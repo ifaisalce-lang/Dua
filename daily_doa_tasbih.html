@@ -14,7 +14,7 @@
   --bd:#C8E6C9;--sh:rgba(27,67,50,.10);
 }
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
-body{font-family:'Noto Sans Bengali',sans-serif;background:var(--cream);color:var(--tx);min-height:100vh;}
+body{font-family:'Noto Sans Bengali',sans-serif;background:var(--cream);color:var(--tx);min-height:100vh;font-size:15px;-webkit-text-size-adjust:100%;}
 
 /* ══ PAGE SYSTEM ══ */
 .page{display:none;min-height:100vh;flex-direction:column;}
@@ -23,8 +23,8 @@ body{font-family:'Noto Sans Bengali',sans-serif;background:var(--cream);color:va
 /* ══ BOTTOM NAV ══ */
 .bnav{position:fixed;bottom:0;left:0;right:0;background:var(--white);border-top:1px solid var(--bd);display:flex;z-index:100;box-shadow:0 -2px 10px var(--sh);}
 .bn{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:9px 4px 11px;cursor:pointer;border:none;background:none;transition:all .2s;}
-.bn .bni{font-size:20px;}
-.bn .bnl{font-size:9px;font-weight:600;color:var(--tx-lt);}
+.bn .bni{font-size:22px;}
+.bn .bnl{font-size:11px;font-weight:600;color:var(--tx-lt);}
 .bn.active .bnl{color:var(--g);}
 .bn.active .bni{filter:drop-shadow(0 0 4px rgba(45,106,79,.5));}
 .bn-dot{width:4px;height:4px;border-radius:50%;background:var(--g);margin-top:1px;display:none;}
@@ -44,23 +44,23 @@ body{font-family:'Noto Sans Bengali',sans-serif;background:var(--cream);color:va
 .hdr-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;}
 .app-logo{display:flex;align-items:center;gap:10px;}
 .logo-moon{width:38px;height:38px;background:rgba(255,255,255,.15);border:1.5px solid rgba(255,255,255,.25);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:19px;}
-.logo-name{font-size:16px;font-weight:700;color:#fff;letter-spacing:.5px;}
-.logo-sub{font-size:10px;color:var(--g-pale);}
+.logo-name{font-size:18px;font-weight:700;color:#fff;letter-spacing:.5px;}
+.logo-sub{font-size:12px;color:var(--g-pale);}
 .hdr-time{text-align:right;}
-.hdr-time .hijri{font-size:12px;font-weight:700;color:var(--gold);}
-.hdr-time .clock{font-size:10px;color:rgba(255,255,255,.6);}
+.hdr-time .hijri{font-size:13px;font-weight:700;color:var(--gold);}
+.hdr-time .clock{font-size:12px;color:rgba(255,255,255,.6);}
 
 /* Ayat banner */
 .ayat-box{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.18);border-radius:16px;padding:16px;}
-.ayat-label{font-size:9px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;text-align:center;margin-bottom:10px;}
-.ayat-ar{font-family:'Noto Naskh Arabic',serif;font-size:22px;color:#fff;direction:rtl;text-align:center;line-height:1.9;text-shadow:0 0 20px rgba(255,255,255,.2);}
+.ayat-label{font-size:11px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;text-align:center;margin-bottom:10px;}
+.ayat-ar{font-family:'Noto Naskh Arabic',serif;font-size:24px;color:#fff;direction:rtl;text-align:center;line-height:1.9;text-shadow:0 0 20px rgba(255,255,255,.2);}
 .ayat-divider{width:40px;height:1.5px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:10px auto;}
-.ayat-bn{font-size:12px;color:rgba(255,255,255,.85);text-align:center;line-height:1.7;}
-.ayat-ref{font-size:10px;color:var(--gold);text-align:center;margin-top:4px;}
+.ayat-bn{font-size:14px;color:rgba(255,255,255,.85);text-align:center;line-height:1.7;}
+.ayat-ref{font-size:12px;color:var(--gold);text-align:center;margin-top:4px;}
 
 /* Home content */
 .home-body{flex:1;padding:16px 14px;padding-bottom:80px;}
-.home-section-title{font-size:11px;font-weight:700;color:var(--tx-lt);letter-spacing:1.5px;text-transform:uppercase;margin:18px 0 10px;display:flex;align-items:center;gap:8px;}
+.home-section-title{font-size:13px;font-weight:700;color:var(--tx-lt);letter-spacing:1.5px;text-transform:uppercase;margin:18px 0 10px;display:flex;align-items:center;gap:8px;}
 .home-section-title::after{content:'';flex:1;height:1px;background:var(--bd);}
 
 /* Feature Cards Grid */
@@ -78,16 +78,99 @@ body{font-family:'Noto Sans Bengali',sans-serif;background:var(--cream);color:va
 /* Card 3 – বিপদ */
 .fc-bipod{background:linear-gradient(145deg,#FFF7ED,#FED7AA);border-color:#FB923C;}
 .fc-bipod .fc-icon-wrap{background:linear-gradient(135deg,#C2410C,#F97316);}
-/* Card 4 – Coming soon */
+/* Card 4 – রোগ মুক্তি */
+.fc-roga{background:linear-gradient(145deg,#FFF1F2,#FFE4E6);border-color:#FDA4AF;}
+.fc-roga .fc-icon-wrap{background:linear-gradient(135deg,#BE123C,#E11D48);}
+/* Card 5 – আল্লাহর ৯৯ নাম */
+.fc-names{background:linear-gradient(145deg,#FFFBEB,#FEF3C7);border-color:#FCD34D;}
+.fc-names .fc-icon-wrap{background:linear-gradient(135deg,#B45309,#D97706);}
+/* Card 6 – সকাল সন্ধ্যা */
+.fc-morning{background:linear-gradient(145deg,#ECFEFF,#CFFAFE);border-color:#67E8F9;}
+.fc-morning .fc-icon-wrap{background:linear-gradient(135deg,#0E7490,#06B6D4);}
+/* Card 7 – ঘুমের দোয়া */
+.fc-sleep{background:linear-gradient(145deg,#F0F9FF,#E0F2FE);border-color:#7DD3FC;}
+.fc-sleep .fc-icon-wrap{background:linear-gradient(135deg,#1D4ED8,#0EA5E9);}
+/* Card 8 – দুরুদ শরীফ */
+.fc-durud{background:linear-gradient(145deg,#F0FDF4,#DCFCE7);border-color:#86EFAC;}
+.fc-durud .fc-icon-wrap{background:linear-gradient(135deg,#15803D,#22C55E);}
+/* Card 9 – ডিজিটাল তসবিহ */
+.fc-dgtasbih{background:linear-gradient(145deg,#FDF4FF,#F3E8FF);border-color:#D8B4FE;}
+.fc-dgtasbih .fc-icon-wrap{background:linear-gradient(135deg,#7E22CE,#A855F7);}
+/* Card – Coming soon */
 .fc-soon{background:linear-gradient(145deg,#F5F3FF,#EDE9FE);border-color:#C4B5FD;opacity:.75;}
 .fc-soon .fc-icon-wrap{background:linear-gradient(135deg,#6D28D9,#8B5CF6);}
 
-.fc-icon-wrap{width:44px;height:44px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:12px;box-shadow:0 3px 10px rgba(0,0,0,.15);}
-.fc-title{font-size:13px;font-weight:700;color:var(--tx);margin-bottom:4px;line-height:1.3;}
-.fc-desc{font-size:10px;color:var(--tx-lt);line-height:1.5;}
-.fc-arrow{position:absolute;bottom:14px;right:14px;font-size:16px;color:rgba(0,0,0,.2);}
-.fc-badge{display:inline-block;background:rgba(0,0,0,.08);border-radius:6px;padding:2px 7px;font-size:9px;font-weight:700;color:var(--tx-mid);margin-top:8px;}
-.fc-soon-tag{position:absolute;top:10px;right:10px;background:rgba(109,40,217,.15);border-radius:6px;padding:2px 7px;font-size:8px;font-weight:700;color:#6D28D9;}
+/* ══════════════════════════════
+   DIGITAL TASBIH PAGE
+══════════════════════════════ */
+.dt-body{flex:1;padding:16px 14px 90px;overflow-y:auto;background:linear-gradient(180deg,#0D0D1A 0%,#1A0A2E 100%);min-height:100vh;}
+.dt-header-banner{background:linear-gradient(135deg,#1E0A3C,#2D1260);border:1px solid rgba(168,85,247,.3);border-radius:20px;padding:20px 16px;text-align:center;margin-bottom:20px;position:relative;overflow:hidden;}
+.dt-header-banner::before{content:'';position:absolute;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(168,85,247,.15),transparent 70%);top:-60px;right:-60px;}
+.dt-header-banner::after{content:'';position:absolute;width:150px;height:150px;border-radius:50%;background:radial-gradient(circle,rgba(232,196,106,.1),transparent 70%);bottom:-40px;left:-40px;}
+.dt-hb-z{position:relative;z-index:1;}
+.dt-hb-ar{font-family:'Noto Naskh Arabic',serif;font-size:24px;color:rgba(255,255,255,.9);direction:rtl;margin-bottom:6px;}
+.dt-hb-bn{font-size:13px;color:rgba(255,255,255,.6);margin-bottom:3px;}
+.dt-hb-ref{font-size:11px;color:var(--gold);}
+.dt-selector{display:flex;gap:8px;margin-bottom:18px;overflow-x:auto;padding-bottom:4px;}
+.dt-selector::-webkit-scrollbar{display:none;}
+.dt-sel-btn{flex:none;padding:9px 16px;border-radius:20px;border:1.5px solid rgba(168,85,247,.3);background:rgba(30,10,60,.8);color:rgba(255,255,255,.6);font-family:'Noto Sans Bengali',sans-serif;font-size:13px;font-weight:700;cursor:pointer;transition:all .2s;white-space:nowrap;}
+.dt-sel-btn.active{background:linear-gradient(135deg,#7E22CE,#A855F7);border-color:#A855F7;color:#fff;box-shadow:0 4px 15px rgba(168,85,247,.4);}
+.dt-ring-wrap{display:flex;justify-content:center;margin-bottom:22px;}
+.dt-ring-outer{position:relative;width:240px;height:240px;}
+.dt-ring-svg{width:240px;height:240px;transform:rotate(-90deg);}
+.dt-ring-bg{fill:none;stroke:rgba(168,85,247,.15);stroke-width:12;}
+.dt-ring-fg{fill:none;stroke:url(#ringGrad);stroke-width:12;stroke-linecap:round;transition:stroke-dashoffset .4s cubic-bezier(.4,0,.2,1);}
+.dt-ring-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;width:160px;}
+.dt-count-num{font-size:68px;font-weight:700;line-height:1;color:#fff;font-family:'Noto Sans Bengali',sans-serif;transition:transform .1s ease;text-shadow:0 0 30px rgba(168,85,247,.5);}
+.dt-count-lbl{font-size:13px;color:rgba(255,255,255,.5);margin-top:4px;}
+.dt-target-lbl{font-size:13px;color:var(--gold);margin-top:2px;font-weight:700;}
+@keyframes dtPulse{0%{transform:scale(1);}50%{transform:scale(1.1);}100%{transform:scale(1);}}
+.dt-count-num.pulse{animation:dtPulse .15s ease;}
+.dt-tap-btn{width:100%;padding:24px;border-radius:24px;background:linear-gradient(135deg,#7E22CE,#A855F7);border:none;color:#fff;font-family:'Noto Sans Bengali',sans-serif;font-size:20px;font-weight:700;cursor:pointer;letter-spacing:1px;box-shadow:0 8px 30px rgba(168,85,247,.5);transition:all .15s;margin-bottom:14px;position:relative;overflow:hidden;}
+.dt-tap-btn:active{transform:scale(.97);box-shadow:0 4px 15px rgba(168,85,247,.4);}
+.dt-tap-btn::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.15),transparent);border-radius:24px;}
+@keyframes tapRipple{0%{transform:scale(0);opacity:.6;}100%{transform:scale(4);opacity:0;}}
+.dt-ripple{position:absolute;width:60px;height:60px;border-radius:50%;background:rgba(255,255,255,.3);transform:scale(0);pointer-events:none;animation:tapRipple .5s ease-out forwards;}
+.dt-ctrl-row{display:flex;gap:10px;margin-bottom:18px;}
+.dt-ctrl-btn{flex:1;padding:14px 8px;border-radius:16px;border:1.5px solid rgba(168,85,247,.25);background:rgba(30,10,60,.8);color:rgba(255,255,255,.7);font-family:'Noto Sans Bengali',sans-serif;font-size:13px;font-weight:700;cursor:pointer;transition:all .2s;display:flex;flex-direction:column;align-items:center;gap:4px;}
+.dt-ctrl-btn span{font-size:22px;}
+.dt-ctrl-btn:active{transform:scale(.95);}
+.dt-done{display:none;background:linear-gradient(135deg,#14532D,#166534);border:1.5px solid #4ADE80;border-radius:16px;padding:14px;text-align:center;margin-bottom:16px;}
+.dt-done.show{display:block;}
+.dt-done-icon{font-size:32px;margin-bottom:4px;}
+.dt-done-title{font-size:15px;font-weight:700;color:#4ADE80;margin-bottom:2px;}
+.dt-done-sub{font-size:13px;color:rgba(255,255,255,.6);}
+.dt-stats{background:rgba(30,10,60,.8);border:1.5px solid rgba(168,85,247,.2);border-radius:18px;padding:16px;margin-bottom:16px;}
+.dt-stats-title{font-size:12px;font-weight:700;color:rgba(255,255,255,.4);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px;text-align:center;}
+.dt-stats-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;}
+.dt-stat-item{text-align:center;padding:11px 6px;background:rgba(168,85,247,.08);border-radius:12px;border:1px solid rgba(168,85,247,.15);}
+.dt-stat-num{font-size:22px;font-weight:700;color:#A855F7;font-family:'Noto Sans Bengali',sans-serif;}
+.dt-stat-lbl{font-size:11px;color:rgba(255,255,255,.4);margin-top:2px;}
+.dt-beads{display:flex;justify-content:center;gap:6px;margin-bottom:16px;flex-wrap:wrap;padding:0 10px;}
+.dt-bead{width:14px;height:14px;border-radius:50%;background:rgba(168,85,247,.2);border:1px solid rgba(168,85,247,.4);transition:all .25s;}
+.dt-bead.lit{background:radial-gradient(circle at 35% 35%,#D8B4FE,#7E22CE);box-shadow:0 0 8px rgba(168,85,247,.7);}
+.dt-custom-row{display:flex;align-items:center;gap:8px;margin-bottom:16px;}
+.dt-custom-input{flex:1;padding:11px 14px;border-radius:12px;border:1.5px solid rgba(168,85,247,.3);background:rgba(30,10,60,.8);color:#fff;font-family:'Noto Sans Bengali',sans-serif;font-size:14px;text-align:center;}
+.dt-custom-input:focus{outline:none;border-color:#A855F7;}
+.dt-custom-set{padding:11px 18px;border-radius:12px;background:linear-gradient(135deg,#7E22CE,#A855F7);border:none;color:#fff;font-family:'Noto Sans Bengali',sans-serif;font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap;}
+.dt-page-hdr{background:linear-gradient(160deg,#0D0D1A,#1E0A3C 60%,#2D1260);padding:18px 20px 22px;position:relative;overflow:hidden;}
+.dt-page-hdr::before{content:'';position:absolute;width:160px;height:160px;border-radius:50%;border:36px solid rgba(168,85,247,.08);top:-50px;right:-50px;}
+.dt-bnav{background:#0D0D1A;border-top:1px solid rgba(168,85,247,.2);}
+.dt-bnav .bn .bnl{color:rgba(255,255,255,.4);}
+.dt-bnav .bn.active .bnl{color:#A855F7;}
+.dt-bnav .bn-dot{background:#A855F7;}
+/* Hdr-time multi-date */
+.hdr-time{text-align:right;}
+.hdr-time .hijri{font-size:13px;font-weight:700;color:var(--gold);}
+.hdr-time .eng-date{font-size:11px;color:rgba(255,255,255,.55);margin-top:1px;}
+.hdr-time .clock{font-size:12px;color:rgba(255,255,255,.6);margin-top:1px;}
+
+.fc-icon-wrap{width:48px;height:48px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:12px;box-shadow:0 3px 10px rgba(0,0,0,.15);}
+.fc-title{font-size:14px;font-weight:700;color:var(--tx);margin-bottom:4px;line-height:1.3;}
+.fc-desc{font-size:12px;color:var(--tx-lt);line-height:1.5;}
+.fc-arrow{position:absolute;bottom:14px;right:14px;font-size:18px;color:rgba(0,0,0,.2);}
+.fc-badge{display:inline-block;background:rgba(0,0,0,.08);border-radius:6px;padding:3px 8px;font-size:11px;font-weight:700;color:var(--tx-mid);margin-top:8px;}
+.fc-soon-tag{position:absolute;top:10px;right:10px;background:rgba(109,40,217,.15);border-radius:6px;padding:2px 7px;font-size:10px;font-weight:700;color:#6D28D9;}
 
 /* ══════════════════════════════
    AMAL PAGE (5 prayer tabs)
@@ -98,14 +181,14 @@ body{font-family:'Noto Sans Bengali',sans-serif;background:var(--cream);color:va
 .back-btn{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.15);border:1.5px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:16px;color:#fff;flex-shrink:0;transition:all .2s;}
 .back-btn:active{transform:scale(.9);}
 .ph-info{flex:1;}
-.ph-title{font-size:17px;font-weight:700;color:#fff;position:relative;z-index:1;}
-.ph-sub{font-size:10px;color:var(--g-pale);margin-top:2px;}
+.ph-title{font-size:19px;font-weight:700;color:#fff;position:relative;z-index:1;}
+.ph-sub{font-size:12px;color:var(--g-pale);margin-top:2px;}
 
 /* Prayer sub-nav */
 .prayer-nav{display:flex;background:#F0FDF4;border-bottom:2px solid var(--g-pale);overflow-x:auto;position:sticky;top:0;z-index:50;}
 .prayer-nav::-webkit-scrollbar{display:none;}
-.p-tab{flex:none;padding:9px 14px;font-family:'Noto Sans Bengali',sans-serif;font-size:11px;font-weight:700;color:var(--tx-lt);background:none;border:none;border-bottom:3px solid transparent;margin-bottom:-2px;cursor:pointer;white-space:nowrap;transition:all .2s;display:flex;flex-direction:column;align-items:center;gap:2px;}
-.p-tab .pi{font-size:16px;}
+.p-tab{flex:none;padding:10px 16px;font-family:'Noto Sans Bengali',sans-serif;font-size:13px;font-weight:700;color:var(--tx-lt);background:none;border:none;border-bottom:3px solid transparent;margin-bottom:-2px;cursor:pointer;white-space:nowrap;transition:all .2s;display:flex;flex-direction:column;align-items:center;gap:2px;}
+.p-tab .pi{font-size:18px;}
 .p-tab.active{color:var(--g);border-bottom-color:var(--g-mid);}
 
 .prayer-content{flex:1;padding:0 13px;padding-bottom:80px;overflow-y:auto;}
@@ -119,10 +202,10 @@ body{font-family:'Noto Sans Bengali',sans-serif;background:var(--cream);color:va
 .pb-maghrib{background:linear-gradient(135deg,#FDF4FF,#F5D0FE);border:1.5px solid #E879F9;}
 .pb-isha{background:linear-gradient(135deg,#0F172A,#1E293B);border:1.5px solid #475569;}
 .pb-isha .pb-t{color:#F1F5F9;} .pb-isha .pb-s{color:#94A3B8;}
-.pb-ico{font-size:28px;} .pb-t{font-size:14px;font-weight:700;color:var(--tx);} .pb-s{font-size:10px;color:var(--tx-lt);margin-top:1px;}
+.pb-ico{font-size:30px;} .pb-t{font-size:15px;font-weight:700;color:var(--tx);} .pb-s{font-size:12px;color:var(--tx-lt);margin-top:1px;}
 
 /* Section label */
-.sl{font-size:10px;font-weight:700;color:var(--tx-lt);letter-spacing:1.5px;text-transform:uppercase;margin:16px 0 8px;display:flex;align-items:center;gap:7px;}
+.sl{font-size:12px;font-weight:700;color:var(--tx-lt);letter-spacing:1.5px;text-transform:uppercase;margin:16px 0 8px;display:flex;align-items:center;gap:7px;}
 .sl::after{content:'';flex:1;height:1px;background:var(--bd);}
 
 /* Amal card */
@@ -134,50 +217,50 @@ body{font-family:'Noto Sans Bengali',sans-serif;background:var(--cream);color:va
 .ac.org::before{background:linear-gradient(180deg,#C2410C,#FB923C);}
 .ac.pur::before{background:linear-gradient(180deg,#6D28D9,#A78BFA);}
 .ac.ngt::before{background:linear-gradient(180deg,#0F172A,#334155);}
-.cnum{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;font-size:11px;font-weight:700;margin-bottom:8px;}
-.ctitle{font-size:13px;font-weight:700;color:var(--g-dark);margin-bottom:9px;}
-.ar{font-family:'Noto Naskh Arabic',serif;font-size:20px;font-weight:700;color:#1A237E;direction:rtl;text-align:center;line-height:2;padding:11px;background:#F0F4FF;border-radius:8px;margin-bottom:8px;}
-.ar.sm{font-size:17px;} .ar.gb{background:#FFFBEB;color:#92400E;}
-.tr{display:flex;align-items:baseline;gap:5px;margin-bottom:3px;flex-wrap:wrap;}
-.tl{font-size:9px;font-weight:700;color:var(--g-mid);white-space:nowrap;min-width:56px;}
+.cnum{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;font-size:12px;font-weight:700;margin-bottom:8px;}
+.ctitle{font-size:15px;font-weight:700;color:var(--g-dark);margin-bottom:9px;}
+.ar{font-family:'Noto Naskh Arabic',serif;font-size:22px;font-weight:700;color:#1A237E;direction:rtl;text-align:center;line-height:2;padding:12px;background:#F0F4FF;border-radius:8px;margin-bottom:8px;}
+.ar.sm{font-size:19px;} .ar.gb{background:#FFFBEB;color:#92400E;}
+.tr{display:flex;align-items:baseline;gap:5px;margin-bottom:4px;flex-wrap:wrap;}
+.tl{font-size:11px;font-weight:700;color:var(--g-mid);white-space:nowrap;min-width:60px;}
 .tl.g{color:var(--gold-dk);}
-.tt{font-size:11px;color:var(--tx-mid);line-height:1.6;}
-.pill{display:inline-flex;align-items:center;gap:4px;border-radius:100px;padding:3px 10px;font-size:10px;font-weight:700;margin:5px 0 4px;}
+.tt{font-size:13px;color:var(--tx-mid);line-height:1.7;}
+.pill{display:inline-flex;align-items:center;gap:4px;border-radius:100px;padding:4px 12px;font-size:12px;font-weight:700;margin:5px 0 4px;}
 .pill.grn{background:var(--g-pale);color:var(--g);}
 .pill.gld{background:#FEF3C7;color:var(--gold-dk);}
 .pill.blu{background:#EFF6FF;color:#1D4ED8;}
 .pill.pur{background:#F5F3FF;color:#6D28D9;}
 .pill.org{background:#FFF7ED;color:#C2410C;}
 .pill.ngt{background:#F0F9FF;color:#0F172A;}
-.fad{border-radius:7px;padding:7px 10px;font-size:10px;line-height:1.6;margin-top:6px;}
+.fad{border-radius:7px;padding:9px 12px;font-size:12px;line-height:1.7;margin-top:6px;}
 .fad.grn{background:linear-gradient(135deg,#F0FFF4,#E8FDF0);border:1px solid #A7F3D0;color:#065F46;}
 .fad.gld{background:linear-gradient(135deg,#FFFBEB,#FEF3C7);border:1px solid #FCD34D;color:#78350F;}
 .tbl{background:var(--white);border-radius:10px;border:1.5px solid var(--bd);overflow:hidden;margin-bottom:9px;}
 .th{background:linear-gradient(90deg,var(--g-dark),var(--g));display:grid;grid-template-columns:1fr 1fr 1fr 42px;padding:7px 9px;gap:4px;}
-.th span{font-size:9px;font-weight:700;color:white;text-align:center;}
-.trow{display:grid;grid-template-columns:1fr 1fr 1fr 42px;padding:8px 9px;gap:4px;align-items:center;border-bottom:1px solid var(--g-pale);}
+.th span{font-size:11px;font-weight:700;color:white;text-align:center;}
+.trow{display:grid;grid-template-columns:1fr 1fr 1fr 42px;padding:9px 9px;gap:4px;align-items:center;border-bottom:1px solid var(--g-pale);}
 .trow:last-child{border-bottom:none;} .trow:nth-child(even){background:#F9FDFB;}
-.trow span{font-size:10px;color:var(--tx-mid);text-align:center;}
-.ta{font-family:'Noto Naskh Arabic',serif;font-size:15px;color:#1A237E;direction:rtl;text-align:center;}
-.tc{font-weight:700;color:var(--g);font-size:11px;}
+.trow span{font-size:12px;color:var(--tx-mid);text-align:center;}
+.ta{font-family:'Noto Naskh Arabic',serif;font-size:17px;color:#1A237E;direction:rtl;text-align:center;}
+.tc{font-weight:700;color:var(--g);font-size:13px;}
 .dhr{border:none;border-top:1px dashed var(--bd);margin:9px 0;}
 
 /* ══════════════════════════════
    TASBIH PAGE
 ══════════════════════════════ */
 .tasbih-body{flex:1;padding:14px 13px;padding-bottom:80px;overflow-y:auto;}
-.calc-hd{font-size:15px;font-weight:700;color:var(--g-dark);margin-bottom:3px;}
-.calc-sub{font-size:11px;color:var(--tx-lt);margin-bottom:14px;}
+.calc-hd{font-size:17px;font-weight:700;color:var(--g-dark);margin-bottom:3px;}
+.calc-sub{font-size:13px;color:var(--tx-lt);margin-bottom:14px;}
 .tot-box{background:linear-gradient(135deg,var(--g-dark),var(--g));border-radius:14px;padding:15px;text-align:center;margin-bottom:12px;color:#fff;}
-.tot-box .tn{font-size:38px;font-weight:700;line-height:1;color:var(--gold);}
-.tot-box .tl2{font-size:11px;color:rgba(255,255,255,.7);margin-top:2px;}
+.tot-box .tn{font-size:40px;font-weight:700;line-height:1;color:var(--gold);}
+.tot-box .tl2{font-size:13px;color:rgba(255,255,255,.7);margin-top:2px;}
 .cc{background:var(--white);border-radius:16px;border:1.5px solid var(--bd);padding:15px 12px;margin-bottom:11px;box-shadow:0 2px 7px var(--sh);text-align:center;}
 .cc.cg{border-color:var(--g-light);} .cc.cb{border-color:#93C5FD;} .cc.cr{border-color:#FCA5A5;}
-.car{font-family:'Noto Naskh Arabic',serif;font-size:24px;color:#1A237E;direction:rtl;margin-bottom:2px;}
-.cnm{font-size:12px;font-weight:700;color:var(--g-dark);margin-bottom:9px;}
-.cdis{font-size:52px;font-weight:700;line-height:1;margin-bottom:4px;transition:transform .1s ease;}
+.car{font-family:'Noto Naskh Arabic',serif;font-size:26px;color:#1A237E;direction:rtl;margin-bottom:2px;}
+.cnm{font-size:14px;font-weight:700;color:var(--g-dark);margin-bottom:9px;}
+.cdis{font-size:54px;font-weight:700;line-height:1;margin-bottom:4px;transition:transform .1s ease;}
 .cg .cdis{color:var(--g);} .cb .cdis{color:#1D4ED8;} .cr .cdis{color:#B91C1C;}
-.ctg{font-size:10px;color:var(--tx-lt);margin-bottom:11px;}
+.ctg{font-size:12px;color:var(--tx-lt);margin-bottom:11px;}
 .pb{height:5px;background:var(--g-pale);border-radius:5px;margin-bottom:13px;overflow:hidden;}
 .pb.bb{background:#EFF6FF;} .pb.rb{background:#FFF1F2;}
 .pf{height:100%;border-radius:5px;transition:width .3s ease;}
@@ -185,56 +268,56 @@ body{font-family:'Noto Sans Bengali',sans-serif;background:var(--cream);color:va
 .cb .pf{background:linear-gradient(90deg,#1D4ED8,#93C5FD);}
 .cr .pf{background:linear-gradient(90deg,#B91C1C,#FCA5A5);}
 .br{display:flex;gap:9px;justify-content:center;align-items:center;}
-.bt{width:62px;height:62px;border-radius:50%;font-size:24px;font-weight:700;border:none;cursor:pointer;transition:all .1s;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,.15);user-select:none;}
+.bt{width:66px;height:66px;border-radius:50%;font-size:26px;font-weight:700;border:none;cursor:pointer;transition:all .1s;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,.15);user-select:none;}
 .bt:active{transform:scale(.9);}
 .cg .bt{background:linear-gradient(135deg,var(--g),var(--g-mid));color:#fff;}
 .cb .bt{background:linear-gradient(135deg,#1D4ED8,#3B82F6);color:#fff;}
 .cr .bt{background:linear-gradient(135deg,#B91C1C,#EF4444);color:#fff;}
-.bm{width:38px;height:38px;border-radius:50%;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .15s;border:1.5px solid var(--bd);}
+.bm{width:42px;height:42px;border-radius:50%;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .15s;border:1.5px solid var(--bd);}
 .bm:active{transform:scale(.9);}
 .cg .bm{background:var(--g-pale);color:var(--g);}
 .cb .bm{background:#EFF6FF;color:#1D4ED8;border-color:#BFDBFE;}
 .cr .bm{background:#FFF1F2;color:#B91C1C;border-color:#FCA5A5;}
-.bs{width:38px;height:38px;border-radius:50%;background:#F1F5F9;color:#64748B;border:1.5px solid #E2E8F0;font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .15s;}
+.bs{width:42px;height:42px;border-radius:50%;background:#F1F5F9;color:#64748B;border:1.5px solid #E2E8F0;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .15s;}
 .bs:active{transform:scale(.9);}
-.db{display:none;background:linear-gradient(135deg,var(--g-pale),#B7E4C7);border:1.5px solid var(--g-light);border-radius:7px;padding:7px;margin-top:8px;text-align:center;font-size:12px;font-weight:700;color:var(--g-dark);}
+.db{display:none;background:linear-gradient(135deg,var(--g-pale),#B7E4C7);border:1.5px solid var(--g-light);border-radius:7px;padding:8px;margin-top:8px;text-align:center;font-size:13px;font-weight:700;color:var(--g-dark);}
 .db.show{display:block;}
-.rabtn{width:100%;padding:12px;background:var(--white);color:var(--g);border:1.5px solid var(--bd);border-radius:11px;font-family:'Noto Sans Bengali',sans-serif;font-size:12px;font-weight:700;cursor:pointer;transition:all .2s;margin-bottom:18px;}
+.rabtn{width:100%;padding:13px;background:var(--white);color:var(--g);border:1.5px solid var(--bd);border-radius:11px;font-family:'Noto Sans Bengali',sans-serif;font-size:14px;font-weight:700;cursor:pointer;transition:all .2s;margin-bottom:18px;}
 .rabtn:hover{background:var(--g-pale);}
 
 /* Names tables */
 .nsh{display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:13px;margin:16px 0 8px;}
 .rh{background:linear-gradient(135deg,#FEF3C7,#FDE68A);border:1.5px solid #F59E0B;}
 .ih{background:linear-gradient(135deg,#EDE9FE,#DDD6FE);border:1.5px solid #7C3AED;}
-.ni{font-size:22px;} .ntl{font-size:13px;font-weight:700;color:#1A2E1A;} .nsl{font-size:9px;color:#6B7280;margin-top:1px;}
+.ni{font-size:24px;} .ntl{font-size:14px;font-weight:700;color:#1A2E1A;} .nsl{font-size:11px;color:#6B7280;margin-top:1px;}
 .ntc{background:var(--white);border-radius:13px;border:1.5px solid var(--bd);overflow:hidden;box-shadow:0 2px 7px var(--sh);margin-bottom:11px;}
-.nth{display:grid;grid-template-columns:70px 1fr 24px 48px;gap:4px;padding:8px 9px;background:linear-gradient(90deg,#78350F,#D97706);}
+.nth{display:grid;grid-template-columns:70px 1fr 24px 48px;gap:4px;padding:9px 9px;background:linear-gradient(90deg,#78350F,#D97706);}
 .ith{background:linear-gradient(90deg,#4C1D95,#7C3AED);}
-.nth span{font-size:9px;font-weight:700;color:#fff;text-align:center;}
-.nr{display:grid;grid-template-columns:70px 1fr 24px 48px;gap:4px;padding:8px 9px;align-items:start;border-bottom:1px solid #F0FDF4;}
+.nth span{font-size:11px;font-weight:700;color:#fff;text-align:center;}
+.nr{display:grid;grid-template-columns:70px 1fr 24px 48px;gap:4px;padding:9px 9px;align-items:start;border-bottom:1px solid #F0FDF4;}
 .nr.alt{background:#FAFFF8;} .nr:last-child{border-bottom:none;}
-.nac{font-family:'Noto Naskh Arabic',serif;font-size:17px;color:#92400E;direction:rtl;text-align:center;font-weight:700;}
+.nac{font-family:'Noto Naskh Arabic',serif;font-size:19px;color:#92400E;direction:rtl;text-align:center;font-weight:700;}
 .iac{color:#4C1D95;}
 .ni2{display:flex;flex-direction:column;gap:1px;}
-.nu{font-size:10px;font-weight:700;color:var(--tx);} .no{font-size:9px;color:var(--tx-mid);} .nud{font-size:8px;color:#D97706;margin-top:1px;} .iud{color:#6D28D9;}
+.nu{font-size:12px;font-weight:700;color:var(--tx);} .no{font-size:11px;color:var(--tx-mid);} .nud{font-size:10px;color:#D97706;margin-top:1px;} .iud{color:#6D28D9;}
 .nbc{display:flex;justify-content:center;padding-top:2px;}
-.ntb{display:inline-block;font-size:10px;font-weight:700;border-radius:5px;padding:2px 5px;text-align:center;}
+.ntb{display:inline-block;font-size:11px;font-weight:700;border-radius:5px;padding:2px 5px;text-align:center;}
 .rtb{background:#FEF3C7;color:#92400E;} .itb{background:#EDE9FE;color:#4C1D95;}
 .ncc{display:flex;flex-direction:column;align-items:center;gap:3px;}
-.mc{font-size:17px;font-weight:700;color:#D97706;line-height:1;text-align:center;}
+.mc{font-size:18px;font-weight:700;color:#D97706;line-height:1;text-align:center;}
 .mp{width:40px;height:3px;background:#FEF3C7;border-radius:3px;overflow:hidden;}
 .mf{height:100%;border-radius:3px;transition:width .3s ease;}
 .rf{background:linear-gradient(90deg,#D97706,#F59E0B);} .iif{background:linear-gradient(90deg,#6D28D9,#A78BFA);}
 .mbs{display:flex;gap:2px;align-items:center;}
-.mbp{width:24px;height:24px;border-radius:50%;border:none;font-size:14px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#fff;transition:all .15s;}
+.mbp{width:26px;height:26px;border-radius:50%;border:none;font-size:15px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#fff;transition:all .15s;}
 .mbp:active{transform:scale(.85);}
 .rp{background:linear-gradient(135deg,#D97706,#F59E0B);} .ip{background:linear-gradient(135deg,#6D28D9,#7C3AED);}
-.mbm{width:19px;height:19px;border-radius:50%;font-size:12px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .15s;}
+.mbm{width:22px;height:22px;border-radius:50%;font-size:13px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .15s;}
 .mbm:active{transform:scale(.85);}
 .rm{border:1.5px solid #FCD34D;background:#FEF3C7;color:#92400E;} .im{border:1.5px solid #A78BFA;background:#EDE9FE;color:#4C1D95;}
-.mbr{width:19px;height:19px;border-radius:50%;border:1.5px solid #E2E8F0;background:#F8FAFC;color:#94A3B8;font-size:9px;cursor:pointer;display:flex;align-items:center;justify-content:center;}
+.mbr{width:22px;height:22px;border-radius:50%;border:1.5px solid #E2E8F0;background:#F8FAFC;color:#94A3B8;font-size:10px;cursor:pointer;display:flex;align-items:center;justify-content:center;}
 .mbr:active{transform:scale(.85);}
-.mdn{display:none;font-size:8px;font-weight:700;color:var(--g);}
+.mdn{display:none;font-size:10px;font-weight:700;color:var(--g);}
 .mdn.show{display:block;}
 
 /* ══════════════════════════════
@@ -242,8 +325,8 @@ body{font-family:'Noto Sans Bengali',sans-serif;background:var(--cream);color:va
 ══════════════════════════════ */
 .bipod-body{flex:1;padding:14px 13px;padding-bottom:80px;overflow-y:auto;}
 .bipod-intro{background:linear-gradient(135deg,#FFF7ED,#FED7AA);border:1.5px solid #FB923C;border-radius:14px;padding:16px;margin-bottom:16px;text-align:center;}
-.bipod-intro .bi-ar{font-family:'Noto Naskh Arabic',serif;font-size:22px;color:#92400E;direction:rtl;margin-bottom:8px;}
-.bipod-intro .bi-bn{font-size:12px;color:#C2410C;font-weight:600;}
+.bipod-intro .bi-ar{font-family:'Noto Naskh Arabic',serif;font-size:24px;color:#92400E;direction:rtl;margin-bottom:8px;}
+.bipod-intro .bi-bn{font-size:13px;color:#C2410C;font-weight:600;}
 
 /* ══════════════════════════════
    ABOUT PAGE
@@ -252,28 +335,48 @@ body{font-family:'Noto Sans Bengali',sans-serif;background:var(--cream);color:va
 .about-card{background:var(--white);border-radius:16px;border:1.5px solid var(--bd);padding:20px 16px;margin-bottom:14px;box-shadow:0 2px 8px var(--sh);}
 .about-logo-box{text-align:center;padding:24px 0 16px;}
 .about-logo-box .al-icon{font-size:56px;display:block;margin-bottom:10px;}
-.about-logo-box .al-name{font-size:20px;font-weight:700;color:var(--g-dark);}
-.about-logo-box .al-sub{font-size:12px;color:var(--tx-lt);margin-top:3px;}
-.about-logo-box .al-ver{display:inline-block;background:var(--g-pale);color:var(--g);border-radius:8px;padding:3px 12px;font-size:11px;font-weight:700;margin-top:10px;}
-.about-row{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--bd);}
+.about-logo-box .al-name{font-size:22px;font-weight:700;color:var(--g-dark);}
+.about-logo-box .al-sub{font-size:13px;color:var(--tx-lt);margin-top:3px;}
+.about-logo-box .al-ver{display:inline-block;background:var(--g-pale);color:var(--g);border-radius:8px;padding:3px 12px;font-size:12px;font-weight:700;margin-top:10px;}
+.about-row{display:flex;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid var(--bd);}
 .about-row:last-child{border-bottom:none;}
-.about-row .ar-icon{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
+.about-row .ar-icon{width:42px;height:42px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;}
 .about-row .ar-text{flex:1;}
-.about-row .ar-title{font-size:13px;font-weight:700;color:var(--tx);margin-bottom:2px;}
-.about-row .ar-sub{font-size:11px;color:var(--tx-lt);line-height:1.5;}
+.about-row .ar-title{font-size:14px;font-weight:700;color:var(--tx);margin-bottom:2px;}
+.about-row .ar-sub{font-size:12px;color:var(--tx-lt);line-height:1.6;}
 .free-badge{background:linear-gradient(135deg,#ECFDF5,#D1FAE5);border:1.5px solid #6EE7B7;border-radius:14px;padding:18px;text-align:center;margin-bottom:14px;}
 .free-badge .fb-icon{font-size:36px;margin-bottom:8px;display:block;}
-.free-badge .fb-title{font-size:15px;font-weight:700;color:var(--g-dark);margin-bottom:5px;}
-.free-badge .fb-text{font-size:12px;color:var(--tx-mid);line-height:1.7;}
+.free-badge .fb-title{font-size:16px;font-weight:700;color:var(--g-dark);margin-bottom:5px;}
+.free-badge .fb-text{font-size:13px;color:var(--tx-mid);line-height:1.7;}
 .footer-doa{background:linear-gradient(135deg,var(--g-dark),var(--g));border-radius:14px;padding:18px;text-align:center;margin-bottom:14px;}
-.footer-doa .fd-ar{font-family:'Noto Naskh Arabic',serif;font-size:20px;color:var(--gold);direction:rtl;margin-bottom:8px;}
-.footer-doa .fd-bn{font-size:11px;color:rgba(255,255,255,.8);line-height:1.7;}
+.footer-doa .fd-ar{font-family:'Noto Naskh Arabic',serif;font-size:22px;color:var(--gold);direction:rtl;margin-bottom:8px;}
+.footer-doa .fd-bn{font-size:13px;color:rgba(255,255,255,.8);line-height:1.7;}
 
 @media(max-width:360px){
   .fcard{padding:14px 11px;}
-  .fc-title{font-size:12px;}
-  .cdis{font-size:46px;}
-  .bt{width:56px;height:56px;}
+  .fc-title{font-size:13px;}
+  .fc-desc{font-size:11px;}
+  .cdis{font-size:48px;}
+  .bt{width:60px;height:60px;}
+  .ar{font-size:19px;}
+  .ar.sm{font-size:17px;}
+  .tt{font-size:12px;}
+  .ctitle{font-size:14px;}
+  .dt-count-num{font-size:58px;}
+  .dt-ring-outer{width:210px;height:210px;}
+  .dt-ring-svg{width:210px;height:210px;}
+}
+@media(min-width:400px){
+  .fc-title{font-size:15px;}
+  .fc-desc{font-size:13px;}
+  .tt{font-size:14px;}
+  .ctitle{font-size:16px;}
+  .ar{font-size:23px;}
+  .ar.sm{font-size:20px;}
+  .tl{font-size:12px;}
+  .fad{font-size:13px;}
+  .pill{font-size:13px;}
+  .sl{font-size:13px;}
 }
 </style>
 </head>
@@ -297,6 +400,7 @@ body{font-family:'Noto Sans Bengali',sans-serif;background:var(--cream);color:va
         </div>
         <div class="hdr-time">
           <div class="hijri" id="hijriDate">—</div>
+          <div class="eng-date" id="banglaDate">—</div>
           <div class="clock" id="clockTime">—</div>
         </div>
       </div>
@@ -345,13 +449,62 @@ body{font-family:'Noto Sans Bengali',sans-serif;background:var(--cream);color:va
         <div class="fc-arrow">›</div>
       </div>
 
-      <!-- Card 4: Coming soon -->
-      <div class="fcard fc-soon">
-        <span class="fc-soon-tag">শীঘ্রই</span>
-        <div class="fc-icon-wrap">📖</div>
-        <div class="fc-title">কুরআনের গুরুত্বপূর্ণ সূরা</div>
-        <div class="fc-desc">অর্থ ও ফজিলতসহ</div>
-        <span class="fc-badge">আসছে…</span>
+      <!-- Card 4: রোগ মুক্তির দোয়া -->
+      <div class="fcard fc-roga" onclick="goTo('pg-roga')">
+        <div class="fc-icon-wrap">🩺</div>
+        <div class="fc-title">রোগ মুক্তির দোয়া</div>
+        <div class="fc-desc">অসুখ, ব্যথা ও রোগ থেকে মুক্তির মাসনূন দোয়া</div>
+        <span class="fc-badge">৮টি দোয়া</span>
+        <div class="fc-arrow">›</div>
+      </div>
+
+      <!-- Card 5: আল্লাহর ৯৯ নাম -->
+      <div class="fcard fc-names" onclick="goTo('pg-names')">
+        <div class="fc-icon-wrap">✨</div>
+        <div class="fc-title">আল্লাহর ৯৯টি নামের আমল</div>
+        <div class="fc-desc">রিজিক, জ্ঞান ও সম্মানের জন্য যিকির</div>
+        <span class="fc-badge">ক্যালকুলেটর</span>
+        <div class="fc-arrow">›</div>
+      </div>
+
+      <!-- Card 6: সকাল ও সন্ধ্যার আমল -->
+      <div class="fcard fc-morning" onclick="goTo('pg-morning')">
+        <div class="fc-icon-wrap">🌤️</div>
+        <div class="fc-title">সকাল ও সন্ধ্যার আমল</div>
+        <div class="fc-desc">মাসনূন সকালি ও সন্ধ্যার যিকির ও দোয়া</div>
+        <span class="fc-badge">১২টি আমল</span>
+        <div class="fc-arrow">›</div>
+      </div>
+
+      <!-- Card 7: ঘুমের দোয়া -->
+      <div class="fcard fc-sleep" onclick="goTo('pg-sleep')">
+        <div class="fc-icon-wrap">🌙</div>
+        <div class="fc-title">ঘুমের দোয়া ও আমল</div>
+        <div class="fc-desc">ঘুমানো ও জাগার মাসনূন দোয়া ও আমল</div>
+        <span class="fc-badge">৮টি আমল</span>
+        <div class="fc-arrow">›</div>
+      </div>
+
+      <!-- Card 8: দুরুদ শরীফ -->
+      <div class="fcard fc-durud" onclick="goTo('pg-durud')">
+        <div class="fc-icon-wrap">💚</div>
+        <div class="fc-title">দুরুদ শরীফ</div>
+        <div class="fc-desc">নবী ﷺ-এর উপর দুরুদ পাঠের গুরুত্ব ও আমল</div>
+        <span class="fc-badge">৬টি দুরুদ</span>
+        <div class="fc-arrow">›</div>
+      </div>
+
+      <!-- Card 9: ডিজিটাল তসবিহ -->
+      <div class="fcard fc-dgtasbih" onclick="goTo('pg-dgtasbih')" style="grid-column:1/-1;">
+        <div style="display:flex;align-items:center;gap:14px;">
+          <div class="fc-icon-wrap" style="margin-bottom:0;flex-shrink:0;width:52px;height:52px;font-size:26px;">📿</div>
+          <div>
+            <div class="fc-title" style="font-size:15px;">ডিজিটাল তসবিহ কাউন্টার</div>
+            <div class="fc-desc" style="font-size:11px;">সুবহানাল্লাহ · আলহামদুলিল্লাহ · আল্লাহু আকবার · যেকোনো যিকির গণনা করুন</div>
+            <span class="fc-badge" style="background:rgba(126,34,206,.12);color:#7E22CE;">প্রিমিয়াম কাউন্টার</span>
+          </div>
+        </div>
+        <div class="fc-arrow" style="color:rgba(126,34,206,.3);">›</div>
       </div>
 
     </div><!-- /cards-grid -->
@@ -362,15 +515,15 @@ body{font-family:'Noto Sans Bengali',sans-serif;background:var(--cream);color:va
       <div style="display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--bd);">
         <span style="font-size:20px;">🕌</span>
         <div>
-          <div style="font-size:12px;font-weight:700;color:var(--tx);">নামাজের পর আমলের গুরুত্ব</div>
-          <div style="font-size:10px;color:var(--tx-lt);margin-top:2px;line-height:1.5;">নামাজের পর আমল করলে সওয়াব বহুগুণে বেড়ে যায়।</div>
+          <div style="font-size:14px;font-weight:700;color:var(--tx);">নামাজের পর আমলের গুরুত্ব</div>
+          <div style="font-size:12px;color:var(--tx-lt);margin-top:2px;line-height:1.5;">নামাজের পর আমল করলে সওয়াব বহুগুণে বেড়ে যায়।</div>
         </div>
       </div>
       <div style="display:flex;align-items:center;gap:10px;padding:8px 0;">
         <span style="font-size:20px;">💚</span>
         <div>
-          <div style="font-size:12px;font-weight:700;color:var(--tx);">বিনামূল্যে ও বিজ্ঞাপনমুক্ত</div>
-          <div style="font-size:10px;color:var(--tx-lt);margin-top:2px;">এই অ্যাপটি সম্পূর্ণ বিনামূল্যে ও কোনো বিজ্ঞাপন নেই।</div>
+          <div style="font-size:14px;font-weight:700;color:var(--tx);">বিনামূল্যে ও বিজ্ঞাপনমুক্ত</div>
+          <div style="font-size:12px;color:var(--tx-lt);margin-top:2px;">এই অ্যাপটি সম্পূর্ণ বিনামূল্যে ও কোনো বিজ্ঞাপন নেই।</div>
         </div>
       </div>
     </div>
@@ -421,8 +574,8 @@ body{font-family:'Noto Sans Bengali',sans-serif;background:var(--cream);color:va
         <div class="cnum" style="background:var(--g-pale);color:var(--g);">১</div>
         <div class="ctitle">আয়াতুল কুরসি</div>
         <div class="ar sm">ٱللَّهُ لَآ إِلَٰهَ إِلَّا هُوَ ٱلْحَىُّ ٱلْقَيُّومُ ۚ لَا تَأْخُذُهُۥ سِنَةٌ وَلَا نَوْمٌ ۚ لَّهُۥ مَا فِى ٱلسَّمَٰوَٰتِ وَمَا فِى ٱلْأَرْضِ ۗ مَن ذَا ٱلَّذِى يَشْفَعُ عِندَهُۥٓ إِلَّا بِإِذْنِهِۦ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَىْءٍ مِّنْ عِلْمِهِۦٓ إِلَّا بِمَا شَآءَ ۚ وَسِعَ كُرْسِيُّهُ ٱلسَّمَٰوَٰتِ وَٱلْأَرْضَ ۖ وَلَا يَـُٔودُهُۥ حِفْظُهُمَا ۚ وَهُوَ ٱلْعَلِىُّ ٱلْعَظِيمُ</div>
-        <div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">আল্লাহু লা ইলাহা ইল্লা হুওয়াল হাইয়্যুল কাইয়্যুম... ওয়া হুওয়াল আলিইয়্যুল আযিম।</span></div>
-        <div class="tr"><span class="tl">অর্থ:</span><span class="tt">আল্লাহ ছাড়া কোনো ইলাহ নেই। চিরজীবী, সর্বসত্তার ধারক। তাঁর কুরসি আসমান-জমিন পরিব্যাপ্ত।</span></div>
+        <div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">আল্লাহু লা ইলাহা ইল্লা হুওয়াল হাইয়্যুল কাইয়্যুম। লা তা'খুযুহু সিনাতুঁ ওয়ালা নাউম। লাহু মা ফিস-সামাওয়াতি ওয়ামা ফিল-আরদ্বি। মান যাল্লাযি ইয়াশফাউ ইন্দাহু ইল্লা বিইযনিহি। ইয়া'লামু মা বাইনা আইদিহিম ওয়ামা খালফাহুম ওয়ালা ইউহিতুনা বিশাইয়িম মিন ইলমিহি ইল্লা বিমা শা'আ। ওয়াসিআ কুরসিইয়্যুহুস সামাওয়াতি ওয়াল আরদ্ব। ওয়ালা ইয়াউদুহু হিফযুহুমা ওয়া হুওয়াল আলিইয়্যুল আযিম।</span></div>
+        <div class="tr"><span class="tl">অর্থ:</span><span class="tt">আল্লাহ — তিনি ছাড়া কোনো ইলাহ নেই। চিরজীবী, সর্বসত্তার ধারক। তন্দ্রা বা নিদ্রা তাঁকে স্পর্শ করে না। আকাশ ও পৃথিবীতে যা কিছু আছে সব তাঁরই। তাঁর অনুমতি ছাড়া কে তাঁর কাছে সুপারিশ করতে পারবে? তারা তাঁর জ্ঞানের কিছুই আয়ত্ত করতে পারে না তাঁর ইচ্ছা ছাড়া। তাঁর কুরসি আকাশ ও পৃথিবী পরিব্যাপ্ত এবং এদের রক্ষণাবেক্ষণ তাঁকে ক্লান্ত করে না। তিনি সর্বোচ্চ, মহামহিম।</span></div>
         <span class="pill grn">📿 ১ বার</span>
         <div class="fad grn">🌟 প্রতিটি নামাজের পর পড়লে মৃত্যু ছাড়া কিছুই জান্নাত থেকে বিরত রাখতে পারবে না। <em>(নাসাঈ)</em></div>
       </div>
@@ -430,13 +583,16 @@ body{font-family:'Noto Sans Bengali',sans-serif;background:var(--cream);color:va
         <div class="cnum" style="background:var(--g-pale);color:var(--g);">২</div>
         <div class="ctitle">হাশরের শেষ ৩ আয়াত (৫৯:২২–২৪)</div>
         <div class="ar sm">هُوَ اللَّهُ الَّذِي لَا إِلَٰهَ إِلَّا هُوَ ۖ عَالِمُ الْغَيْبِ وَالشَّهَادَةِ ۖ هُوَ الرَّحْمَٰنُ الرَّحِيمُ</div>
-        <div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">হুওয়াল্লাহুল্লাযি লা ইলাহা ইল্লা হুয়া, আলিমুল গাইবি ওয়াশ-শাহাদাহ, হুওয়ার রহমানুর রহিম।</span></div>
+        <div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">হুওয়াল্লাহুল্লাযি লা ইলাহা ইল্লা হুওয়া, আলিমুল গাইবি ওয়াশ-শাহাদাহ, হুওয়ার রহমানুর রহিম।</span></div>
+        <div class="tr"><span class="tl">অর্থ:</span><span class="tt">তিনিই আল্লাহ — তিনি ছাড়া কোনো ইলাহ নেই। তিনি অদৃশ্য ও দৃশ্যমান সব কিছু জানেন। তিনিই দয়ালু, পরম করুণাময়।</span></div>
         <hr class="dhr">
         <div class="ar sm">هُوَ اللَّهُ الَّذِي لَا إِلَٰهَ إِلَّا هُوَ الْمَلِكُ الْقُدُّوسُ السَّلَامُ الْمُؤْمِنُ الْمُهَيْمِنُ الْعَزِيزُ الْجَبَّارُ الْمُتَكَبِّرُ ۚ سُبْحَانَ اللَّهِ عَمَّا يُشْرِكُونَ</div>
-        <div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">হুওয়াল্লাহুল মালিকুল কুদ্দুসুস সালামুল মু'মিনুল মুহাইমিনুল আযিযুল জাব্বারুল মুতাকাব্বির।</span></div>
+        <div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">হুওয়াল্লাহুল মালিকুল কুদ্দুসুস-সালামুল মু'মিনুল মুহাইমিনুল আযিযুল জাব্বারুল মুতাকাব্বির। সুবহানাল্লাহি আম্মা ইউশরিকুন।</span></div>
+        <div class="tr"><span class="tl">অর্থ:</span><span class="tt">তিনিই আল্লাহ — অধিপতি, অতিপবিত্র, শান্তিময়, নিরাপত্তাদাতা, রক্ষক, পরাক্রমশালী, প্রতাপশালী, অহংকারের যোগ্য। তারা যা শরিক করে, আল্লাহ তা থেকে পবিত্র।</span></div>
         <hr class="dhr">
         <div class="ar sm">هُوَ اللَّهُ الْخَالِقُ الْبَارِئُ الْمُصَوِّرُ ۖ لَهُ الْأَسْمَاءُ الْحُسْنَىٰ ۚ يُسَبِّحُ لَهُ مَا فِي السَّمَاوَاتِ وَالْأَرْضِ ۖ وَهُوَ الْعَزِيزُ الْحَكِيمُ</div>
-        <div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">হুওয়াল্লাহুল খালিকুল বারিউল মুসাওয়ির, লাহুল আসমাউল হুসনা, ওয়া হুওয়াল আযিযুল হাকিম।</span></div>
+        <div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">হুওয়াল্লাহুল খালিকুল বারিউল মুসাওয়ির, লাহুল আসমাউল হুসনা, ইউসাব্বিহু লাহু মা ফিস-সামাওয়াতি ওয়াল আরদ্বি, ওয়া হুওয়াল আযিযুল হাকিম।</span></div>
+        <div class="tr"><span class="tl">অর্থ:</span><span class="tt">তিনিই আল্লাহ — স্রষ্টা, উদ্ভাবক, রূপদাতা। সুন্দর নামগুলো তাঁরই। আকাশ ও পৃথিবীতে যা কিছু আছে সবই তাঁর তাসবিহ পাঠ করে। তিনি পরাক্রমশালী, প্রজ্ঞাময়।</span></div>
         <span class="pill grn">📿 ১ বার</span>
         <div class="fad grn">🌟 ৭০ হাজার ফেরেশতা দোয়া করবেন। <em>(তিরমিযি: ২৯২২)</em></div>
       </div>
@@ -459,15 +615,18 @@ body{font-family:'Noto Sans Bengali',sans-serif;background:var(--cream);color:va
         <div class="ctitle">তিন কুল — সূরা ইখলাস, ফালাক ও নাস</div>
         <div style="font-size:10px;font-weight:700;color:var(--g-mid);margin-bottom:5px;">① সূরা ইখলাস</div>
         <div class="ar sm">قُلْ هُوَ اللَّهُ أَحَدٌ ۝ اللَّهُ الصَّمَدُ ۝ لَمْ يَلِدْ وَلَمْ يُولَدْ ۝ وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ</div>
-        <div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">কুল হুওয়াল্লাহু আহাদ। আল্লাহুস সামাদ। লাম ইয়ালিদ ওয়ালাম ইউলাদ।</span></div>
+        <div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">কুল হুওয়াল্লাহু আহাদ। আল্লাহুস সামাদ। লাম ইয়ালিদ ওয়ালাম ইউলাদ। ওয়ালাম ইয়াকুল লাহু কুফুওয়ান আহাদ।</span></div>
+        <div class="tr"><span class="tl">অর্থ:</span><span class="tt">বলুন, তিনি আল্লাহ, এক-অদ্বিতীয়। আল্লাহ অমুখাপেক্ষী। তিনি কাউকে জন্ম দেননি এবং তাঁকেও জন্ম দেওয়া হয়নি। এবং তাঁর সমতুল্য কেউ নেই।</span></div>
         <hr class="dhr">
         <div style="font-size:10px;font-weight:700;color:var(--g-mid);margin-bottom:5px;">② সূরা ফালাক</div>
         <div class="ar sm">قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ ۝ مِن شَرِّ مَا خَلَقَ ۝ وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ ۝ وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ ۝ وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ</div>
-        <div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">কুল আউযু বিরাব্বিল ফালাক। মিন শাররি মা খালাক...</span></div>
+        <div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">কুল আউযু বিরাব্বিল ফালাক। মিন শাররি মা খালাক। ওয়া মিন শাররি গাসিকিন ইযা ওয়াকাব। ওয়া মিন শাররিন নাফ্ফাসাতি ফিল উকাদ। ওয়া মিন শাররি হাসিদিন ইযা হাসাদ।</span></div>
+        <div class="tr"><span class="tl">অর্থ:</span><span class="tt">বলুন, আমি আশ্রয় নিচ্ছি ঊষার রবের কাছে — তাঁর সৃষ্টির অনিষ্ট থেকে, রাতের অন্ধকারের অনিষ্ট থেকে, জাদুকারিণীদের ফুঁকের অনিষ্ট থেকে এবং হিংসুকের অনিষ্ট থেকে।</span></div>
         <hr class="dhr">
         <div style="font-size:10px;font-weight:700;color:var(--g-mid);margin-bottom:5px;">③ সূরা নাস</div>
         <div class="ar sm">قُلْ أَعُوذُ بِرَبِّ النَّاسِ ۝ مَلِكِ النَّاسِ ۝ إِلَٰهِ النَّاسِ ۝ مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ ۝ الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ ۝ مِنَ الْجِنَّةِ وَالنَّاسِ</div>
-        <div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">কুল আউযু বিরাব্বিন নাস। মালিকিন নাস। ইলাহিন নাস...</span></div>
+        <div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">কুল আউযু বিরাব্বিন-নাস। মালিকিন-নাস। ইলাহিন-নাস। মিন শাররিল ওয়াসওয়াসিল খান্নাস। আল্লাযি ইউওয়াসউইসু ফি সুদুরিন-নাস। মিনাল জিন্নাতি ওয়ান-নাস।</span></div>
+        <div class="tr"><span class="tl">অর্থ:</span><span class="tt">বলুন, আমি আশ্রয় নিচ্ছি মানুষের রবের কাছে — মানুষের অধিপতির কাছে, মানুষের ইলাহর কাছে — কুমন্ত্রণাদাতা আত্মগোপনকারীর অনিষ্ট থেকে, যে মানুষের বুকে কুমন্ত্রণা দেয় — সে জিন হোক বা মানুষ।</span></div>
         <span class="pill grn">📿 ৩ বার করে</span>
         <div class="fad grn">🌟 সারাদিনের সুরক্ষার জন্য যথেষ্ট। <em>(আবু দাউদ: ৫০৮২)</em></div>
       </div>
@@ -475,7 +634,8 @@ body{font-family:'Noto Sans Bengali',sans-serif;background:var(--cream);color:va
         <div class="cnum" style="background:var(--g-pale);color:var(--g);">৫</div>
         <div class="ctitle">দরূদে ইব্রাহিম</div>
         <div class="ar sm">اللَّهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَعَلَىٰ آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَىٰ إِبْرَاهِيمَ وَعَلَىٰ آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَّجِيدٌ ۝ اللَّهُمَّ بَارِكْ عَلَىٰ مُحَمَّدٍ وَعَلَىٰ آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَىٰ إِبْرَاهِيمَ وَعَلَىٰ آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَّجِيدٌ</div>
-        <div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">আল্লাহুম্মা সাল্লি আলা মুহাম্মাদিন ওয়া আলা আলি মুহাম্মাদ... ইন্নাকা হামিদুম মাজিদ।</span></div>
+        <div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">আল্লাহুম্মা সাল্লি আলা মুহাম্মাদিন ওয়া আলা আলি মুহাম্মাদ, কামা সাল্লাইতা আলা ইবরাহিমা ওয়া আলা আলি ইবরাহিম, ইন্নাকা হামিদুম মাজিদ। আল্লাহুম্মা বারিক আলা মুহাম্মাদিন ওয়া আলা আলি মুহাম্মাদ, কামা বারাকতা আলা ইবরাহিমা ওয়া আলা আলি ইবরাহিম, ইন্নাকা হামিদুম মাজিদ।</span></div>
+        <div class="tr"><span class="tl">অর্থ:</span><span class="tt">হে আল্লাহ! মুহাম্মদ ﷺ ও তাঁর পরিবারের উপর রহমত বর্ষণ করুন, যেভাবে ইবরাহিম (আ.) ও তাঁর পরিবারের উপর রহমত বর্ষণ করেছেন। নিশ্চয়ই আপনি প্রশংসিত, মহামহিম। হে আল্লাহ! মুহাম্মদ ﷺ ও তাঁর পরিবারকে বরকত দিন, যেভাবে ইবরাহিম (আ.) ও তাঁর পরিবারকে বরকত দিয়েছেন। নিশ্চয়ই আপনি প্রশংসিত, মহামহিম।</span></div>
         <span class="pill grn">📿 ১০ বার</span>
         <div class="fad grn">🌟 ১ বার পড়লে ১০ রহমত, ১০ গুনাহ মাফ। <em>(নাসাঈ: ১২৯৭)</em></div>
       </div>
@@ -494,50 +654,135 @@ body{font-family:'Noto Sans Bengali',sans-serif;background:var(--cream);color:va
     <div class="p-pg" id="p-zuhr">
       <div class="pbanner pb-zuhr"><span class="pb-ico">🌤️</span><div><div class="pb-t">যোহরের পরের আমল</div><div class="pb-s">যোহর নামাজের পর যেসব আমল করবেন</div></div></div>
       <div class="sl">ফরজ আমল</div>
-      <div class="ac blu"><div class="cnum" style="background:#EFF6FF;color:#1D4ED8;">১</div><div class="ctitle">আয়াতুল কুরসি</div><div class="ar sm">ٱللَّهُ لَآ إِلَٰهَ إِلَّا هُوَ ٱلْحَىُّ ٱلْقَيُّومُ...</div><span class="pill blu">📿 ১ বার</span><div class="fad grn">🌟 প্রতিটি নামাজের পর পড়া সুন্নাত।</div></div>
+      <div class="ac blu">
+        <div class="cnum" style="background:#EFF6FF;color:#1D4ED8;">১</div>
+        <div class="ctitle">আয়াতুল কুরসি</div>
+        <div class="ar sm">ٱللَّهُ لَآ إِلَٰهَ إِلَّا هُوَ ٱلْحَىُّ ٱلْقَيُّومُ ۚ لَا تَأْخُذُهُۥ سِنَةٌ وَلَا نَوْمٌ ۚ لَّهُۥ مَا فِى ٱلسَّمَٰوَٰتِ وَمَا فِى ٱلْأَرْضِ ۗ مَن ذَا ٱلَّذِى يَشْفَعُ عِندَهُۥٓ إِلَّا بِإِذْنِهِۦ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَىْءٍ مِّنْ عِلْمِهِۦٓ إِلَّا بِمَا شَآءَ ۚ وَسِعَ كُرْسِيُّهُ ٱلسَّمَٰوَٰتِ وَٱلْأَرْضَ ۖ وَلَا يَـُٔودُهُۥ حِفْظُهُمَا ۚ وَهُوَ ٱلْعَلِىُّ ٱلْعَظِيمُ</div>
+        <div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">আল্লাহু লা ইলাহা ইল্লা হুওয়াল হাইয়্যুল কাইয়্যুম। লা তা'খুযুহু সিনাতুঁ ওয়ালা নাউম। লাহু মা ফিস-সামাওয়াতি ওয়ামা ফিল-আরদ্বি। মান যাল্লাযি ইয়াশফাউ ইন্দাহু ইল্লা বিইযনিহি। ইয়া'লামু মা বাইনা আইদিহিম ওয়ামা খালফাহুম ওয়ালা ইউহিতুনা বিশাইয়িম মিন ইলমিহি ইল্লা বিমা শা'আ। ওয়াসিআ কুরসিইয়্যুহুস সামাওয়াতি ওয়াল আরদ্ব। ওয়ালা ইয়াউদুহু হিফযুহুমা ওয়া হুওয়াল আলিইয়্যুল আযিম।</span></div>
+        <div class="tr"><span class="tl">অর্থ:</span><span class="tt">আল্লাহ — তিনি ছাড়া কোনো ইলাহ নেই। চিরজীবী, সর্বসত্তার ধারক। তন্দ্রা বা নিদ্রা তাঁকে স্পর্শ করে না। আকাশ ও পৃথিবীতে যা কিছু আছে সব তাঁরই। তাঁর অনুমতি ছাড়া কে তাঁর কাছে সুপারিশ করতে পারবে? তারা তাঁর জ্ঞানের কিছুই আয়ত্ত করতে পারে না তাঁর ইচ্ছা ছাড়া। তাঁর কুরসি আকাশ ও পৃথিবী পরিব্যাপ্ত এবং এদের রক্ষণাবেক্ষণ তাঁকে ক্লান্ত করে না। তিনি সর্বোচ্চ, মহামহিম।</span></div>
+        <span class="pill blu">📿 ১ বার</span>
+        <div class="fad grn">🌟 প্রতিটি ফরজ নামাজের পর পড়লে মৃত্যু ছাড়া কিছুই জান্নাত থেকে বিরত রাখতে পারবে না। <em>(নাসাঈ)</em></div>
+      </div>
       <div class="sl">তাসবিহ</div>
       <div class="ac blu"><div class="cnum" style="background:#EFF6FF;color:#1D4ED8;">২</div><div class="ctitle">তিনটি তাসবিহ</div><div class="tbl"><div class="th"><span>আরবি</span><span>উচ্চারণ</span><span>অর্থ</span><span>বার</span></div><div class="trow"><span class="ta">سُبْحَانَ اللهِ</span><span>সুবহানাল্লাহ</span><span>আল্লাহ পবিত্র</span><span class="tc">৩৩</span></div><div class="trow"><span class="ta">الْحَمْدُ للهِ</span><span>আলহামদুলিল্লাহ</span><span>প্রশংসা</span><span class="tc">৩৩</span></div><div class="trow"><span class="ta">اللهُ أَكْبَرُ</span><span>আল্লাহু আকবার</span><span>আল্লাহ বড়</span><span class="tc">৩৪</span></div></div><div class="fad grn">🌟 গুনাহ মাফ হয়।</div></div>
       <div class="sl">বিশেষ আমল</div>
-      <div class="ac blu"><div class="cnum" style="background:#EFF6FF;color:#1D4ED8;">৩</div><div class="ctitle">আস্তাগফিরুল্লাহ</div><div class="ar sm">أَسْتَغْفِرُ اللّٰهَ</div><div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">আস্তাগফিরুল্লাহ।</span></div><span class="pill blu">📿 ১০০ বার</span><div class="fad grn">🌟 গুনাহ মাফ, মন পরিশুদ্ধ।</div></div>
-      <div class="ac blu"><div class="cnum" style="background:#EFF6FF;color:#1D4ED8;">৪</div><div class="ctitle">সুবহানাল্লাহি ওয়া বিহামদিহি</div><div class="ar sm">سُبْحَانَ اللهِ وَبِحَمْدِهِ سُبْحَانَ اللهِ الْعَظِيمِ</div><span class="pill blu">📿 ১০০ বার</span><div class="fad grn">🌟 মিযানে ভারী আমল।</div></div>
-      <div class="ac blu"><div class="cnum" style="background:#EFF6FF;color:#1D4ED8;">৫</div><div class="ctitle">রিজিকের দোয়া</div><div class="ar sm">رَبِّ زِدْنِي رِزْقًا حَلَالًا طَيِّبًا مُبَارَكًا</div><div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">রাব্বি যিদনি রিযকান হালালান তাইয়্যিবান মুবারাকান।</span></div><span class="pill blu">📿 ৭ বার</span></div>
+      <div class="ac blu">
+        <div class="cnum" style="background:#EFF6FF;color:#1D4ED8;">৩</div>
+        <div class="ctitle">আস্তাগফিরুল্লাহ</div>
+        <div class="ar sm">أَسْتَغْفِرُ اللّٰهَ</div>
+        <div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">আস্তাগফিরুল্লাহ।</span></div>
+        <div class="tr"><span class="tl">অর্থ:</span><span class="tt">আমি আল্লাহর কাছে ক্ষমা চাচ্ছি।</span></div>
+        <span class="pill blu">📿 ১০০ বার</span>
+        <div class="fad grn">🌟 গুনাহ মাফ হয়, মন পরিশুদ্ধ হয়। <em>(তিরমিযি: ৩৫৫৯)</em></div>
+      </div>
+      <div class="ac blu">
+        <div class="cnum" style="background:#EFF6FF;color:#1D4ED8;">৪</div>
+        <div class="ctitle">সুবহানাল্লাহি ওয়া বিহামদিহি</div>
+        <div class="ar sm">سُبْحَانَ اللهِ وَبِحَمْدِهِ سُبْحَانَ اللهِ الْعَظِيمِ</div>
+        <div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">সুবহানাল্লাহি ওয়া বিহামদিহি, সুবহানাল্লাহিল আযিম।</span></div>
+        <div class="tr"><span class="tl">অর্থ:</span><span class="tt">আল্লাহ পবিত্র এবং তাঁর প্রশংসা করি; মহান আল্লাহ পবিত্র।</span></div>
+        <span class="pill blu">📿 ১০০ বার</span>
+        <div class="fad grn">🌟 মিযানে সবচেয়ে ভারী আমল — আল্লাহর কাছে অত্যন্ত প্রিয়। <em>(বুখারি: ৬৪০৬)</em></div>
+      </div>
+      <div class="ac blu">
+        <div class="cnum" style="background:#EFF6FF;color:#1D4ED8;">৫</div>
+        <div class="ctitle">রিজিকের দোয়া</div>
+        <div class="ar sm">رَبِّ زِدْنِي رِزْقًا حَلَالًا طَيِّبًا مُبَارَكًا</div>
+        <div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">রাব্বি যিদনি রিযকান হালালান তাইয়্যিবান মুবারাকান।</span></div>
+        <div class="tr"><span class="tl">অর্থ:</span><span class="tt">হে আমার রব! আমাকে হালাল, পবিত্র ও বরকতময় রিজিক বাড়িয়ে দিন।</span></div>
+        <span class="pill blu">📿 ৭ বার</span>
+        <div class="fad grn">🌟 হালাল রিজিক ও জীবিকায় বরকতের জন্য অত্যন্ত কার্যকর দোয়া।</div>
+      </div>
     </div>
 
     <!-- আসর -->
     <div class="p-pg" id="p-asr">
       <div class="pbanner pb-asr"><span class="pb-ico">🌇</span><div><div class="pb-t">আসরের পরের আমল</div><div class="pb-s">আসর নামাজের পর যেসব আমল করবেন</div></div></div>
       <div class="sl">ফরজ আমল</div>
-      <div class="ac org"><div class="cnum" style="background:#FFF7ED;color:#C2410C;">১</div><div class="ctitle">আয়াতুল কুরসি</div><div class="ar sm">ٱللَّهُ لَآ إِلَٰهَ إِلَّا هُوَ ٱلْحَىُّ ٱلْقَيُّومُ...</div><span class="pill org">📿 ১ বার</span></div>
+      <div class="ac org"><div class="cnum" style="background:#FFF7ED;color:#C2410C;">১</div><div class="ctitle">আয়াতুল কুরসি</div><div class="ar sm">ٱللَّهُ لَآ إِلَٰهَ إِلَّا هُوَ ٱلْحَىُّ ٱلْقَيُّومُ ۚ لَا تَأْخُذُهُۥ سِنَةٌ وَلَا نَوْمٌ ۚ لَّهُۥ مَا فِى ٱلسَّمَٰوَٰتِ وَمَا فِى ٱلْأَرْضِ ۗ مَن ذَا ٱلَّذِى يَشْفَعُ عِندَهُۥٓ إِلَّا بِإِذْنِهِۦ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَىْءٍ مِّنْ عِلْمِهِۦٓ إِلَّا بِمَا شَآءَ ۚ وَسِعَ كُرْسِيُّهُ ٱلسَّمَٰوَٰتِ وَٱلْأَرْضَ ۖ وَلَا يَـُٔودُهُۥ حِفْظُهُمَا ۚ وَهُوَ ٱلْعَلِىُّ ٱلْعَظِيمُ</div><div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">আল্লাহু লা ইলাহা ইল্লা হুওয়াল হাইয়্যুল কাইয়্যুম। লা তা'খুযুহু সিনাতুও ওয়ালা নাউম। লাহু মা ফিস সামাওয়াতি ওয়ামা ফিল আরদ। মান যাল্লাযি ইয়াশফাউ ইনদাহু ইল্লা বিইযনিহ। ইয়া'লামু মা বাইনা আইদিহিম ওয়ামা খালফাহুম ওয়ালা ইউহিতুনা বিশাইয়িম মিন ইলমিহি ইল্লা বিমা শাআ। ওয়াসিআ কুরসিইয়্যুহুস সামাওয়াতি ওয়াল আরদ। ওয়ালা ইয়াউদুহু হিফজুহুমা ওয়া হুওয়াল আলিইয়্যুল আযিম।</span></div><div class="tr"><span class="tl">অর্থ:</span><span class="tt">আল্লাহ — তিনি ছাড়া কোনো ইলাহ নেই। তিনি চিরঞ্জীব, সর্বসত্তার ধারক। তন্দ্রা বা নিদ্রা তাঁকে স্পর্শ করতে পারে না। আসমান ও জমিনে যা কিছু আছে সবই তাঁর। তাঁর অনুমতি ছাড়া কে তাঁর সামনে সুপারিশ করবে? তিনি জানেন যা তাদের সামনে ও পেছনে আছে। তারা তাঁর জ্ঞানের কিছুই আয়ত্ত করতে পারে না, তবে তিনি যতটুকু ইচ্ছা করেন। তাঁর কুরসি আসমান ও জমিনকে পরিব্যাপ্ত। এ দুটির রক্ষণাবেক্ষণ তাঁকে ক্লান্ত করে না। তিনিই সর্বোচ্চ, মহামহিম।</span></div><span class="pill org">📿 ১ বার</span><div class="fad grn">🌟 প্রতিটি নামাজের পর পড়লে মৃত্যু ছাড়া কিছুই জান্নাত থেকে বিরত রাখতে পারবে না। <em>(নাসাঈ)</em></div></div>
       <div class="sl">তাসবিহ</div>
-      <div class="ac org"><div class="cnum" style="background:#FFF7ED;color:#C2410C;">২</div><div class="ctitle">তিনটি তাসবিহ</div><div class="tbl"><div class="th"><span>আরবি</span><span>উচ্চারণ</span><span>অর্থ</span><span>বার</span></div><div class="trow"><span class="ta">سُبْحَانَ اللهِ</span><span>সুবহানাল্লাহ</span><span>পবিত্র</span><span class="tc">৩৩</span></div><div class="trow"><span class="ta">الْحَمْدُ للهِ</span><span>আলহামদুলিল্লাহ</span><span>প্রশংসা</span><span class="tc">৩৩</span></div><div class="trow"><span class="ta">اللهُ أَكْبَرُ</span><span>আল্লাহু আকবার</span><span>বড়</span><span class="tc">৩৪</span></div></div></div>
+      <div class="ac org"><div class="cnum" style="background:#FFF7ED;color:#C2410C;">২</div><div class="ctitle">তিনটি তাসবিহ</div><div class="tbl"><div class="th"><span>আরবি</span><span>উচ্চারণ</span><span>অর্থ</span><span>বার</span></div><div class="trow"><span class="ta">سُبْحَانَ اللهِ</span><span>সুবহানাল্লাহ</span><span>আল্লাহ পবিত্র</span><span class="tc">৩৩</span></div><div class="trow"><span class="ta">الْحَمْدُ للهِ</span><span>আলহামদুলিল্লাহ</span><span>সকল প্রশংসা আল্লাহর</span><span class="tc">৩৩</span></div><div class="trow"><span class="ta">اللهُ أَكْبَرُ</span><span>আল্লাহু আকবার</span><span>আল্লাহ সবচেয়ে বড়</span><span class="tc">৩৪</span></div></div><div style="font-size:10px;color:var(--tx-lt);margin-bottom:5px;">শেষে ১ বার:</div><div class="ar sm">لَآ إِلَٰهَ إِلَّا ٱللَّهُ وَحْدَهُۥ لَا شَرِيكَ لَهُۥ لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ</div><div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">লা ইলাহা ইল্লাল্লাহু ওয়াহদাহু লা শারিকা লাহু, লাহুল মুলকু ওয়ালাহুল হামদু ওয়া হুওয়া আলা কুল্লি শাইয়িন কাদির।</span></div><div class="tr"><span class="tl">অর্থ:</span><span class="tt">আল্লাহ ছাড়া কোনো ইলাহ নেই, তিনি একক, তাঁর কোনো শরিক নেই। রাজত্ব তাঁর, প্রশংসা তাঁর এবং তিনি সবকিছুর উপর ক্ষমতাবান।</span></div><div class="fad grn">🌟 গুনাহ মাফ হয় — সমুদ্রের ফেনার মতো হলেও। <em>(মুসলিম: ৫৯৭)</em></div></div>
       <div class="sl">বিশেষ আমল</div>
-      <div class="ac org"><div class="cnum" style="background:#FFF7ED;color:#C2410C;">৩</div><div class="ctitle">লা ইলাহা ইল্লাল্লাহ</div><div class="ar sm">لَآ إِلَٰهَ إِلَّا ٱللَّهُ</div><span class="pill org">📿 ১০০ বার</span><div class="fad grn">🌟 জান্নাতের চাবি।</div></div>
-      <div class="ac org"><div class="cnum" style="background:#FFF7ED;color:#C2410C;">৪</div><div class="ctitle">আস্তাগফার ও তওবা</div><div class="ar sm">أَسْتَغْفِرُ اللّٰهَ وَأَتُوبُ إِلَيْهِ</div><span class="pill org">📿 ১০০ বার</span><div class="fad grn">🌟 সন্ধ্যার আগে গুনাহ মাফ।</div></div>
-      <div class="ac org"><div class="cnum" style="background:#FFF7ED;color:#C2410C;">৫</div><div class="ctitle">বিপদ থেকে মুক্তির দোয়া</div><div class="ar sm">اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْهَمِّ وَالْحَزَنِ وَالْعَجْزِ وَالْكَسَلِ</div><div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">আল্লাহুম্মা ইন্নি আউযু বিকা মিনাল হাম্মি ওয়াল হাযানি ওয়াল আজযি ওয়াল কাসালি।</span></div><span class="pill org">📿 ৩ বার</span><div class="fad grn">🌟 দুশ্চিন্তা থেকে মুক্তি।</div></div>
+      <div class="ac org"><div class="cnum" style="background:#FFF7ED;color:#C2410C;">৩</div><div class="ctitle">লা ইলাহা ইল্লাল্লাহ</div><div class="ar sm">لَآ إِلَٰهَ إِلَّا ٱللَّهُ</div><div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">লা ইলাহা ইল্লাল্লাহ।</span></div><div class="tr"><span class="tl">অর্থ:</span><span class="tt">আল্লাহ ছাড়া কোনো ইলাহ নেই।</span></div><span class="pill org">📿 ১০০ বার</span><div class="fad grn">🌟 জান্নাতের চাবি — এটি সর্বোত্তম যিকির। <em>(তিরমিযি: ৩৩৮৩)</em></div></div>
+      <div class="ac org"><div class="cnum" style="background:#FFF7ED;color:#C2410C;">৪</div><div class="ctitle">আস্তাগফার ও তওবা</div><div class="ar sm">أَسْتَغْفِرُ اللّٰهَ وَأَتُوبُ إِلَيْهِ</div><div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">আস্তাগফিরুল্লাহা ওয়া আতুবু ইলাইহ।</span></div><div class="tr"><span class="tl">অর্থ:</span><span class="tt">আমি আল্লাহর কাছে ক্ষমা চাই এবং তাঁর কাছে তওবা করি।</span></div><span class="pill org">📿 ১০০ বার</span><div class="fad grn">🌟 সন্ধ্যার আগে গুনাহ মাফ — রাসূল ﷺ দৈনিক ১০০ বার পড়তেন। <em>(বুখারি: ৬৩০৭)</em></div></div>
+      <div class="ac org"><div class="cnum" style="background:#FFF7ED;color:#C2410C;">৫</div><div class="ctitle">বিপদ থেকে মুক্তির দোয়া</div><div class="ar sm">اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْهَمِّ وَالْحَزَنِ وَالْعَجْزِ وَالْكَسَلِ</div><div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">আল্লাহুম্মা ইন্নি আউযু বিকা মিনাল হাম্মি ওয়াল হাযানি ওয়াল আজযি ওয়াল কাসালি।</span></div><div class="tr"><span class="tl">অর্থ:</span><span class="tt">হে আল্লাহ! আমি তোমার কাছে দুশ্চিন্তা, দুঃখ, অক্ষমতা ও অলসতা থেকে আশ্রয় চাই।</span></div><span class="pill org">📿 ৩ বার</span><div class="fad grn">🌟 দুশ্চিন্তা ও অলসতা থেকে মুক্তির সুন্নাতি দোয়া। <em>(বুখারি: ২৮৯৩)</em></div></div>
     </div>
 
     <!-- মাগরিব -->
     <div class="p-pg" id="p-maghrib">
       <div class="pbanner pb-maghrib"><span class="pb-ico">🌆</span><div><div class="pb-t">মাগরিবের পরের আমল</div><div class="pb-s">মাগরিব নামাজের পর যেসব আমল করবেন</div></div></div>
       <div class="sl">ফরজ আমল</div>
-      <div class="ac pur"><div class="cnum" style="background:#F5F3FF;color:#6D28D9;">১</div><div class="ctitle">আয়াতুল কুরসি</div><div class="ar sm">ٱللَّهُ لَآ إِلَٰهَ إِلَّا هُوَ ٱلْحَىُّ ٱلْقَيُّومُ...</div><span class="pill pur">📿 ১ বার</span><div class="fad grn">🌟 সারারাত ফেরেশতার হেফাজত।</div></div>
+      <div class="ac pur"><div class="cnum" style="background:#F5F3FF;color:#6D28D9;">১</div><div class="ctitle">আয়াতুল কুরসি</div><div class="ar sm">ٱللَّهُ لَآ إِلَٰهَ إِلَّا هُوَ ٱلْحَىُّ ٱلْقَيُّومُ ۚ لَا تَأْخُذُهُۥ سِنَةٌ وَلَا نَوْمٌ ۚ لَّهُۥ مَا فِى ٱلسَّمَٰوَٰتِ وَمَا فِى ٱلْأَرْضِ ۗ مَن ذَا ٱلَّذِى يَشْفَعُ عِندَهُۥٓ إِلَّا بِإِذْنِهِۦ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَىْءٍ مِّنْ عِلْمِهِۦٓ إِلَّا بِمَا شَآءَ ۚ وَسِعَ كُرْسِيُّهُ ٱلسَّمَٰوَٰتِ وَٱلْأَرْضَ ۖ وَلَا يَـُٔودُهُۥ حِفْظُهُمَا ۚ وَهُوَ ٱلْعَلِىُّ ٱلْعَظِيمُ</div><div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">আল্লাহু লা ইলাহা ইল্লা হুওয়াল হাইয়্যুল কাইয়্যুম। লা তা'খুযুহু সিনাতুও ওয়ালা নাউম। লাহু মা ফিস সামাওয়াতি ওয়ামা ফিল আরদ। মান যাল্লাযি ইয়াশফাউ ইনদাহু ইল্লা বিইযনিহ। ইয়া'লামু মা বাইনা আইদিহিম ওয়ামা খালফাহুম ওয়ালা ইউহিতুনা বিশাইয়িম মিন ইলমিহি ইল্লা বিমা শাআ। ওয়াসিআ কুরসিইয়্যুহুস সামাওয়াতি ওয়াল আরদ। ওয়ালা ইয়াউদুহু হিফজুহুমা ওয়া হুওয়াল আলিইয়্যুল আযিম।</span></div><div class="tr"><span class="tl">অর্থ:</span><span class="tt">আল্লাহ — তিনি ছাড়া কোনো ইলাহ নেই। তিনি চিরঞ্জীব, সর্বসত্তার ধারক। তন্দ্রা বা নিদ্রা তাঁকে স্পর্শ করতে পারে না। আসমান ও জমিনে যা কিছু আছে সবই তাঁর। তাঁর অনুমতি ছাড়া কে তাঁর সামনে সুপারিশ করবে? তিনি জানেন যা তাদের সামনে ও পেছনে আছে। তারা তাঁর জ্ঞানের কিছুই আয়ত্ত করতে পারে না, তবে তিনি যতটুকু ইচ্ছা করেন। তাঁর কুরসি আসমান ও জমিনকে পরিব্যাপ্ত। এ দুটির রক্ষণাবেক্ষণ তাঁকে ক্লান্ত করে না। তিনিই সর্বোচ্চ, মহামহিম।</span></div><span class="pill pur">📿 ১ বার</span><div class="fad grn">🌟 সারারাত ফেরেশতার হেফাজত — জান্নাতে প্রবেশের পথ খুলে যায়। <em>(নাসাঈ)</em></div></div>
       <div class="sl">তাসবিহ ও সুরক্ষা</div>
-      <div class="ac pur"><div class="cnum" style="background:#F5F3FF;color:#6D28D9;">২</div><div class="ctitle">তিনটি তাসবিহ</div><div class="tbl"><div class="th"><span>আরবি</span><span>উচ্চারণ</span><span>অর্থ</span><span>বার</span></div><div class="trow"><span class="ta">سُبْحَانَ اللهِ</span><span>সুবহানাল্লাহ</span><span>পবিত্র</span><span class="tc">৩৩</span></div><div class="trow"><span class="ta">الْحَمْدُ للهِ</span><span>আলহামদুলিল্লাহ</span><span>প্রশংসা</span><span class="tc">৩৩</span></div><div class="trow"><span class="ta">اللهُ أَكْبَرُ</span><span>আল্লাহু আকবার</span><span>বড়</span><span class="tc">৩৪</span></div></div></div>
-      <div class="ac pur"><div class="cnum" style="background:#F5F3FF;color:#6D28D9;">৩</div><div class="ctitle">তিন কুল — ৩ বার করে</div><div class="tr"><span class="tl" style="color:#6D28D9;">সূরা:</span><span class="tt">সূরা ইখলাস + ফালাক + নাস — প্রতিটি ৩ বার</span></div><span class="pill pur">📿 ৩ বার করে</span><div class="fad grn">🌟 রাতের সুরক্ষা।</div></div>
-      <div class="ac gld"><div class="cnum" style="background:#FEF3C7;color:#92400E;">৪</div><div class="ctitle" style="color:#92400E;">জাহান্নাম থেকে মুক্তির দোয়া</div><div class="ar sm gb">اللَّهُمَّ أَجِرْنِي مِنَ النَّارِ</div><span class="pill gld">🔥 ৭ বার</span><div class="fad gld">🌟 সেরাতে মারা গেলে জাহান্নাম থেকে মুক্তি।</div></div>
-      <div class="ac pur"><div class="cnum" style="background:#F5F3FF;color:#6D28D9;">৫</div><div class="ctitle">দরূদে ইব্রাহিম</div><div class="ar sm">اللَّهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَعَلَىٰ آلِ مُحَمَّدٍ...</div><span class="pill pur">📿 ১০ বার</span><div class="fad grn">🌟 রাসূলের ﷺ সুপারিশ লাভ।</div></div>
+      <div class="ac pur"><div class="cnum" style="background:#F5F3FF;color:#6D28D9;">২</div><div class="ctitle">তিনটি তাসবিহ</div><div class="tbl"><div class="th"><span>আরবি</span><span>উচ্চারণ</span><span>অর্থ</span><span>বার</span></div><div class="trow"><span class="ta">سُبْحَانَ اللهِ</span><span>সুবহানাল্লাহ</span><span>আল্লাহ পবিত্র</span><span class="tc">৩৩</span></div><div class="trow"><span class="ta">الْحَمْدُ للهِ</span><span>আলহামদুলিল্লাহ</span><span>সকল প্রশংসা আল্লাহর</span><span class="tc">৩৩</span></div><div class="trow"><span class="ta">اللهُ أَكْبَرُ</span><span>আল্লাহু আকবার</span><span>আল্লাহ সবচেয়ে বড়</span><span class="tc">৩৪</span></div></div><div style="font-size:10px;color:var(--tx-lt);margin-bottom:5px;">শেষে ১ বার:</div><div class="ar sm">لَآ إِلَٰهَ إِلَّا ٱللَّهُ وَحْدَهُۥ لَا شَرِيكَ لَهُۥ لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ</div><div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">লা ইলাহা ইল্লাল্লাহু ওয়াহদাহু লা শারিকা লাহু, লাহুল মুলকু ওয়ালাহুল হামদু ওয়া হুওয়া আলা কুল্লি শাইয়িন কাদির।</span></div><div class="tr"><span class="tl">অর্থ:</span><span class="tt">আল্লাহ ছাড়া কোনো ইলাহ নেই, তিনি একক, তাঁর কোনো শরিক নেই। রাজত্ব তাঁর, প্রশংসা তাঁর এবং তিনি সবকিছুর উপর ক্ষমতাবান।</span></div><div class="fad grn">🌟 গুনাহ মাফ হয় — সমুদ্রের ফেনার মতো হলেও। <em>(মুসলিম: ৫৯৭)</em></div></div>
+      <div class="ac pur"><div class="cnum" style="background:#F5F3FF;color:#6D28D9;">৩</div><div class="ctitle">তিন কুল — ৩ বার করে</div>
+        <div style="font-size:10px;font-weight:700;color:#6D28D9;margin-bottom:5px;">① সূরা ইখলাস</div>
+        <div class="ar sm">قُلْ هُوَ اللَّهُ أَحَدٌ ۝ اللَّهُ الصَّمَدُ ۝ لَمْ يَلِدْ وَلَمْ يُولَدْ ۝ وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ</div>
+        <div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">কুল হুওয়াল্লাহু আহাদ। আল্লাহুস সামাদ। লাম ইয়ালিদ ওয়ালাম ইউলাদ। ওয়ালাম ইয়াকুল্লাহু কুফুওয়ান আহাদ।</span></div>
+        <div class="tr"><span class="tl">অর্থ:</span><span class="tt">বলুন, তিনি আল্লাহ, একক। আল্লাহ অমুখাপেক্ষী। তিনি কাউকে জন্ম দেননি এবং তাঁকেও কেউ জন্ম দেয়নি। আর তাঁর সমতুল্য কেউ নেই।</span></div>
+        <hr class="dhr">
+        <div style="font-size:10px;font-weight:700;color:#6D28D9;margin-bottom:5px;">② সূরা ফালাক</div>
+        <div class="ar sm">قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ ۝ مِن شَرِّ مَا خَلَقَ ۝ وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ ۝ وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ ۝ وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ</div>
+        <div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">কুল আউযু বিরাব্বিল ফালাক। মিন শাররি মা খালাক। ওয়ামিন শাররি গাসিকিন ইযা ওয়াকাব। ওয়ামিন শাররিন নাফ্ফাসাতি ফিল উকাদ। ওয়ামিন শাররি হাসিদিন ইযা হাসাদ।</span></div>
+        <div class="tr"><span class="tl">অর্থ:</span><span class="tt">বলুন, আমি আশ্রয় নিচ্ছি ঊষার রবের কাছে। তাঁর সৃষ্টির অনিষ্ট থেকে, রাতের অন্ধকারের অনিষ্ট থেকে, গিঁটে ফুঁকদানকারীদের অনিষ্ট থেকে এবং হিংসুকের হিংসার অনিষ্ট থেকে।</span></div>
+        <hr class="dhr">
+        <div style="font-size:10px;font-weight:700;color:#6D28D9;margin-bottom:5px;">③ সূরা নাস</div>
+        <div class="ar sm">قُلْ أَعُوذُ بِرَبِّ النَّاسِ ۝ مَلِكِ النَّاسِ ۝ إِلَٰهِ النَّاسِ ۝ مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ ۝ الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ ۝ مِنَ الْجِنَّةِ وَالنَّاسِ</div>
+        <div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">কুল আউযু বিরাব্বিন নাস। মালিকিন নাস। ইলাহিন নাস। মিন শাররিল ওয়াসওয়াসিল খান্নাস। আল্লাযি ইউওয়াসউয়িসু ফি সুদুরিন নাস। মিনাল জিন্নাতি ওয়ান নাস।</span></div>
+        <div class="tr"><span class="tl">অর্থ:</span><span class="tt">বলুন, আমি আশ্রয় নিচ্ছি মানুষের রবের কাছে, মানুষের অধিপতির কাছে, মানুষের ইলাহের কাছে। কুমন্ত্রণাদাতার অনিষ্ট থেকে, যে পিছু হটে — যে মানুষের বুকে কুমন্ত্রণা দেয় — জিন ও মানুষের মধ্য থেকে।</span></div>
+        <span class="pill pur">📿 ৩ বার করে</span><div class="fad grn">🌟 রাতের সুরক্ষার জন্য যথেষ্ট। <em>(আবু দাউদ: ৫০৮২)</em></div></div>
+      <div class="ac gld"><div class="cnum" style="background:#FEF3C7;color:#92400E;">৪</div><div class="ctitle" style="color:#92400E;">জাহান্নাম থেকে মুক্তির দোয়া</div><div class="ar sm gb">اللَّهُمَّ أَجِرْنِي مِنَ النَّارِ</div><div class="tr"><span class="tl g">উচ্চারণ:</span><span class="tt">আল্লাহুম্মা আজিরনি মিনান্নার।</span></div><div class="tr"><span class="tl g">অর্থ:</span><span class="tt">হে আল্লাহ! আমাকে জাহান্নামের আগুন থেকে রক্ষা করুন।</span></div><span class="pill gld">🔥 ৭ বার</span><div class="fad gld">🌟 সেরাতে মারা গেলে জাহান্নাম থেকে মুক্তি। <em>(আবু দাউদ: ৫০৭৯)</em></div></div>
+      <div class="ac pur"><div class="cnum" style="background:#F5F3FF;color:#6D28D9;">৫</div><div class="ctitle">দরূদে ইব্রাহিম</div><div class="ar sm">اللَّهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَعَلَىٰ آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَىٰ إِبْرَاهِيمَ وَعَلَىٰ آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَّجِيدٌ ۝ اللَّهُمَّ بَارِكْ عَلَىٰ مُحَمَّدٍ وَعَلَىٰ آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَىٰ إِبْرَاهِيمَ وَعَلَىٰ آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَّجِيدٌ</div><div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">আল্লাহুম্মা সাল্লি আলা মুহাম্মাদিন ওয়া আলা আলি মুহাম্মাদ, কামা সাল্লাইতা আলা ইব্রাহিমা ওয়া আলা আলি ইব্রাহিম, ইন্নাকা হামিদুম মাজিদ। আল্লাহুম্মা বারিক আলা মুহাম্মাদিন ওয়া আলা আলি মুহাম্মাদ, কামা বারাকতা আলা ইব্রাহিমা ওয়া আলা আলি ইব্রাহিম, ইন্নাকা হামিদুম মাজিদ।</span></div><div class="tr"><span class="tl">অর্থ:</span><span class="tt">হে আল্লাহ! মুহাম্মাদ ও তাঁর পরিবারের উপর রহমত বর্ষণ করুন, যেমন ইব্রাহিম ও তাঁর পরিবারের উপর রহমত বর্ষণ করেছেন। নিশ্চয়ই আপনি প্রশংসিত ও মহামহিম। হে আল্লাহ! মুহাম্মাদ ও তাঁর পরিবারকে বরকত দিন, যেমন ইব্রাহিম ও তাঁর পরিবারকে বরকত দিয়েছেন। নিশ্চয়ই আপনি প্রশংসিত ও মহামহিম।</span></div><span class="pill pur">📿 ১০ বার</span><div class="fad grn">🌟 ১ বার পড়লে ১০ রহমত, ১০ গুনাহ মাফ, ১০ মর্যাদা বৃদ্ধি। রাসূলের ﷺ সুপারিশ লাভ। <em>(নাসাঈ: ১২৯৭)</em></div></div>
     </div>
 
     <!-- এশা -->
     <div class="p-pg" id="p-isha">
       <div class="pbanner pb-isha"><span class="pb-ico">🌙</span><div><div class="pb-t">এশার পরের আমল</div><div class="pb-s">এশা নামাজের পর যেসব আমল করবেন</div></div></div>
       <div class="sl">ফরজ আমল</div>
-      <div class="ac ngt"><div class="cnum" style="background:#F0F9FF;color:#0F172A;">১</div><div class="ctitle">আয়াতুল কুরসি</div><div class="ar sm">ٱللَّهُ لَآ إِلَٰهَ إِلَّا هُوَ ٱلْحَىُّ ٱلْقَيُّومُ...</div><span class="pill ngt">📿 ১ বার — ঘুমানোর আগেও</span><div class="fad grn">🌟 সারারাত ফেরেশতার হেফাজত।</div></div>
+      <div class="ac ngt">
+        <div class="cnum" style="background:#F0F9FF;color:#0F172A;">১</div>
+        <div class="ctitle">আয়াতুল কুরসি</div>
+        <div class="ar sm">ٱللَّهُ لَآ إِلَٰهَ إِلَّا هُوَ ٱلْحَىُّ ٱلْقَيُّومُ ۚ لَا تَأْخُذُهُۥ سِنَةٌ وَلَا نَوْمٌ ۚ لَّهُۥ مَا فِى ٱلسَّمَٰوَٰتِ وَمَا فِى ٱلْأَرْضِ ۗ مَن ذَا ٱلَّذِى يَشْفَعُ عِندَهُۥٓ إِلَّا بِإِذْنِهِۦ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَىْءٍ مِّنْ عِلْمِهِۦٓ إِلَّا بِمَا شَآءَ ۚ وَسِعَ كُرْسِيُّهُ ٱلسَّمَٰوَٰتِ وَٱلْأَرْضَ ۖ وَلَا يَـُٔودُهُۥ حِفْظُهُمَا ۚ وَهُوَ ٱلْعَلِىُّ ٱلْعَظِيمُ</div>
+        <div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">আল্লাহু লা ইলাহা ইল্লা হুওয়াল হাইয়্যুল কাইয়্যুম। লা তা'খুযুহু সিনাতুঁ ওয়ালা নাউম। লাহু মা ফিস-সামাওয়াতি ওয়ামা ফিল-আরদ্বি। মান যাল্লাযি ইয়াশফাউ ইন্দাহু ইল্লা বিইযনিহি। ইয়া'লামু মা বাইনা আইদিহিম ওয়ামা খালফাহুম ওয়ালা ইউহিতুনা বিশাইয়িম মিন ইলমিহি ইল্লা বিমা শা'আ। ওয়াসিআ কুরসিইয়্যুহুস সামাওয়াতি ওয়াল আরদ্ব। ওয়ালা ইয়াউদুহু হিফযুহুমা ওয়া হুওয়াল আলিইয়্যুল আযিম।</span></div>
+        <div class="tr"><span class="tl">অর্থ:</span><span class="tt">আল্লাহ — তিনি ছাড়া কোনো ইলাহ নেই। চিরজীবী, সর্বসত্তার ধারক। তন্দ্রা বা নিদ্রা তাঁকে স্পর্শ করে না। আকাশ ও পৃথিবীতে যা কিছু আছে সব তাঁরই। তাঁর অনুমতি ছাড়া কে তাঁর কাছে সুপারিশ করতে পারবে? তারা তাঁর জ্ঞানের কিছুই আয়ত্ত করতে পারে না তাঁর ইচ্ছা ছাড়া। তাঁর কুরসি আকাশ ও পৃথিবী পরিব্যাপ্ত এবং এদের রক্ষণাবেক্ষণ তাঁকে ক্লান্ত করে না। তিনি সর্বোচ্চ, মহামহিম।</span></div>
+        <span class="pill ngt">📿 ১ বার — ঘুমানোর আগেও</span>
+        <div class="fad grn">🌟 সারারাত ফেরেশতার হেফাজতে থাকবেন। <em>(নাসাঈ)</em></div>
+      </div>
       <div class="sl">তাসবিহ ফাতিমা</div>
-      <div class="ac ngt"><div class="cnum" style="background:#F0F9FF;color:#0F172A;">২</div><div class="ctitle">তাসবিহ ফাতিমা — শুয়ে পড়া</div><div class="tbl"><div class="th"><span>আরবি</span><span>উচ্চারণ</span><span>অর্থ</span><span>বার</span></div><div class="trow"><span class="ta">سُبْحَانَ اللهِ</span><span>সুবহানাল্লাহ</span><span>পবিত্র</span><span class="tc">৩৩</span></div><div class="trow"><span class="ta">الْحَمْدُ للهِ</span><span>আলহামদুলিল্লাহ</span><span>প্রশংসা</span><span class="tc">৩৩</span></div><div class="trow"><span class="ta">اللهُ أَكْبَرُ</span><span>আল্লাহু আকবার</span><span>বড়</span><span class="tc">৩৪</span></div></div><div class="fad grn">🌟 দারিদ্র্য দূর, শক্তি বৃদ্ধি।</div></div>
+      <div class="ac ngt">
+        <div class="cnum" style="background:#F0F9FF;color:#0F172A;">২</div>
+        <div class="ctitle">তাসবিহ ফাতিমা — শুয়ে পড়া</div>
+        <div class="tbl"><div class="th"><span>আরবি</span><span>উচ্চারণ</span><span>অর্থ</span><span>বার</span></div>
+          <div class="trow"><span class="ta">سُبْحَانَ اللهِ</span><span>সুবহানাল্লাহ</span><span>আল্লাহ পবিত্র</span><span class="tc">৩৩</span></div>
+          <div class="trow"><span class="ta">الْحَمْدُ للهِ</span><span>আলহামদুলিল্লাহ</span><span>সব প্রশংসা আল্লাহর</span><span class="tc">৩৩</span></div>
+          <div class="trow"><span class="ta">اللهُ أَكْبَرُ</span><span>আল্লাহু আকবার</span><span>আল্লাহ সবচেয়ে বড়</span><span class="tc">৩৪</span></div>
+        </div>
+        <div style="font-size:10px;color:var(--tx-lt);margin-bottom:5px;">শেষে ১ বার:</div>
+        <div class="ar sm">لَآ إِلَٰهَ إِلَّا ٱللَّهُ وَحْدَهُۥ لَا شَرِيكَ لَهُۥ لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ</div>
+        <div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">লা ইলাহা ইল্লাল্লাহু ওয়াহদাহু লা শারিকা লাহু, লাহুল মুলকু ওয়ালাহুল হামদু ওয়া হুওয়া আলা কুল্লি শাইয়িন কাদির।</span></div>
+        <div class="tr"><span class="tl">অর্থ:</span><span class="tt">আল্লাহ ছাড়া কোনো ইলাহ নেই, তিনি একা, তাঁর কোনো শরিক নেই। রাজত্ব তাঁরই, প্রশংসা তাঁরই এবং তিনি সব কিছুর উপর ক্ষমতাবান।</span></div>
+        <div class="fad grn">🌟 রাসূল ﷺ ফাতিমা (রা.)-কে শেখালেন — এটি একজন খাদেম রাখার চেয়ে উত্তম। দারিদ্র্য দূর হয় ও শক্তি বৃদ্ধি পায়। <em>(বুখারি: ৩৭০৫)</em></div>
+      </div>
       <div class="sl">বিশেষ আমল</div>
-      <div class="ac ngt"><div class="cnum" style="background:#F0F9FF;color:#0F172A;">৩</div><div class="ctitle">সূরা মুলক তেলাওয়াত</div><div class="tr"><span class="tl">বিবরণ:</span><span class="tt">ঘুমানোর আগে সূরা মুলক (সূরা নং ৬৭) পূর্ণ তেলাওয়াত।</span></div><span class="pill ngt">📿 ১ বার</span><div class="fad grn">🌟 কবরের আজাব থেকে মুক্তি।</div></div>
-      <div class="ac gld"><div class="cnum" style="background:#FEF3C7;color:#92400E;">৪</div><div class="ctitle" style="color:#92400E;">ঘুমানোর দোয়া</div><div class="ar sm gb">بِاسْمِكَ اللَّهُمَّ أَمُوتُ وَأَحْيَا</div><div class="tr"><span class="tl g">উচ্চারণ:</span><span class="tt">বিসমিকাল্লাহুম্মা আমুতু ওয়া আহইয়া।</span></div><span class="pill gld">📿 ১ বার</span></div>
+      <div class="ac ngt">
+        <div class="cnum" style="background:#F0F9FF;color:#0F172A;">৩</div>
+        <div class="ctitle">সূরা মুলক তেলাওয়াত</div>
+        <div class="ar sm" style="font-size:15px;">تَبَارَكَ الَّذِي بِيَدِهِ الْمُلْكُ وَهُوَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ</div>
+        <div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">তাবারাকাল্লাযি বিয়াদিহিল মুলকু ওয়া হুওয়া আলা কুল্লি শাইয়িন কাদির। (প্রথম আয়াত)</span></div>
+        <div class="tr"><span class="tl">অর্থ:</span><span class="tt">মহান বরকতময় তিনি — যাঁর হাতে সমস্ত রাজত্ব এবং তিনি সব কিছুর উপর ক্ষমতাবান। (সূরা মুলক, আয়াত ১ — সূরা নং ৬৭, মোট ৩০ আয়াত)</span></div>
+        <div class="tr"><span class="tl">বিবরণ:</span><span class="tt">ঘুমানোর আগে সূরা মুলক (সূরা নং ৬৭) পূর্ণ তেলাওয়াত করুন।</span></div>
+        <span class="pill ngt">📿 ১ বার (সম্পূর্ণ সূরা)</span>
+        <div class="fad grn">🌟 কবরের আজাব থেকে সুরক্ষা করে — নবী ﷺ প্রতি রাতে এটি তেলাওয়াত না করে ঘুমাতেন না। <em>(তিরমিযি: ২৮৯২)</em></div>
+      </div>
+      <div class="ac gld">
+        <div class="cnum" style="background:#FEF3C7;color:#92400E;">৪</div>
+        <div class="ctitle" style="color:#92400E;">ঘুমানোর দোয়া</div>
+        <div class="ar sm gb">بِاسْمِكَ اللَّهُمَّ أَمُوتُ وَأَحْيَا</div>
+        <div class="tr"><span class="tl g">উচ্চারণ:</span><span class="tt">বিসমিকাল্লাহুম্মা আমুতু ওয়া আহইয়া।</span></div>
+        <div class="tr"><span class="tl g">অর্থ:</span><span class="tt">হে আল্লাহ! তোমার নামে আমি মরি এবং জীবিত হই (অর্থাৎ ঘুমাই ও জাগি)।</span></div>
+        <span class="pill gld">📿 ১ বার</span>
+        <div class="fad gld">🌟 নবী ﷺ প্রতি রাতে ঘুমানোর আগে এই দোয়া পড়তেন। <em>(বুখারি: ৬৩১২)</em></div>
+      </div>
     </div>
 
   </div><!-- /prayer-content -->
@@ -591,36 +836,31 @@ body{font-family:'Noto Sans Bengali',sans-serif;background:var(--cream);color:va
       <div class="db" id="done2">🎉 আল্লাহু আকবার! ৩৪ বার সম্পন্ন!</div>
     </div>
 
+    <div class="cc" style="border-color:#A78BFA;background:linear-gradient(145deg,#F5F3FF,#EDE9FE);">
+      <div class="car" style="color:#4C1D95;">أَسْتَغْفِرُ اللّٰهَ</div>
+      <div class="cnm" style="color:#4C1D95;">আস্তাগফিরুল্লাহ</div>
+      <div class="cdis" id="d3" style="color:#6D28D9;">০</div>
+      <div class="ctg">লক্ষ্য: <strong>১০০</strong> বার</div>
+      <div class="pb" style="background:#EDE9FE;"><div class="pf" id="p3" style="width:0%;background:linear-gradient(90deg,#6D28D9,#A78BFA);"></div></div>
+      <div class="br">
+        <button class="bm" style="border-color:#A78BFA;background:#F5F3FF;color:#6D28D9;" onclick="dec(3)">−</button>
+        <button class="bt" style="background:linear-gradient(135deg,#6D28D9,#8B5CF6);" onclick="inc(3)">+</button>
+        <button class="bs" onclick="reset(3)">↺</button>
+      </div>
+      <div class="db" id="done3" style="background:linear-gradient(135deg,#EDE9FE,#DDD6FE);border-color:#A78BFA;color:#4C1D95;">🎉 আস্তাগফিরুল্লাহ! ১০০ বার সম্পন্ন!</div>
+      <div style="background:linear-gradient(135deg,#F5F3FF,#EDE9FE);border:1px solid #C4B5FD;border-radius:7px;padding:8px 10px;font-size:10px;line-height:1.7;margin-top:8px;color:#4C1D95;">
+        🌟 <strong>ফজিলত:</strong> রাসূলুল্লাহ ﷺ বলেছেন: "যে ব্যক্তি নিয়মিত ইস্তিগফার করে, আল্লাহ তার প্রতিটি সংকট থেকে মুক্তির পথ করে দেন, প্রতিটি দুশ্চিন্তা দূর করেন এবং অপ্রত্যাশিত জায়গা থেকে তাকে রিজিক দেন।" <em>(আবু দাউদ: ১৫২০)</em><br>
+        🌟 রাসূল ﷺ নিজে দৈনিক ৭০–১০০ বার ইস্তিগফার করতেন। <em>(বুখারি: ৬৩০৭)</em>
+      </div>
+    </div>
+
     <div id="allDone" style="display:none;text-align:center;background:linear-gradient(135deg,#D1FAE5,#A7F3D0);border:1.5px solid var(--g-light);border-radius:14px;padding:18px;margin-bottom:12px;">
       <div style="font-size:34px;margin-bottom:5px;">🤲</div>
       <div style="font-size:16px;font-weight:700;color:var(--g-dark);margin-bottom:4px;">মাশাআল্লাহ!</div>
-      <div style="font-size:12px;color:var(--g);line-height:1.8;">তিনটি তাসবিহ সম্পন্ন। এখন পড়ুন:</div>
+      <div style="font-size:12px;color:var(--g);line-height:1.8;">চারটি তাসবিহ সম্পন্ন। এখন পড়ুন:</div>
       <div style="font-family:'Noto Naskh Arabic',serif;font-size:16px;direction:rtl;color:#1A237E;background:#EEF2FF;padding:11px;border-radius:7px;margin-top:10px;">لَآ إِلَٰهَ إِلَّا ٱللَّهُ وَحْدَهُۥ لَا شَرِيكَ لَهُۥ</div>
     </div>
     <button class="rabtn" onclick="resetAll()">↺ &nbsp;সব রিসেট করুন</button>
-
-    <!-- আল্লাহর নাম: রিজিক -->
-    <div class="nsh rh"><span class="ni">💰</span><div><div class="ntl">রিজিক ও ব্যবসার সাফল্যের জন্য</div><div class="nsl">আল্লাহর গুণবাচক নামসমূহ</div></div></div>
-    <div class="ntc">
-      <div class="nth"><span>নাম</span><span>উচ্চারণ / অর্থ</span><span>বার</span><span>গণনা</span></div>
-      <div class="nr"><div class="nac">يَا رَزَّاقُ</div><div class="ni2"><div class="nu">ইয়া রাযযাকু</div><div class="no">হে মহান রিজিকদাতা</div><div class="nud">রিজিক বৃদ্ধি</div></div><div class="nbc"><span class="ntb rtb">১০০</span></div><div class="ncc"><div class="mc" id="nc0">০</div><div class="mp"><div class="mf rf" id="np0" style="width:0%"></div></div><div class="mbs"><button class="mbm rm" onclick="nDec(0)">−</button><button class="mbp rp" onclick="nInc(0)">+</button><button class="mbr" onclick="nReset(0)">↺</button></div><div class="mdn" id="nd0">✅</div></div></div>
-      <div class="nr alt"><div class="nac">يَا فَتَّاحُ</div><div class="ni2"><div class="nu">ইয়া ফাত্তাহু</div><div class="no">হে দরজা উন্মোচনকারী</div><div class="nud">ব্যবসার সাফল্য</div></div><div class="nbc"><span class="ntb rtb">৭১</span></div><div class="ncc"><div class="mc" id="nc1">০</div><div class="mp"><div class="mf rf" id="np1" style="width:0%"></div></div><div class="mbs"><button class="mbm rm" onclick="nDec(1)">−</button><button class="mbp rp" onclick="nInc(1)">+</button><button class="mbr" onclick="nReset(1)">↺</button></div><div class="mdn" id="nd1">✅</div></div></div>
-      <div class="nr"><div class="nac">يَا وَهَّابُ</div><div class="ni2"><div class="nu">ইয়া ওয়াহহাবু</div><div class="no">হে মহাদানশীল</div><div class="nud">অপ্রত্যাশিত বরকত</div></div><div class="nbc"><span class="ntb rtb">১০০</span></div><div class="ncc"><div class="mc" id="nc2">০</div><div class="mp"><div class="mf rf" id="np2" style="width:0%"></div></div><div class="mbs"><button class="mbm rm" onclick="nDec(2)">−</button><button class="mbp rp" onclick="nInc(2)">+</button><button class="mbr" onclick="nReset(2)">↺</button></div><div class="mdn" id="nd2">✅</div></div></div>
-      <div class="nr alt"><div class="nac">يَا مُغْنِي</div><div class="ni2"><div class="nu">ইয়া মুগনি</div><div class="no">হে অভাবমুক্তকারী</div><div class="nud">অভাব দূর</div></div><div class="nbc"><span class="ntb rtb">১০০</span></div><div class="ncc"><div class="mc" id="nc3">০</div><div class="mp"><div class="mf rf" id="np3" style="width:0%"></div></div><div class="mbs"><button class="mbm rm" onclick="nDec(3)">−</button><button class="mbp rp" onclick="nInc(3)">+</button><button class="mbr" onclick="nReset(3)">↺</button></div><div class="mdn" id="nd3">✅</div></div></div>
-      <div class="nr"><div class="nac">يَا كَرِيمُ</div><div class="ni2"><div class="nu">ইয়া কারিমু</div><div class="no">হে মহাসম্মানিত দাতা</div><div class="nud">সম্পদ বৃদ্ধি</div></div><div class="nbc"><span class="ntb rtb">১০০</span></div><div class="ncc"><div class="mc" id="nc4">০</div><div class="mp"><div class="mf rf" id="np4" style="width:0%"></div></div><div class="mbs"><button class="mbm rm" onclick="nDec(4)">−</button><button class="mbp rp" onclick="nInc(4)">+</button><button class="mbr" onclick="nReset(4)">↺</button></div><div class="mdn" id="nd4">✅</div></div></div>
-    </div>
-
-    <!-- আল্লাহর নাম: জ্ঞান -->
-    <div class="nsh ih"><span class="ni">🧠</span><div><div class="ntl">জ্ঞান, বুদ্ধি ও সম্মানের জন্য</div><div class="nsl">আল্লাহর গুণবাচক নামসমূহ</div></div></div>
-    <div class="ntc">
-      <div class="nth ith"><span>নাম</span><span>উচ্চারণ / অর্থ</span><span>বার</span><span>গণনা</span></div>
-      <div class="nr"><div class="nac iac">يَا حَكِيمُ</div><div class="ni2"><div class="nu">ইয়া হাকিমু</div><div class="no">হে পরম প্রজ্ঞাময়</div><div class="nud iud">বিচক্ষণতা</div></div><div class="nbc"><span class="ntb itb">১০০</span></div><div class="ncc"><div class="mc" id="nc5">০</div><div class="mp"><div class="mf iif" id="np5" style="width:0%"></div></div><div class="mbs"><button class="mbm im" onclick="nDec(5)">−</button><button class="mbp ip" onclick="nInc(5)">+</button><button class="mbr" onclick="nReset(5)">↺</button></div><div class="mdn" id="nd5">✅</div></div></div>
-      <div class="nr alt"><div class="nac iac">يَا عَلِيمُ</div><div class="ni2"><div class="nu">ইয়া আলিমু</div><div class="no">হে সর্বজ্ঞ</div><div class="nud iud">জ্ঞান বৃদ্ধি</div></div><div class="nbc"><span class="ntb itb">১০০</span></div><div class="ncc"><div class="mc" id="nc6">০</div><div class="mp"><div class="mf iif" id="np6" style="width:0%"></div></div><div class="mbs"><button class="mbm im" onclick="nDec(6)">−</button><button class="mbp ip" onclick="nInc(6)">+</button><button class="mbr" onclick="nReset(6)">↺</button></div><div class="mdn" id="nd6">✅</div></div></div>
-      <div class="nr"><div class="nac iac">يَا نُورُ</div><div class="ni2"><div class="nu">ইয়া নুরু</div><div class="no">হে মহাজ্যোতি</div><div class="nud iud">অন্তরে নূর</div></div><div class="nbc"><span class="ntb itb">১০০</span></div><div class="ncc"><div class="mc" id="nc7">০</div><div class="mp"><div class="mf iif" id="np7" style="width:0%"></div></div><div class="mbs"><button class="mbm im" onclick="nDec(7)">−</button><button class="mbp ip" onclick="nInc(7)">+</button><button class="mbr" onclick="nReset(7)">↺</button></div><div class="mdn" id="nd7">✅</div></div></div>
-      <div class="nr alt"><div class="nac iac">يَا جَلِيلُ</div><div class="ni2"><div class="nu">ইয়া জালিলু</div><div class="no">হে মহামহিমান্বিত</div><div class="nud iud">সম্মান বৃদ্ধি</div></div><div class="nbc"><span class="ntb itb">৪১</span></div><div class="ncc"><div class="mc" id="nc8">০</div><div class="mp"><div class="mf iif" id="np8" style="width:0%"></div></div><div class="mbs"><button class="mbm im" onclick="nDec(8)">−</button><button class="mbp ip" onclick="nInc(8)">+</button><button class="mbr" onclick="nReset(8)">↺</button></div><div class="mdn" id="nd8">✅</div></div></div>
-      <div class="nr"><div class="nac iac">يَا عَزِيزُ</div><div class="ni2"><div class="nu">ইয়া আযিযু</div><div class="no">হে মহাপরাক্রমশালী</div><div class="nud iud">আত্মসম্মান বৃদ্ধি</div></div><div class="nbc"><span class="ntb itb">৪০</span></div><div class="ncc"><div class="mc" id="nc9">০</div><div class="mp"><div class="mf iif" id="np9" style="width:0%"></div></div><div class="mbs"><button class="mbm im" onclick="nDec(9)">−</button><button class="mbp ip" onclick="nInc(9)">+</button><button class="mbr" onclick="nReset(9)">↺</button></div><div class="mdn" id="nd9">✅</div></div></div>
-    </div>
-    <button class="rabtn" onclick="resetNames()">↺ &nbsp;নামের গণনা রিসেট</button>
   </div>
 
   <nav class="bnav">
@@ -729,8 +969,678 @@ body{font-family:'Noto Sans Bengali',sans-serif;background:var(--cream);color:va
 
 
 <!-- ══════════════════════════════════════
-     PAGE 5 — ABOUT
+     PAGE 5 — রোগ মুক্তির দোয়া
 ══════════════════════════════════════ -->
+<div class="page" id="pg-roga">
+
+  <div class="page-hdr" style="background:linear-gradient(160deg,#881337,#BE123C 60%,#E11D48);">
+    <div class="ph-top">
+      <button class="back-btn" onclick="goHome()">←</button>
+      <div class="ph-info">
+        <div class="ph-title">রোগ মুক্তির দোয়া</div>
+        <div class="ph-sub">অসুখ, ব্যথা ও রোগ থেকে মুক্তির মাসনূন আমল</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bipod-body">
+
+    <div class="bipod-intro" style="background:linear-gradient(135deg,#FFF1F2,#FFE4E6);border-color:#FDA4AF;">
+      <div class="bi-ar" style="color:#9F1239;">وَإِذَا مَرِضْتُ فَهُوَ يَشْفِينِ</div>
+      <div class="bi-bn" style="color:#BE123C;">"আর যখন আমি অসুস্থ হই, তিনিই আমাকে সুস্থ করেন।"<br><strong>— সূরা আশ-শুআরা: ৮০</strong></div>
+    </div>
+
+    <div class="sl">রোগীর জন্য রুকইয়া দোয়া</div>
+    <div class="ac org" style="--accent:#BE123C;">
+      <div class="cnum" style="background:#FFF1F2;color:#BE123C;">১</div>
+      <div class="ctitle">সাতবারের রুকইয়া দোয়া</div>
+      <div class="ar sm">أَسْأَلُ اللَّهَ الْعَظِيمَ رَبَّ الْعَرْشِ الْعَظِيمِ أَنْ يَشْفِيَكَ</div>
+      <div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">আস'আলুল্লাহাল আযিম, রাব্বাল আরশিল আযিম, আন ইয়াশফিয়াক।</span></div>
+      <div class="tr"><span class="tl">অর্থ:</span><span class="tt">আমি মহান আল্লাহর কাছে প্রার্থনা করছি, যিনি মহান আরশের রব, তিনি যেন তোমাকে সুস্থ করেন।</span></div>
+      <span class="pill org">📿 ৭ বার</span>
+      <div class="fad grn">🌟 রোগীর কাছে বসে ৭ বার পড়লে আল্লাহ তাকে সুস্থ করবেন — মৃত্যু ছাড়া। <em>(আবু দাউদ: ৩১০৬)</em></div>
+    </div>
+
+    <div class="ac org">
+      <div class="cnum" style="background:#FFF1F2;color:#BE123C;">২</div>
+      <div class="ctitle">নিজের রোগের জন্য দোয়া</div>
+      <div class="ar sm">اللَّهُمَّ رَبَّ النَّاسِ أَذْهِبِ الْبَأْسَ وَاشْفِ أَنْتَ الشَّافِي لَا شِفَاءَ إِلَّا شِفَاؤُكَ شِفَاءً لَا يُغَادِرُ سَقَمًا</div>
+      <div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">আল্লাহুম্মা রাব্বান্নাস, আযহিবিল বা'স, ওয়াশফি, আন্তাশ শাফি, লা শিফাআ ইল্লা শিফাউকা, শিফাআন লা ইউগাদিরু সাকামা।</span></div>
+      <div class="tr"><span class="tl">অর্থ:</span><span class="tt">হে আল্লাহ! হে মানুষের রব! কষ্ট দূর করুন এবং সুস্থ করুন। আপনিই শাফা দানকারী। আপনার শাফা ছাড়া কোনো শাফা নেই — এমন শাফা যা কোনো রোগ রেখে যায় না।</span></div>
+      <span class="pill org">📿 ৩ বার</span>
+      <div class="fad grn">🌟 নবী ﷺ রোগীর মাথায় হাত রেখে এই দোয়া পড়তেন। <em>(বুখারি: ৫৭৪৩)</em></div>
+    </div>
+
+    <div class="sl">ব্যথা ও কষ্টের জন্য</div>
+    <div class="ac org">
+      <div class="cnum" style="background:#FFF1F2;color:#BE123C;">৩</div>
+      <div class="ctitle">শরীরের ব্যথার স্থানে হাত রেখে দোয়া</div>
+      <div class="ar sm">بِسْمِ اللَّهِ</div>
+      <div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">বিসমিল্লাহ (৩ বার), তারপর:</span></div>
+      <div class="ar sm" style="margin-top:6px;">أَعُوذُ بِاللَّهِ وَقُدْرَتِهِ مِنْ شَرِّ مَا أَجِدُ وَأُحَاذِرُ</div>
+      <div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">আউযু বিল্লাহি ওয়া কুদরাতিহি মিন শাররি মা আজিদু ওয়া উহাযির।</span></div>
+      <div class="tr"><span class="tl">অর্থ:</span><span class="tt">আল্লাহ ও তাঁর শক্তির মাধ্যমে আশ্রয় চাই যা আমি অনুভব করছি ও যা থেকে ভয় পাচ্ছি তার অনিষ্ট থেকে।</span></div>
+      <span class="pill org">📿 ৭ বার</span>
+      <div class="fad grn">🌟 ব্যথার স্থানে ডান হাত রেখে পড়ুন — ব্যথা লাঘব হবে। <em>(মুসলিম: ২২০২)</em></div>
+    </div>
+
+    <div class="sl">সুরক্ষা ও শিফার দোয়া</div>
+    <div class="ac gld">
+      <div class="cnum" style="background:#FEF3C7;color:#92400E;">৪</div>
+      <div class="ctitle" style="color:#92400E;">সকাল-সন্ধ্যার সুরক্ষা দোয়া</div>
+      <div class="ar sm gb">بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ</div>
+      <div class="tr"><span class="tl g">উচ্চারণ:</span><span class="tt">বিসমিল্লাহিল্লাযি লা ইয়াদুররু মাআস্‌মিহি শাইউন ফিল আরদ্বি ওয়ালা ফিস সামাই ওয়া হুওয়াস সামিউল আলিম।</span></div>
+      <div class="tr"><span class="tl g">অর্থ:</span><span class="tt">আল্লাহর নামে, যার নামের সাথে আকাশ ও জমিনে কোনো কিছুই ক্ষতি করতে পারে না। তিনি সর্বশ্রোতা, সর্বজ্ঞ।</span></div>
+      <span class="pill gld">📿 ৩ বার — সকাল ও সন্ধ্যা</span>
+      <div class="fad gld">🌟 যে সকাল-সন্ধ্যা ৩ বার পড়বে, সেদিন বা সেরাতে কোনো অনিষ্ট তাকে স্পর্শ করবে না। <em>(তিরমিযি: ৩৩৮৮)</em></div>
+    </div>
+
+    <div class="ac org">
+      <div class="cnum" style="background:#FFF1F2;color:#BE123C;">৫</div>
+      <div class="ctitle">মানসিক কষ্ট ও অশান্তি দূরের দোয়া</div>
+      <div class="ar sm">اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْبَرَصِ وَالْجُنُونِ وَالْجُذَامِ وَمِنْ سَيِّئِ الْأَسْقَامِ</div>
+      <div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">আল্লাহুম্মা ইন্নি আউযু বিকা মিনাল বারাসি ওয়াল জুনুনি ওয়াল জুযামি ওয়ামিন সাইয়িইল আসকাম।</span></div>
+      <div class="tr"><span class="tl">অর্থ:</span><span class="tt">হে আল্লাহ! আমি শ্বেতী রোগ, পাগলামি, কুষ্ঠরোগ ও যাবতীয় দুরারোগ্য ব্যাধি থেকে তোমার আশ্রয় চাই।</span></div>
+      <span class="pill org">📿 ১ বার — সকালে</span>
+      <div class="fad grn">🌟 ভয়াবহ রোগ থেকে সুরক্ষার মাসনূন দোয়া। <em>(আবু দাউদ: ১৫৫৪)</em></div>
+    </div>
+
+    <div class="sl">রুকইয়া (ঝাড়-ফুঁক)</div>
+    <div class="ac org">
+      <div class="cnum" style="background:#FFF1F2;color:#BE123C;">৬</div>
+      <div class="ctitle">সূরা ফাতিহা দিয়ে রুকইয়া</div>
+      <div class="ar sm">ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَٰلَمِينَ ۝ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ ۝ مَٰلِكِ يَوْمِ ٱلدِّينِ ۝ إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ ۝ ٱهْدِنَا ٱلصِّرَٰطَ ٱلْمُسْتَقِيمَ ۝ صِرَٰطَ ٱلَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ ٱلْمَغْضُوبِ عَلَيْهِمْ وَلَا ٱلضَّآلِّينَ</div>
+      <div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">আলহামদু লিল্লাহি রাব্বিল আলামিন। আর-রহমানির রহিম। মালিকি ইয়াওমিদ্দিন। ইয়্যাকা নাবুদু ওয়া ইয়্যাকা নাস্তাইন। ইহদিনাস সিরাতাল মুস্তাকিম। সিরাতাল্লাযিনা আনআমতা আলাইহিম, গাইরিল মাগদুবি আলাইহিম ওয়ালাদ্বাল্লিন।</span></div>
+      <div class="tr"><span class="tl">অর্থ:</span><span class="tt">সকল প্রশংসা আল্লাহর জন্য, যিনি সমস্ত সৃষ্টির রব। দয়াময়, পরম দয়ালু। বিচারদিনের মালিক। আমরা কেবল তোমারই ইবাদত করি এবং কেবল তোমার কাছেই সাহায্য চাই। আমাদের সরল পথ দেখাও — তাদের পথ যাদের তুমি নিয়ামত দান করেছ, যাদের উপর তোমার রাগ নেই এবং যারা পথভ্রষ্ট নয়।</span></div>
+      <span class="pill org">📿 ৭ বার — ফুঁ দিয়ে</span>
+      <div class="fad grn">🌟 সাহাবি এই সূরা দিয়ে সাপে কাটা ব্যক্তিকে সুস্থ করেছিলেন। নবী ﷺ বলেছেন: "তুমি কীভাবে জানলে যে এটি রুকইয়া?" <em>(বুখারি: ৫৭৩৬)</em></div>
+    </div>
+
+    <div class="ac org">
+      <div class="cnum" style="background:#FFF1F2;color:#BE123C;">৭</div>
+      <div class="ctitle">অসুস্থকে দেখতে গেলে দোয়া</div>
+      <div class="ar sm">لَا بَأْسَ طَهُورٌ إِنْ شَاءَ اللَّهُ</div>
+      <div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">লা বা'স, তাহুরুন ইনশাআল্লাহ।</span></div>
+      <div class="tr"><span class="tl">অর্থ:</span><span class="tt">কোনো ক্ষতি নেই, ইনশাআল্লাহ এটি (গুনাহের) পরিশুদ্ধতা।</span></div>
+      <span class="pill org">📿 রোগীকে দেখতে গেলে পড়ুন</span>
+      <div class="fad grn">🌟 নবী ﷺ রোগীকে দেখতে গেলে এই দোয়া পড়তেন। <em>(বুখারি: ৫৬৫৬)</em></div>
+    </div>
+
+    <div class="ac gld">
+      <div class="cnum" style="background:#FEF3C7;color:#92400E;">৮</div>
+      <div class="ctitle" style="color:#92400E;">সুস্থতার শুকরিয়া দোয়া</div>
+      <div class="ar sm gb">الْحَمْدُ لِلَّهِ الَّذِي عَافَانِي مِمَّا ابْتَلَاكَ بِهِ وَفَضَّلَنِي عَلَىٰ كَثِيرٍ مِمَّنْ خَلَقَ تَفْضِيلًا</div>
+      <div class="tr"><span class="tl g">উচ্চারণ:</span><span class="tt">আলহামদু লিল্লাহিল্লাযি আফানি মিম্মাবতালাকা বিহি ওয়া ফাদ্বদ্বালানি আলা কাসিরিম মিম্মান খালাকা তাফদ্বিলা।</span></div>
+      <div class="tr"><span class="tl g">অর্থ:</span><span class="tt">সকল প্রশংসা আল্লাহর, যিনি আমাকে সেই বিপদ থেকে মুক্ত রেখেছেন যা তোমাকে দিয়েছেন, এবং তাঁর অনেক সৃষ্টির উপর আমাকে মর্যাদা দিয়েছেন।</span></div>
+      <span class="pill gld">📿 অসুস্থ কাউকে দেখলে মনে মনে</span>
+      <div class="fad gld">🌟 যে এই দোয়া পড়বে সে সেই রোগ থেকে নিরাপদ থাকবে। <em>(তিরমিযি: ৩৪৩১)</em></div>
+    </div>
+
+  </div><!-- /roga-body -->
+
+  <nav class="bnav">
+    <button class="bn active" onclick="goHome()"><span class="bni">🏠</span><span class="bnl">হোম</span><div class="bn-dot"></div></button>
+    <button class="bn" onclick="goToAmal()"><span class="bni">🤲</span><span class="bnl">আমল</span><div class="bn-dot"></div></button>
+    <button class="bn" onclick="goTo('pg-tasbih')"><span class="bni">📿</span><span class="bnl">তাসবিহ</span><div class="bn-dot"></div></button>
+    <button class="bn" onclick="goTo('pg-about')"><span class="bni">ℹ️</span><span class="bnl">পরিচিতি</span><div class="bn-dot"></div></button>
+  </nav>
+</div>
+
+
+<!-- ══════════════════════════════════════
+     PAGE 6 — আল্লাহর ৯৯টি নামের আমল
+══════════════════════════════════════ -->
+<div class="page" id="pg-names">
+
+  <div class="page-hdr" style="background:linear-gradient(160deg,#78350F,#B45309 60%,#D97706);">
+    <div class="ph-top">
+      <button class="back-btn" onclick="goHome()">←</button>
+      <div class="ph-info">
+        <div class="ph-title">আল্লাহর ৯৯টি নামের আমল</div>
+        <div class="ph-sub">রিজিক, জ্ঞান ও সম্মানের জন্য যিকির</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tasbih-body">
+
+    <!-- রিজিক ও ব্যবসার সাফল্য -->
+    <div class="nsh rh"><span class="ni">💰</span><div><div class="ntl">রিজিক ও ব্যবসার সাফল্যের জন্য</div><div class="nsl">আল্লাহর গুণবাচক নামসমূহ</div></div></div>
+    <div class="ntc">
+      <div class="nth"><span>নাম</span><span>উচ্চারণ / অর্থ</span><span>বার</span><span>গণনা</span></div>
+      <div class="nr"><div class="nac">يَا رَزَّاقُ</div><div class="ni2"><div class="nu">ইয়া রাযযাকু</div><div class="no">হে মহান রিজিকদাতা</div><div class="nud">রিজিক বৃদ্ধি</div></div><div class="nbc"><span class="ntb rtb">১০০</span></div><div class="ncc"><div class="mc" id="nn0">০</div><div class="mp"><div class="mf rf" id="nq0" style="width:0%"></div></div><div class="mbs"><button class="mbm rm" onclick="nnDec(0)">−</button><button class="mbp rp" onclick="nnInc(0)">+</button><button class="mbr" onclick="nnReset(0)">↺</button></div><div class="mdn" id="ne0">✅</div></div></div>
+      <div class="nr alt"><div class="nac">يَا فَتَّاحُ</div><div class="ni2"><div class="nu">ইয়া ফাত্তাহু</div><div class="no">হে দরজা উন্মোচনকারী</div><div class="nud">ব্যবসার সাফল্য</div></div><div class="nbc"><span class="ntb rtb">৭১</span></div><div class="ncc"><div class="mc" id="nn1">০</div><div class="mp"><div class="mf rf" id="nq1" style="width:0%"></div></div><div class="mbs"><button class="mbm rm" onclick="nnDec(1)">−</button><button class="mbp rp" onclick="nnInc(1)">+</button><button class="mbr" onclick="nnReset(1)">↺</button></div><div class="mdn" id="ne1">✅</div></div></div>
+      <div class="nr"><div class="nac">يَا وَهَّابُ</div><div class="ni2"><div class="nu">ইয়া ওয়াহহাবু</div><div class="no">হে মহাদানশীল</div><div class="nud">অপ্রত্যাশিত বরকত</div></div><div class="nbc"><span class="ntb rtb">১০০</span></div><div class="ncc"><div class="mc" id="nn2">০</div><div class="mp"><div class="mf rf" id="nq2" style="width:0%"></div></div><div class="mbs"><button class="mbm rm" onclick="nnDec(2)">−</button><button class="mbp rp" onclick="nnInc(2)">+</button><button class="mbr" onclick="nnReset(2)">↺</button></div><div class="mdn" id="ne2">✅</div></div></div>
+      <div class="nr alt"><div class="nac">يَا مُغْنِي</div><div class="ni2"><div class="nu">ইয়া মুগনি</div><div class="no">হে অভাবমুক্তকারী</div><div class="nud">অভাব দূর</div></div><div class="nbc"><span class="ntb rtb">১০০</span></div><div class="ncc"><div class="mc" id="nn3">০</div><div class="mp"><div class="mf rf" id="nq3" style="width:0%"></div></div><div class="mbs"><button class="mbm rm" onclick="nnDec(3)">−</button><button class="mbp rp" onclick="nnInc(3)">+</button><button class="mbr" onclick="nnReset(3)">↺</button></div><div class="mdn" id="ne3">✅</div></div></div>
+      <div class="nr"><div class="nac">يَا كَرِيمُ</div><div class="ni2"><div class="nu">ইয়া কারিমু</div><div class="no">হে মহাসম্মানিত দাতা</div><div class="nud">সম্পদ বৃদ্ধি</div></div><div class="nbc"><span class="ntb rtb">১০০</span></div><div class="ncc"><div class="mc" id="nn4">০</div><div class="mp"><div class="mf rf" id="nq4" style="width:0%"></div></div><div class="mbs"><button class="mbm rm" onclick="nnDec(4)">−</button><button class="mbp rp" onclick="nnInc(4)">+</button><button class="mbr" onclick="nnReset(4)">↺</button></div><div class="mdn" id="ne4">✅</div></div></div>
+    </div>
+
+    <!-- জ্ঞান, বুদ্ধি ও সম্মান -->
+    <div class="nsh ih"><span class="ni">🧠</span><div><div class="ntl">জ্ঞান, বুদ্ধি ও সম্মানের জন্য</div><div class="nsl">আল্লাহর গুণবাচক নামসমূহ</div></div></div>
+    <div class="ntc">
+      <div class="nth ith"><span>নাম</span><span>উচ্চারণ / অর্থ</span><span>বার</span><span>গণনা</span></div>
+      <div class="nr"><div class="nac iac">يَا حَكِيمُ</div><div class="ni2"><div class="nu">ইয়া হাকিমু</div><div class="no">হে পরম প্রজ্ঞাময়</div><div class="nud iud">বিচক্ষণতা</div></div><div class="nbc"><span class="ntb itb">১০০</span></div><div class="ncc"><div class="mc" id="nn5">০</div><div class="mp"><div class="mf iif" id="nq5" style="width:0%"></div></div><div class="mbs"><button class="mbm im" onclick="nnDec(5)">−</button><button class="mbp ip" onclick="nnInc(5)">+</button><button class="mbr" onclick="nnReset(5)">↺</button></div><div class="mdn" id="ne5">✅</div></div></div>
+      <div class="nr alt"><div class="nac iac">يَا عَلِيمُ</div><div class="ni2"><div class="nu">ইয়া আলিমু</div><div class="no">হে সর্বজ্ঞ</div><div class="nud iud">জ্ঞান বৃদ্ধি</div></div><div class="nbc"><span class="ntb itb">১০০</span></div><div class="ncc"><div class="mc" id="nn6">০</div><div class="mp"><div class="mf iif" id="nq6" style="width:0%"></div></div><div class="mbs"><button class="mbm im" onclick="nnDec(6)">−</button><button class="mbp ip" onclick="nnInc(6)">+</button><button class="mbr" onclick="nnReset(6)">↺</button></div><div class="mdn" id="ne6">✅</div></div></div>
+      <div class="nr"><div class="nac iac">يَا نُورُ</div><div class="ni2"><div class="nu">ইয়া নুরু</div><div class="no">হে মহাজ্যোতি</div><div class="nud iud">অন্তরে নূর</div></div><div class="nbc"><span class="ntb itb">১০০</span></div><div class="ncc"><div class="mc" id="nn7">০</div><div class="mp"><div class="mf iif" id="nq7" style="width:0%"></div></div><div class="mbs"><button class="mbm im" onclick="nnDec(7)">−</button><button class="mbp ip" onclick="nnInc(7)">+</button><button class="mbr" onclick="nnReset(7)">↺</button></div><div class="mdn" id="ne7">✅</div></div></div>
+      <div class="nr alt"><div class="nac iac">يَا جَلِيلُ</div><div class="ni2"><div class="nu">ইয়া জালিলু</div><div class="no">হে মহামহিমান্বিত</div><div class="nud iud">সম্মান বৃদ্ধি</div></div><div class="nbc"><span class="ntb itb">৪১</span></div><div class="ncc"><div class="mc" id="nn8">০</div><div class="mp"><div class="mf iif" id="nq8" style="width:0%"></div></div><div class="mbs"><button class="mbm im" onclick="nnDec(8)">−</button><button class="mbp ip" onclick="nnInc(8)">+</button><button class="mbr" onclick="nnReset(8)">↺</button></div><div class="mdn" id="ne8">✅</div></div></div>
+      <div class="nr"><div class="nac iac">يَا عَزِيزُ</div><div class="ni2"><div class="nu">ইয়া আযিযু</div><div class="no">হে মহাপরাক্রমশালী</div><div class="nud iud">আত্মসম্মান বৃদ্ধি</div></div><div class="nbc"><span class="ntb itb">৪০</span></div><div class="ncc"><div class="mc" id="nn9">০</div><div class="mp"><div class="mf iif" id="nq9" style="width:0%"></div></div><div class="mbs"><button class="mbm im" onclick="nnDec(9)">−</button><button class="mbp ip" onclick="nnInc(9)">+</button><button class="mbr" onclick="nnReset(9)">↺</button></div><div class="mdn" id="ne9">✅</div></div></div>
+    </div>
+    <button class="rabtn" onclick="resetNamesPage()">↺ &nbsp;নামের গণনা রিসেট</button>
+
+  </div>
+
+  <nav class="bnav">
+    <button class="bn active" onclick="goHome()"><span class="bni">🏠</span><span class="bnl">হোম</span><div class="bn-dot"></div></button>
+    <button class="bn" onclick="goToAmal()"><span class="bni">🤲</span><span class="bnl">আমল</span><div class="bn-dot"></div></button>
+    <button class="bn" onclick="goTo('pg-tasbih')"><span class="bni">📿</span><span class="bnl">তাসবিহ</span><div class="bn-dot"></div></button>
+    <button class="bn" onclick="goTo('pg-about')"><span class="bni">ℹ️</span><span class="bnl">পরিচিতি</span><div class="bn-dot"></div></button>
+  </nav>
+</div>
+
+
+<!-- ══════════════════════════════════════
+     PAGE 7 — সকাল ও সন্ধ্যার আমল
+══════════════════════════════════════ -->
+<div class="page" id="pg-morning">
+  <div class="page-hdr">
+    <div class="ph-top">
+      <button class="back-btn" onclick="goHome()">←</button>
+      <div class="ph-info">
+        <div class="ph-title">সকাল ও সন্ধ্যার আমল</div>
+        <div class="ph-sub">আরবি · উচ্চারণ · অর্থ · ফজিলত</div>
+      </div>
+    </div>
+  </div>
+  <div class="prayer-content pb-nav">
+
+    <div class="pbanner" style="background:linear-gradient(135deg,#ECFEFF,#CFFAFE);border:1.5px solid #67E8F9;margin:14px 0 10px;">
+      <span class="pb-ico">🌤️</span>
+      <div><div class="pb-t">মাসনূন সকাল ও সন্ধ্যার যিকির</div><div class="pb-s">প্রতিদিন সকাল ও সন্ধ্যায় পড়ার আমলসমূহ</div></div>
+    </div>
+
+    <div class="sl">সকালের আমল (ফজরের পর)</div>
+
+    <div class="ac grn">
+      <div class="cnum" style="background:var(--g-pale);color:var(--g);">১</div>
+      <div class="ctitle">সকালের সাইয়্যিদুল ইস্তিগফার</div>
+      <div class="ar sm">اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ خَلَقْتَنِي وَأَنَا عَبْدُكَ وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ وَأَبُوءُ لَكَ بِذَنْبِي فَاغْفِرْ لِي فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ</div>
+      <div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">আল্লাহুম্মা আন্তা রাব্বি, লা ইলাহা ইল্লা আন্তা, খালাকতানি ওয়া আনা আবদুকা, ওয়া আনা আলা আহদিকা ওয়া ওয়া'দিকা মাস্তাতা'তু, আউযু বিকা মিন শাররি মা সানা'তু, আবুউ লাকা বিনি'মাতিকা আলাইয়্যা, ওয়া আবুউ বিযাম্বি ফাগফিরলি, ফাইন্নাহু লা ইয়াগফিরুয যুনুবা ইল্লা আন্তা।</span></div>
+      <div class="tr"><span class="tl">অর্থ:</span><span class="tt">হে আল্লাহ! তুমি আমার রব। তুমি ছাড়া কোনো ইলাহ নেই। তুমি আমাকে সৃষ্টি করেছ এবং আমি তোমার বান্দা। আমি যথাসাধ্য তোমার অঙ্গীকার ও প্রতিশ্রুতিতে আছি। আমি আমার কৃতকর্মের অনিষ্ট থেকে তোমার আশ্রয় চাই। তোমার নিয়ামত আমার উপর স্বীকার করি এবং আমার গুনাহও স্বীকার করি। তাই আমাকে ক্ষমা করো — কারণ তুমি ছাড়া গুনাহ মাফ করার কেউ নেই।</span></div>
+      <span class="pill grn">📿 ১ বার — সকালে</span>
+      <div class="fad grn">🌟 যে সকালে এটি পড়ে ঈমানের সাথে মারা যায়, সে জান্নাতি। <em>(বুখারি: ৬৩০৬)</em></div>
+    </div>
+
+    <div class="ac grn">
+      <div class="cnum" style="background:var(--g-pale);color:var(--g);">২</div>
+      <div class="ctitle">সকালের সুরক্ষার দোয়া</div>
+      <div class="ar sm">اللَّهُمَّ بِكَ أَصْبَحْنَا وَبِكَ أَمْسَيْنَا وَبِكَ نَحْيَا وَبِكَ نَمُوتُ وَإِلَيْكَ النُّشُورُ</div>
+      <div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">আল্লাহুম্মা বিকা আসবাহনা ওয়া বিকা আমসাইনা ওয়া বিকা নাহইয়া ওয়া বিকা নামুতু ওয়া ইলাইকান নুশুর।</span></div>
+      <div class="tr"><span class="tl">অর্থ:</span><span class="tt">হে আল্লাহ! তোমার নামেই আমরা সকালে প্রবেশ করি, তোমার নামেই সন্ধ্যায় পৌঁছাই, তোমার নামেই বাঁচি ও মরি এবং তোমার কাছেই পুনরুত্থান।</span></div>
+      <span class="pill grn">📿 ১ বার — সকালে</span>
+      <div class="fad grn">🌟 মাসনূন সকালের দোয়া। <em>(তিরমিযি: ৩৩৯১)</em></div>
+    </div>
+
+    <div class="ac grn">
+      <div class="cnum" style="background:var(--g-pale);color:var(--g);">৩</div>
+      <div class="ctitle">সকালে ১০০ বার দরুদ ও ইস্তিগফার</div>
+      <div class="ar sm">أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ وَالْحَمْدُ لِلَّهِ لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ</div>
+      <div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">আসবাহনা ওয়া আসবাহাল মুলকু লিল্লাহ, ওয়াল হামদু লিল্লাহ, লা ইলাহা ইল্লাল্লাহু ওয়াহদাহু লা শারিকালাহু, লাহুল মুলকু ওয়ালাহুল হামদু ওয়া হুওয়া আলা কুল্লি শাইয়িন কাদির।</span></div>
+      <div class="tr"><span class="tl">অর্থ:</span><span class="tt">আমরা সকালে পৌঁছলাম এবং সকল রাজত্ব আল্লাহর। সকল প্রশংসা আল্লাহর। আল্লাহ ছাড়া কোনো ইলাহ নেই, তিনি একক, কোনো অংশীদার নেই। রাজত্ব তাঁর, প্রশংসা তাঁর, তিনি সবকিছুর উপর ক্ষমতাবান।</span></div>
+      <span class="pill grn">📿 ১ বার — সকালে</span>
+      <div class="fad grn">🌟 যে সকালে এটি পড়বে তার সেদিনের শুকরিয়া আদায় হবে। <em>(আবু দাউদ: ৫০৭৩)</em></div>
+    </div>
+
+    <div class="ac grn">
+      <div class="cnum" style="background:var(--g-pale);color:var(--g);">৪</div>
+      <div class="ctitle">সকালে ৩ বার সুরা ইখলাস, ফালাক ও নাস</div>
+      <div class="ar sm">قُلْ هُوَ اللَّهُ أَحَدٌ ۝ اللَّهُ الصَّمَدُ ۝ لَمْ يَلِدْ وَلَمْ يُولَدْ ۝ وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ</div>
+      <div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">কুল হুওয়াল্লাহু আহাদ। আল্লাহুস সামাদ। লাম ইয়ালিদ ওয়ালাম ইউলাদ। ওয়ালাম ইয়াকুল্লাহু কুফুওয়ান আহাদ।</span></div>
+      <div class="tr"><span class="tl">অর্থ:</span><span class="tt">বলো: তিনিই আল্লাহ, এক। আল্লাহ অমুখাপেক্ষী। তিনি জন্ম দেননি এবং জন্ম নেননি। তাঁর সমতুল্য কেউ নেই।</span></div>
+      <span class="pill grn">📿 ৩ বার — সকাল ও সন্ধ্যা</span>
+      <div class="fad grn">🌟 এটি দিনে ৩ বার পড়লে সব কিছু থেকে রক্ষা পাওয়া যায়। <em>(আবু দাউদ: ৫০৮২)</em></div>
+    </div>
+
+    <div class="sl">সন্ধ্যার আমল (মাগরিবের পর)</div>
+
+    <div class="ac blu">
+      <div class="cnum" style="background:#EFF6FF;color:#1D4ED8;">৫</div>
+      <div class="ctitle">সন্ধ্যার সাইয়্যিদুল ইস্তিগফার</div>
+      <div class="ar sm">اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ خَلَقْتَنِي وَأَنَا عَبْدُكَ وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ وَأَبُوءُ لَكَ بِذَنْبِي فَاغْفِرْ لِي فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ</div>
+      <div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">আল্লাহুম্মা আন্তা রাব্বি, লা ইলাহা ইল্লা আন্তা, খালাকতানি ওয়া আনা আবদুকা... (আগের মতো)</span></div>
+      <div class="tr"><span class="tl">অর্থ:</span><span class="tt">হে আল্লাহ! তুমি আমার রব। তুমি ছাড়া কোনো ইলাহ নেই। তুমি আমাকে সৃষ্টি করেছ এবং আমি তোমার বান্দা।</span></div>
+      <span class="pill blu">📿 ১ বার — সন্ধ্যায়</span>
+      <div class="fad grn">🌟 যে সন্ধ্যায় এটি পড়ে ঈমানের সাথে মারা যায়, সে জান্নাতি। <em>(বুখারি: ৬৩০৬)</em></div>
+    </div>
+
+    <div class="ac blu">
+      <div class="cnum" style="background:#EFF6FF;color:#1D4ED8;">৬</div>
+      <div class="ctitle">সন্ধ্যার সুরক্ষার দোয়া</div>
+      <div class="ar sm">اللَّهُمَّ بِكَ أَمْسَيْنَا وَبِكَ أَصْبَحْنَا وَبِكَ نَحْيَا وَبِكَ نَمُوتُ وَإِلَيْكَ الْمَصِيرُ</div>
+      <div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">আল্লাহুম্মা বিকা আমসাইনা ওয়া বিকা আসবাহনা ওয়া বিকা নাহইয়া ওয়া বিকা নামুতু ওয়া ইলাইকাল মাসির।</span></div>
+      <div class="tr"><span class="tl">অর্থ:</span><span class="tt">হে আল্লাহ! তোমার নামেই আমরা সন্ধ্যায় পৌঁছাই, তোমার নামেই সকালে উঠি, তোমার নামেই বাঁচি ও মরি এবং তোমার কাছেই প্রত্যাবর্তন।</span></div>
+      <span class="pill blu">📿 ১ বার — সন্ধ্যায়</span>
+      <div class="fad grn">🌟 মাসনূন সন্ধ্যার দোয়া। <em>(তিরমিযি: ৩৩৯১)</em></div>
+    </div>
+
+    <div class="ac gld">
+      <div class="cnum" style="background:#FEF3C7;color:#92400E;">৭</div>
+      <div class="ctitle" style="color:#92400E;">সকাল-সন্ধ্যার নিরাপত্তার দোয়া</div>
+      <div class="ar sm gb">بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ</div>
+      <div class="tr"><span class="tl g">উচ্চারণ:</span><span class="tt">বিসমিল্লাহিল্লাযি লা ইয়াদুররু মাআস্‌মিহি শাইউন ফিল আরদ্বি ওয়ালা ফিস সামাই ওয়া হুওয়াস সামিউল আলিম।</span></div>
+      <div class="tr"><span class="tl g">অর্থ:</span><span class="tt">আল্লাহর নামে, যার নামের সাথে আকাশ ও জমিনে কোনো কিছুই ক্ষতি করতে পারে না। তিনি সর্বশ্রোতা, সর্বজ্ঞ।</span></div>
+      <span class="pill gld">📿 ৩ বার — সকাল ও সন্ধ্যা</span>
+      <div class="fad gld">🌟 যে ৩ বার পড়বে, সেদিন বা সেরাতে কোনো অনিষ্ট তাকে স্পর্শ করবে না। <em>(তিরমিযি: ৩৩৮৮)</em></div>
+    </div>
+
+    <div class="ac grn">
+      <div class="cnum" style="background:var(--g-pale);color:var(--g);">৮</div>
+      <div class="ctitle">আফিয়াতের দোয়া</div>
+      <div class="ar sm">اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي الدُّنْيَا وَالْآخِرَةِ</div>
+      <div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">আল্লাহুম্মা ইন্নি আস'আলুকাল আফওয়া ওয়াল আফিয়াতা ফিদ দুনইয়া ওয়াল আখিরাহ।</span></div>
+      <div class="tr"><span class="tl">অর্থ:</span><span class="tt">হে আল্লাহ! আমি তোমার কাছে দুনিয়া ও আখিরাতে ক্ষমা ও সুস্থতা চাই।</span></div>
+      <span class="pill grn">📿 ১ বার — সকাল ও সন্ধ্যা</span>
+      <div class="fad grn">🌟 নবী ﷺ কখনো এই দোয়া ছাড়তেন না। <em>(ইবনে মাজাহ: ৩৮৭১)</em></div>
+    </div>
+
+    <div class="ac grn">
+      <div class="cnum" style="background:var(--g-pale);color:var(--g);">৯</div>
+      <div class="ctitle">রাতের বিপদ থেকে রক্ষার দোয়া</div>
+      <div class="ar sm">أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ</div>
+      <div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">আউযু বিকালিমাতিল্লাহিত তাম্মাতি মিন শাররি মা খালাক।</span></div>
+      <div class="tr"><span class="tl">অর্থ:</span><span class="tt">আল্লাহর পরিপূর্ণ কালিমাসমূহের মাধ্যমে তাঁর সৃষ্টির যাবতীয় অনিষ্ট থেকে আশ্রয় চাই।</span></div>
+      <span class="pill grn">📿 ৩ বার — সন্ধ্যায়</span>
+      <div class="fad grn">🌟 যে সন্ধ্যায় ৩ বার পড়বে, সে রাতে কোনো বিষধর প্রাণী তাকে ক্ষতি করবে না। <em>(মুসলিম: ২৭০৯)</em></div>
+    </div>
+
+    <div class="ac gld">
+      <div class="cnum" style="background:#FEF3C7;color:#92400E;">১০</div>
+      <div class="ctitle" style="color:#92400E;">সকাল-সন্ধ্যার শ্রেষ্ঠ যিকির</div>
+      <div class="ar sm gb">سُبْحَانَ اللَّهِ وَبِحَمْدِهِ</div>
+      <div class="tr"><span class="tl g">উচ্চারণ:</span><span class="tt">সুবহানাল্লাহি ওয়া বিহামদিহ।</span></div>
+      <div class="tr"><span class="tl g">অর্থ:</span><span class="tt">আল্লাহ পবিত্র এবং তাঁর প্রশংসা।</span></div>
+      <span class="pill gld">📿 ১০০ বার — সকাল ও সন্ধ্যা</span>
+      <div class="fad gld">🌟 যে সকালে ও সন্ধ্যায় ১০০ বার পড়বে, কেউ তার চেয়ে বেশি নেকি নিয়ে আসতে পারবে না। <em>(মুসলিম: ২৬৯২)</em></div>
+    </div>
+
+    <div class="ac blu">
+      <div class="cnum" style="background:#EFF6FF;color:#1D4ED8;">১১</div>
+      <div class="ctitle">সকালে নবীর উপর দরুদ</div>
+      <div class="ar sm">اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ</div>
+      <div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">আল্লাহুম্মা সাল্লি আলা মুহাম্মাদিন ওয়া আলা আলি মুহাম্মাদ।</span></div>
+      <div class="tr"><span class="tl">অর্থ:</span><span class="tt">হে আল্লাহ! মুহাম্মাদ ﷺ এবং তাঁর পরিবারের উপর রহমত বর্ষণ করো।</span></div>
+      <span class="pill blu">📿 ১০ বার — সকাল ও সন্ধ্যা</span>
+      <div class="fad grn">🌟 যে সকাল-সন্ধ্যায় ১০ বার দরুদ পড়বে, কিয়ামতের দিন আমার শাফায়াত তার জন্য। <em>(তাবারানি)</em></div>
+    </div>
+
+    <div class="ac grn">
+      <div class="cnum" style="background:var(--g-pale);color:var(--g);">১২</div>
+      <div class="ctitle">সন্ধ্যায় আয়াতুল কুরসি</div>
+      <div class="ar sm">ٱللَّهُ لَآ إِلَٰهَ إِلَّا هُوَ ٱلْحَىُّ ٱلْقَيُّومُ</div>
+      <div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">আল্লাহু লা ইলাহা ইল্লা হুওয়াল হাইয়্যুল কাইয়্যুম।</span></div>
+      <div class="tr"><span class="tl">অর্থ:</span><span class="tt">আল্লাহ — তিনি ছাড়া কোনো ইলাহ নেই। চিরজীবী, সর্বসত্তার ধারক।</span></div>
+      <span class="pill grn">📿 ১ বার — সকাল ও সন্ধ্যা</span>
+      <div class="fad grn">🌟 যে সকাল-সন্ধ্যায় আয়াতুল কুরসি পড়বে, সে জান্নাতে যাবে। <em>(নাসাঈ)</em></div>
+    </div>
+
+  </div><!-- /prayer-content -->
+
+  <nav class="bnav">
+    <button class="bn active" onclick="goHome()"><span class="bni">🏠</span><span class="bnl">হোম</span><div class="bn-dot"></div></button>
+    <button class="bn" onclick="goToAmal()"><span class="bni">🤲</span><span class="bnl">আমল</span><div class="bn-dot"></div></button>
+    <button class="bn" onclick="goTo('pg-tasbih')"><span class="bni">📿</span><span class="bnl">তাসবিহ</span><div class="bn-dot"></div></button>
+    <button class="bn" onclick="goTo('pg-about')"><span class="bni">ℹ️</span><span class="bnl">পরিচিতি</span><div class="bn-dot"></div></button>
+  </nav>
+</div>
+
+
+<!-- ══════════════════════════════════════
+     PAGE 8 — ঘুমের দোয়া ও আমল
+══════════════════════════════════════ -->
+<div class="page" id="pg-sleep">
+  <div class="page-hdr">
+    <div class="ph-top">
+      <button class="back-btn" onclick="goHome()">←</button>
+      <div class="ph-info">
+        <div class="ph-title">ঘুমের দোয়া ও আমল</div>
+        <div class="ph-sub">আরবি · উচ্চারণ · অর্থ · ফজিলত</div>
+      </div>
+    </div>
+  </div>
+  <div class="prayer-content pb-nav">
+
+    <div class="pbanner pb-isha" style="margin:14px 0 10px;">
+      <span class="pb-ico">🌙</span>
+      <div><div class="pb-t" style="color:#F1F5F9;">ঘুমানো ও জাগার মাসনূন দোয়া</div><div class="pb-s">ঘুমের আদব ও সুরক্ষার আমলসমূহ</div></div>
+    </div>
+
+    <div class="sl">ঘুমানোর আগের আমল</div>
+
+    <div class="ac ngt">
+      <div class="cnum" style="background:#1E293B;color:#CBD5E1;">১</div>
+      <div class="ctitle" style="color:#E2E8F0;">বিছানায় যাওয়ার দোয়া</div>
+      <div class="ar sm">بِاسْمِكَ اللَّهُمَّ أَمُوتُ وَأَحْيَا</div>
+      <div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">বিসমিকাল্লাহুম্মা আমুতু ওয়া আহইয়া।</span></div>
+      <div class="tr"><span class="tl">অর্থ:</span><span class="tt">হে আল্লাহ! তোমার নামে মরি এবং তোমার নামেই বাঁচি।</span></div>
+      <span class="pill ngt">📿 ১ বার — শোয়ার সময়</span>
+      <div class="fad grn">🌟 নবী ﷺ শোয়ার সময় এই দোয়া পড়তেন। <em>(বুখারি: ৬৩১২)</em></div>
+    </div>
+
+    <div class="ac ngt">
+      <div class="cnum" style="background:#1E293B;color:#CBD5E1;">২</div>
+      <div class="ctitle" style="color:#E2E8F0;">ঘুমের আগে আয়াতুল কুরসি</div>
+      <div class="ar sm">ٱللَّهُ لَآ إِلَٰهَ إِلَّا هُوَ ٱلْحَىُّ ٱلْقَيُّومُ ۚ لَا تَأْخُذُهُۥ سِنَةٌ وَلَا نَوْمٌ</div>
+      <div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">আল্লাহু লা ইলাহা ইল্লা হুওয়াল হাইয়্যুল কাইয়্যুম। লা তা'খুযুহু সিনাতুঁ ওয়ালা নাউম...</span></div>
+      <div class="tr"><span class="tl">অর্থ:</span><span class="tt">আল্লাহ — তিনি ছাড়া কোনো ইলাহ নেই। চিরজীবী, সর্বসত্তার ধারক। তন্দ্রা বা নিদ্রা তাঁকে স্পর্শ করে না।</span></div>
+      <span class="pill ngt">📿 ১ বার — ঘুমের আগে</span>
+      <div class="fad grn">🌟 এটি পড়লে সারারাত একজন রক্ষক ফেরেশতা পাহারা দেবে। <em>(বুখারি)</em></div>
+    </div>
+
+    <div class="ac ngt">
+      <div class="cnum" style="background:#1E293B;color:#CBD5E1;">৩</div>
+      <div class="ctitle" style="color:#E2E8F0;">সুরা বাকারার শেষ দুই আয়াত</div>
+      <div class="ar sm">آمَنَ الرَّسُولُ بِمَا أُنزِلَ إِلَيْهِ مِن رَّبِّهِ وَالْمُؤْمِنُونَ ۚ كُلٌّ آمَنَ بِاللَّهِ وَمَلَائِكَتِهِ وَكُتُبِهِ وَرُسُلِهِ</div>
+      <div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">আমানার রাসুলু বিমা উনযিলা ইলাইহি মির রাব্বিহি ওয়াল মু'মিনুন, কুল্লুন আমানা বিল্লাহি ওয়া মালাইকাতিহি ওয়া কুতুবিহি ওয়া রুসুলিহি...</span></div>
+      <div class="tr"><span class="tl">অর্থ:</span><span class="tt">রাসুল তার রবের কাছ থেকে যা নাযিল হয়েছে তাতে ঈমান এনেছেন এবং মু'মিনরাও। সকলেই ঈমান এনেছে আল্লাহ, তাঁর ফেরেশতা, তাঁর কিতাব ও তাঁর রাসুলদের উপর।</span></div>
+      <span class="pill ngt">📿 ১ বার — রাতে</span>
+      <div class="fad grn">🌟 যে রাতে সুরা বাকারার শেষ দুই আয়াত পড়বে তার জন্য তা যথেষ্ট হবে। <em>(বুখারি: ৫০০৮)</em></div>
+    </div>
+
+    <div class="ac ngt">
+      <div class="cnum" style="background:#1E293B;color:#CBD5E1;">৪</div>
+      <div class="ctitle" style="color:#E2E8F0;">তিন কুল একত্রে পড়া ও ফুঁ দেওয়া</div>
+      <div class="ar sm">قُلْ هُوَ اللَّهُ أَحَدٌ ۝ قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ ۝ قُلْ أَعُوذُ بِرَبِّ النَّاسِ</div>
+      <div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">কুল হুওয়াল্লাহু আহাদ (সুরা ইখলাস), কুল আউযু বিরাব্বিল ফালাক (সুরা ফালাক), কুল আউযু বিরাব্বিন নাস (সুরা নাস)।</span></div>
+      <div class="tr"><span class="tl">পদ্ধতি:</span><span class="tt">হাতে ফুঁ দিয়ে সারা শরীরে বুলিয়ে দিন। মাথা থেকে শুরু করুন।</span></div>
+      <span class="pill ngt">📿 ৩ বার — ঘুমের আগে</span>
+      <div class="fad grn">🌟 নবী ﷺ প্রতি রাতে ঘুমানোর আগে এই আমল করতেন। <em>(বুখারি: ৫০১৭)</em></div>
+    </div>
+
+    <div class="ac ngt">
+      <div class="cnum" style="background:#1E293B;color:#CBD5E1;">৫</div>
+      <div class="ctitle" style="color:#E2E8F0;">ঘুমানোর সময় তাসবিহ</div>
+      <div class="ar sm">سُبْحَانَ اللَّهِ ۝ الْحَمْدُ لِلَّهِ ۝ اللَّهُ أَكْبَرُ</div>
+      <div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">সুবহানাল্লাহ (৩৩ বার), আলহামদুলিল্লাহ (৩৩ বার), আল্লাহু আকবার (৩৪ বার)।</span></div>
+      <div class="tr"><span class="tl">অর্থ:</span><span class="tt">আল্লাহ পবিত্র। সকল প্রশংসা আল্লাহর। আল্লাহ সর্বমহান।</span></div>
+      <span class="pill ngt">📿 ৩৩+৩৩+৩৪ বার</span>
+      <div class="fad grn">🌟 এটি একজন খাদেম পাওয়ার চেয়ে উত্তম। <em>(বুখারি: ৩১১৩)</em></div>
+    </div>
+
+    <div class="sl">ঘুম থেকে জাগার আমল</div>
+
+    <div class="ac grn">
+      <div class="cnum" style="background:var(--g-pale);color:var(--g);">৬</div>
+      <div class="ctitle">ঘুম থেকে জেগে দোয়া</div>
+      <div class="ar sm">الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ</div>
+      <div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">আলহামদু লিল্লাহিল্লাযি আহইয়ানা বা'দা মা আমাতানা ওয়া ইলাইহিন নুশুর।</span></div>
+      <div class="tr"><span class="tl">অর্থ:</span><span class="tt">সকল প্রশংসা আল্লাহর, যিনি আমাদের মৃত্যু (ঘুম) দেওয়ার পর আবার জীবিত করলেন এবং তাঁর কাছেই পুনরুত্থান।</span></div>
+      <span class="pill grn">📿 ১ বার — জাগার সাথে সাথে</span>
+      <div class="fad grn">🌟 নবী ﷺ ঘুম থেকে উঠলেই এই দোয়া পড়তেন। <em>(বুখারি: ৬৩১২)</em></div>
+    </div>
+
+    <div class="ac grn">
+      <div class="cnum" style="background:var(--g-pale);color:var(--g);">৭</div>
+      <div class="ctitle">দুঃস্বপ্ন দেখলে আমল</div>
+      <div class="ar sm">أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ</div>
+      <div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">আউযু বিল্লাহি মিনাশ শাইতানির রাজিম।</span></div>
+      <div class="tr"><span class="tl">অর্থ:</span><span class="tt">বিতাড়িত শয়তান থেকে আল্লাহর আশ্রয় চাই।</span></div>
+      <div class="tr"><span class="tl">পদ্ধতি:</span><span class="tt">বাম দিকে ৩ বার থুতু ফেলুন এবং ঘুমের পাশ পরিবর্তন করুন।</span></div>
+      <span class="pill grn">📿 দুঃস্বপ্নে</span>
+      <div class="fad grn">🌟 দুঃস্বপ্ন কাউকে বলবেন না — ক্ষতি করবে না। <em>(মুসলিম: ২২৬১)</em></div>
+    </div>
+
+    <div class="ac gld">
+      <div class="cnum" style="background:#FEF3C7;color:#92400E;">৮</div>
+      <div class="ctitle" style="color:#92400E;">ডান কাতে শোয়ার আদব</div>
+      <div class="ar sm gb">اللَّهُمَّ قِنِي عَذَابَكَ يَوْمَ تَبْعَثُ عِبَادَكَ</div>
+      <div class="tr"><span class="tl g">উচ্চারণ:</span><span class="tt">আল্লাহুম্মা কিনি আযাবাকা ইয়াওমা তাব'আসু ইবাদাকা।</span></div>
+      <div class="tr"><span class="tl g">অর্থ:</span><span class="tt">হে আল্লাহ! যেদিন তুমি তোমার বান্দাদের পুনরুত্থিত করবে সেদিনের আযাব থেকে আমাকে রক্ষা করো।</span></div>
+      <div class="tr"><span class="tl g">আদব:</span><span class="tt">ডান কাতে শুয়ে ডান হাত গালের নিচে রাখুন।</span></div>
+      <span class="pill gld">📿 ১ বার — শোয়ার সময়</span>
+      <div class="fad gld">🌟 নবী ﷺ ডান কাতে শুয়ে এই দোয়া পড়তেন। <em>(আবু দাউদ: ৫০৪৫)</em></div>
+    </div>
+
+  </div><!-- /prayer-content -->
+
+  <nav class="bnav">
+    <button class="bn active" onclick="goHome()"><span class="bni">🏠</span><span class="bnl">হোম</span><div class="bn-dot"></div></button>
+    <button class="bn" onclick="goToAmal()"><span class="bni">🤲</span><span class="bnl">আমল</span><div class="bn-dot"></div></button>
+    <button class="bn" onclick="goTo('pg-tasbih')"><span class="bni">📿</span><span class="bnl">তাসবিহ</span><div class="bn-dot"></div></button>
+    <button class="bn" onclick="goTo('pg-about')"><span class="bni">ℹ️</span><span class="bnl">পরিচিতি</span><div class="bn-dot"></div></button>
+  </nav>
+</div>
+
+
+<!-- ══════════════════════════════════════
+     PAGE 9 — দুরুদ শরীফ
+══════════════════════════════════════ -->
+<div class="page" id="pg-durud">
+  <div class="page-hdr">
+    <div class="ph-top">
+      <button class="back-btn" onclick="goHome()">←</button>
+      <div class="ph-info">
+        <div class="ph-title">দুরুদ শরীফ</div>
+        <div class="ph-sub">আরবি · উচ্চারণ · অর্থ · ফজিলত</div>
+      </div>
+    </div>
+  </div>
+  <div class="prayer-content pb-nav">
+
+    <div class="pbanner" style="background:linear-gradient(135deg,#F0FDF4,#DCFCE7);border:1.5px solid #86EFAC;margin:14px 0 10px;">
+      <span class="pb-ico">💚</span>
+      <div><div class="pb-t">নবী ﷺ-এর উপর দুরুদ পাঠ</div><div class="pb-s">দুরুদের গুরুত্ব, ফজিলত ও বিভিন্ন দুরুদ</div></div>
+    </div>
+
+    <div class="ac grn">
+      <div class="ctitle">দুরুদ পাঠের ফজিলত</div>
+      <div class="fad grn" style="margin-top:0;">
+        🌟 যে আমার উপর একবার দুরুদ পড়বে, আল্লাহ তার উপর দশটি রহমত বর্ষণ করবেন। <em>(মুসলিম: ৪০৮)</em><br><br>
+        💚 কিয়ামতের দিন যে আমার সবচেয়ে বেশি নিকটে থাকবে সে হলো যে আমার উপর সবচেয়ে বেশি দুরুদ পড়েছে। <em>(তিরমিযি: ৪৮৪)</em>
+      </div>
+    </div>
+
+    <div class="sl">প্রধান দুরুদসমূহ</div>
+
+    <div class="ac grn">
+      <div class="cnum" style="background:var(--g-pale);color:var(--g);">১</div>
+      <div class="ctitle">দুরুদে ইব্রাহিম (নামাজে পঠিত)</div>
+      <div class="ar">اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ ۝ اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ</div>
+      <div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">আল্লাহুম্মা সাল্লি আলা মুহাম্মাদিন ওয়া আলা আলি মুহাম্মাদিন কামা সাল্লাইতা আলা ইব্রাহিমা ওয়া আলা আলি ইব্রাহিমা ইন্নাকা হামিদুম মাজিদ। আল্লাহুম্মা বারিক আলা মুহাম্মাদিন ওয়া আলা আলি মুহাম্মাদিন কামা বারাকতা আলা ইব্রাহিমা ওয়া আলা আলি ইব্রাহিমা ইন্নাকা হামিদুম মাজিদ।</span></div>
+      <div class="tr"><span class="tl">অর্থ:</span><span class="tt">হে আল্লাহ! মুহাম্মাদ ﷺ ও তাঁর পরিবারের উপর রহমত বর্ষণ করো যেভাবে ইব্রাহিম ও তাঁর পরিবারের উপর করেছ। নিশ্চয়ই তুমি প্রশংসিত, মহামহিম। হে আল্লাহ! মুহাম্মাদ ﷺ ও তাঁর পরিবারকে বরকত দাও যেভাবে ইব্রাহিম ও তাঁর পরিবারকে দিয়েছ।</span></div>
+      <span class="pill grn">📿 নামাজে ফরজ — প্রতিদিন বহুবার</span>
+      <div class="fad grn">🌟 সবচেয়ে উত্তম দুরুদ। নামাজে পড়া ফরজ। <em>(বুখারি: ৩৩৭০)</em></div>
+    </div>
+
+    <div class="ac grn">
+      <div class="cnum" style="background:var(--g-pale);color:var(--g);">২</div>
+      <div class="ctitle">সংক্ষিপ্ত দুরুদ</div>
+      <div class="ar">اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ</div>
+      <div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">আল্লাহুম্মা সাল্লি আলা মুহাম্মাদিন ওয়া আলা আলি মুহাম্মাদ।</span></div>
+      <div class="tr"><span class="tl">অর্থ:</span><span class="tt">হে আল্লাহ! মুহাম্মাদ ﷺ এবং তাঁর পরিবারের উপর রহমত বর্ষণ করো।</span></div>
+      <span class="pill grn">📿 যেকোনো সময়</span>
+      <div class="fad grn">🌟 যে একবার দুরুদ পড়বে, আল্লাহ তার উপর ১০টি রহমত দেবেন। <em>(মুসলিম: ৪০৮)</em></div>
+    </div>
+
+    <div class="ac gld">
+      <div class="cnum" style="background:#FEF3C7;color:#92400E;">৩</div>
+      <div class="ctitle" style="color:#92400E;">দুরুদে তুনজিনা</div>
+      <div class="ar gb">اللَّهُمَّ صَلِّ عَلَى سَيِّدِنَا مُحَمَّدٍ صَلَاةً تُنْجِينَا بِهَا مِنْ جَمِيعِ الْأَهْوَالِ وَالْآفَاتِ وَتَقْضِي لَنَا بِهَا جَمِيعَ الْحَاجَاتِ وَتُطَهِّرُنَا بِهَا مِنْ جَمِيعِ السَّيِّئَاتِ وَتَرْفَعُنَا بِهَا عِنْدَكَ أَعْلَى الدَّرَجَاتِ وَتُبَلِّغُنَا بِهَا أَقْصَى الْغَايَاتِ مِنْ جَمِيعِ الْخَيْرَاتِ فِي الْحَيَاةِ وَبَعْدَ الْمَمَاتِ</div>
+      <div class="tr"><span class="tl g">উচ্চারণ:</span><span class="tt">আল্লাহুম্মা সাল্লি আলা সাইয়্যিদিনা মুহাম্মাদিন সালাতান তুনজিনা বিহা মিন জামিইল আহওয়ালি ওয়াল আফাতি ওয়া তাকদ্বি লানা বিহা জামিইল হাজাতি ওয়া তুতাহহিরুনা বিহা মিন জামিইস সাইয়িআতি ওয়া তারফাউনা বিহা ইন্দাকা আ'লাদ দারাজাতি ওয়া তুবাল্লিগুনা বিহা আকসাল গায়াতি মিন জামিইল খাইরাতি ফিল হায়াতি ওয়া বা'দাল মামাত।</span></div>
+      <div class="tr"><span class="tl g">অর্থ:</span><span class="tt">হে আল্লাহ! আমাদের সাইয়্যেদ মুহাম্মাদ ﷺ-এর উপর এমন দুরুদ পাঠাও যা আমাদের সকল ভয় ও বিপদ থেকে মুক্তি দেবে, সকল প্রয়োজন পূরণ করবে, সকল পাপ থেকে পবিত্র করবে, তোমার কাছে সর্বোচ্চ মর্যাদায় উন্নীত করবে এবং জীবনে ও মৃত্যুর পরে সকল কল্যাণের চরম লক্ষ্যে পৌঁছে দেবে।</span></div>
+      <span class="pill gld">📿 নিয়মিত পাঠযোগ্য</span>
+      <div class="fad gld">🌟 সকল বিপদ থেকে মুক্তি ও সকল প্রয়োজন পূরণের দুরুদ।</div>
+    </div>
+
+    <div class="ac grn">
+      <div class="cnum" style="background:var(--g-pale);color:var(--g);">৪</div>
+      <div class="ctitle">জুমার দিনের বিশেষ দুরুদ</div>
+      <div class="ar sm">اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ النَّبِيِّ الْأُمِّيِّ وَعَلَى آلِهِ وَصَحْبِهِ وَسَلِّمْ</div>
+      <div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">আল্লাহুম্মা সাল্লি আলা মুহাম্মাদিন নাবিইয়্যিল উম্মিয়্যি ওয়া আলা আলিহি ওয়া সাহবিহি ওয়া সাল্লিম।</span></div>
+      <div class="tr"><span class="tl">অর্থ:</span><span class="tt">হে আল্লাহ! উম্মী নবী মুহাম্মাদ ﷺ, তাঁর পরিবার ও সাহাবাদের উপর রহমত ও শান্তি বর্ষণ করো।</span></div>
+      <span class="pill grn">📿 জুমার দিনে বেশি বেশি</span>
+      <div class="fad grn">🌟 জুমার দিন বেশি বেশি দুরুদ পড়ো — আমার কাছে পৌঁছানো হয়। <em>(আবু দাউদ: ১০৪৭)</em></div>
+    </div>
+
+    <div class="ac blu">
+      <div class="cnum" style="background:#EFF6FF;color:#1D4ED8;">৫</div>
+      <div class="ctitle">দুরুদে মাসুর (সংক্ষিপ্ত ও সহজ)</div>
+      <div class="ar sm">صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ</div>
+      <div class="tr"><span class="tl">উচ্চারণ:</span><span class="tt">সাল্লাল্লাহু আলাইহি ওয়া সাল্লাম।</span></div>
+      <div class="tr"><span class="tl">অর্থ:</span><span class="tt">আল্লাহ তাঁর উপর রহমত ও শান্তি বর্ষণ করুন।</span></div>
+      <span class="pill blu">📿 নবীর নাম শুনলে</span>
+      <div class="fad grn">🌟 নবী ﷺ-এর নাম শুনলে দুরুদ না পড়া কৃপণতা। <em>(তিরমিযি: ৩৫৪৬)</em></div>
+    </div>
+
+    <div class="ac gld">
+      <div class="cnum" style="background:#FEF3C7;color:#92400E;">৬</div>
+      <div class="ctitle" style="color:#92400E;">দুরুদে নারিয়া</div>
+      <div class="ar gb">اللَّهُمَّ صَلِّ صَلَاةً كَامِلَةً وَسَلِّمْ سَلَامًا تَامًّا عَلَى سَيِّدِنَا مُحَمَّدٍ الَّذِي تَنْحَلُّ بِهِ الْعُقَدُ وَتَنْفَرِجُ بِهِ الْكُرَبُ وَتُقْضَى بِهِ الْحَوَائِجُ وَتُنَالُ بِهِ الرَّغَائِبُ وَحُسْنُ الْخَوَاتِيمِ وَيُسْتَسْقَى الْغَمَامُ بِوَجْهِهِ الْكَرِيمِ وَعَلَى آلِهِ وَصَحْبِهِ فِي كُلِّ لَمْحَةٍ وَنَفَسٍ بِعَدَدِ كُلِّ مَعْلُومٍ لَكَ</div>
+      <div class="tr"><span class="tl g">উচ্চারণ:</span><span class="tt">আল্লাহুম্মা সাল্লি সালাতান কামিলাতান ওয়া সাল্লিম সালামান তাম্মান আলা সাইয়্যিদিনা মুহাম্মাদিল্লাযি তানহাল্লু বিহিল উকাদু ওয়া তানফারিজু বিহিল কুরাবু ওয়া তুকদ্বা বিহিল হাওয়াইজু ওয়া তুনালু বিহির রাগাইবু ওয়া হুসনুল খাওয়াতিমি ওয়া ইউস্তাসকাল গামামু বিওয়াজহিহিল কারিমি ওয়া আলা আলিহি ওয়া সাহবিহি ফি কুল্লি লামহাতিন ওয়া নাফাসিন বিআদাদি কুল্লি মা'লুমিল্লাক।</span></div>
+      <div class="tr"><span class="tl g">অর্থ:</span><span class="tt">হে আল্লাহ! আমাদের সাইয়্যেদ মুহাম্মাদ ﷺ-এর উপর পরিপূর্ণ দুরুদ ও সালাম পাঠাও — যার মাধ্যমে সকল গ্রন্থি খুলে যায়, বিপদ দূর হয়, প্রয়োজন মেটে, কাঙ্ক্ষিত বিষয় লাভ হয়, উত্তম পরিণতি মেলে এবং মেঘ থেকে বৃষ্টি বর্ষে।</span></div>
+      <span class="pill gld">📿 ৪১ বার — কঠিন বিপদে</span>
+      <div class="fad gld">🌟 বিপদ মুক্তি ও প্রয়োজন পূরণের শক্তিশালী দুরুদ।</div>
+    </div>
+
+  </div><!-- /prayer-content -->
+
+  <nav class="bnav">
+    <button class="bn active" onclick="goHome()"><span class="bni">🏠</span><span class="bnl">হোম</span><div class="bn-dot"></div></button>
+    <button class="bn" onclick="goToAmal()"><span class="bni">🤲</span><span class="bnl">আমল</span><div class="bn-dot"></div></button>
+    <button class="bn" onclick="goTo('pg-tasbih')"><span class="bni">📿</span><span class="bnl">তাসবিহ</span><div class="bn-dot"></div></button>
+    <button class="bn" onclick="goTo('pg-about')"><span class="bni">ℹ️</span><span class="bnl">পরিচিতি</span><div class="bn-dot"></div></button>
+  </nav>
+</div>
+
+
+<!-- ══════════════════════════════════════
+     PAGE — ডিজিটাল তসবিহ
+══════════════════════════════════════ -->
+<div class="page" id="pg-dgtasbih">
+
+  <div class="dt-page-hdr">
+    <div class="ph-top">
+      <button class="back-btn" onclick="goHome()" style="background:rgba(168,85,247,.2);border-color:rgba(168,85,247,.4);">←</button>
+      <div class="ph-info">
+        <div class="ph-title">ডিজিটাল তসবিহ</div>
+        <div class="ph-sub" style="color:rgba(168,85,247,.8);">যিকির গণনার প্রিমিয়াম কাউন্টার</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dt-body">
+
+    <!-- SVG gradient defs -->
+    <svg width="0" height="0" style="position:absolute;">
+      <defs>
+        <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#D8B4FE"/>
+          <stop offset="50%" stop-color="#A855F7"/>
+          <stop offset="100%" stop-color="#E9C46A"/>
+        </linearGradient>
+      </defs>
+    </svg>
+
+    <!-- Top banner -->
+    <div class="dt-header-banner">
+      <div class="dt-hb-z">
+        <div class="dt-hb-ar">سُبْحَانَ اللَّهِ وَبِحَمْدِهِ</div>
+        <div class="dt-hb-bn">"আল্লাহ পবিত্র এবং সকল প্রশংসা তাঁর"</div>
+        <div class="dt-hb-ref">যে দিনে ১০০ বার পড়বে তার গুনাহ মুছে যাবে — মুসলিম: ২৬৯২</div>
+      </div>
+    </div>
+
+    <!-- Tasbih presets -->
+    <div class="dt-selector" id="dtSelector">
+      <button class="dt-sel-btn active" onclick="dtSelect(0,this)">সুবহানাল্লাহ</button>
+      <button class="dt-sel-btn" onclick="dtSelect(1,this)">আলহামদুলিল্লাহ</button>
+      <button class="dt-sel-btn" onclick="dtSelect(2,this)">আল্লাহু আকবার</button>
+      <button class="dt-sel-btn" onclick="dtSelect(3,this)">লা ইলাহা ইল্লাল্লাহ</button>
+      <button class="dt-sel-btn" onclick="dtSelect(4,this)">আস্তাগফিরুল্লাহ</button>
+      <button class="dt-sel-btn" onclick="dtSelect(5,this)">দুরুদ শরীফ</button>
+      <button class="dt-sel-btn" onclick="dtSelect(6,this)">কাস্টম</button>
+    </div>
+
+    <!-- Custom input (hidden by default) -->
+    <div class="dt-custom-row" id="dtCustomRow" style="display:none;">
+      <input class="dt-custom-input" id="dtCustomTarget" type="number" placeholder="লক্ষ্য নির্ধারণ করুন (যেমন: ১০০)" min="1" max="9999">
+      <button class="dt-custom-set" onclick="dtSetCustom()">সেট করুন</button>
+    </div>
+
+    <!-- Circular ring counter -->
+    <div class="dt-ring-wrap">
+      <div class="dt-ring-outer">
+        <svg class="dt-ring-svg" viewBox="0 0 240 240">
+          <circle class="dt-ring-bg" cx="120" cy="120" r="104"/>
+          <circle class="dt-ring-fg" id="dtRingFg" cx="120" cy="120" r="104"
+            stroke-dasharray="653.45"
+            stroke-dashoffset="653.45"/>
+        </svg>
+        <div class="dt-ring-center">
+          <div class="dt-count-num" id="dtCountNum">০</div>
+          <div class="dt-count-lbl" id="dtCountLbl">সুবহানাল্লাহ</div>
+          <div class="dt-target-lbl" id="dtTargetLbl">লক্ষ্য: ৩৩</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bead visualization (33 beads) -->
+    <div class="dt-beads" id="dtBeads"></div>
+
+    <!-- Done banner -->
+    <div class="dt-done" id="dtDone">
+      <div class="dt-done-icon">🌟</div>
+      <div class="dt-done-title" id="dtDoneTitle">মাশাআল্লাহ! লক্ষ্য পূরণ হয়েছে!</div>
+      <div class="dt-done-sub" id="dtDoneSub">আল্লাহ আপনার আমল কবুল করুন।</div>
+    </div>
+
+    <!-- Tap button -->
+    <button class="dt-tap-btn" id="dtTapBtn" onclick="dtTap(event)">
+      ﷽ &nbsp; তসবিহ গণনা করুন
+    </button>
+
+    <!-- Controls -->
+    <div class="dt-ctrl-row">
+      <button class="dt-ctrl-btn dec" onclick="dtDec()">
+        <span>−</span>এক কমান
+      </button>
+      <button class="dt-ctrl-btn" onclick="dtResetCurrent()">
+        <span>↺</span>রিসেট
+      </button>
+      <button class="dt-ctrl-btn" onclick="dtResetAll()">
+        <span>🗑️</span>সব রিসেট
+      </button>
+    </div>
+
+    <!-- Session stats -->
+    <div class="dt-stats">
+      <div class="dt-stats-title">আজকের সেশন</div>
+      <div class="dt-stats-grid">
+        <div class="dt-stat-item">
+          <div class="dt-stat-num" id="dtStatTotal">০</div>
+          <div class="dt-stat-lbl">মোট যিকির</div>
+        </div>
+        <div class="dt-stat-item">
+          <div class="dt-stat-num" id="dtStatRounds">০</div>
+          <div class="dt-stat-lbl">সম্পূর্ণ রাউন্ড</div>
+        </div>
+        <div class="dt-stat-item">
+          <div class="dt-stat-num" id="dtStatActive">০</div>
+          <div class="dt-stat-lbl">বর্তমান</div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /dt-body -->
+
+  <nav class="bnav dt-bnav">
+    <button class="bn active" onclick="goHome()"><span class="bni">🏠</span><span class="bnl">হোম</span><div class="bn-dot"></div></button>
+    <button class="bn" onclick="goToAmal()"><span class="bni">🤲</span><span class="bnl">আমল</span><div class="bn-dot"></div></button>
+    <button class="bn" onclick="goTo('pg-tasbih')"><span class="bni">📿</span><span class="bnl">তাসবিহ</span><div class="bn-dot"></div></button>
+    <button class="bn" onclick="goTo('pg-about')"><span class="bni">ℹ️</span><span class="bnl">পরিচিতি</span><div class="bn-dot"></div></button>
+  </nav>
+</div>
+
+
+
 <div class="page" id="pg-about">
 
   <div class="page-hdr">
@@ -788,10 +1698,38 @@ body{font-family:'Noto Sans Bengali',sans-serif;background:var(--cream);color:va
         </div>
       </div>
       <div class="about-row">
-        <div class="ar-icon" style="background:#FEF3C7;">💰</div>
+        <div class="ar-icon" style="background:#FFF1F2;">🩺</div>
         <div class="ar-text">
-          <div class="ar-title">আল্লাহর গুণবাচক নামের আমল</div>
+          <div class="ar-title">রোগ মুক্তির দোয়া</div>
+          <div class="ar-sub">অসুখ, ব্যথা ও রোগ থেকে মুক্তির মাসনূন দোয়া — আরবি, উচ্চারণ, অর্থ ও ফজিলতসহ।</div>
+        </div>
+      </div>
+      <div class="about-row">
+        <div class="ar-icon" style="background:#FFFBEB;">✨</div>
+        <div class="ar-text">
+          <div class="ar-title">আল্লাহর ৯৯টি নামের আমল</div>
           <div class="ar-sub">রিজিক, জ্ঞান ও সম্মানের জন্য আল্লাহর নামের যিকিরের ক্যালকুলেটর।</div>
+        </div>
+      </div>
+      <div class="about-row">
+        <div class="ar-icon" style="background:#ECFEFF;">🌤️</div>
+        <div class="ar-text">
+          <div class="ar-title">সকাল ও সন্ধ্যার আমল</div>
+          <div class="ar-sub">মাসনূন সকালি ও সন্ধ্যার যিকির ও দোয়া — আরবি, উচ্চারণ, অর্থ ও ফজিলতসহ।</div>
+        </div>
+      </div>
+      <div class="about-row">
+        <div class="ar-icon" style="background:#F0F9FF;">🌙</div>
+        <div class="ar-text">
+          <div class="ar-title">ঘুমের দোয়া ও আমল</div>
+          <div class="ar-sub">ঘুমানো ও জাগার মাসনূন দোয়া, ঘুমের আদব ও সুরক্ষার আমল।</div>
+        </div>
+      </div>
+      <div class="about-row">
+        <div class="ar-icon" style="background:#F0FDF4;">💚</div>
+        <div class="ar-text">
+          <div class="ar-title">দুরুদ শরীফ</div>
+          <div class="ar-sub">নবী ﷺ-এর উপর দুরুদ পাঠের গুরুত্ব, ফজিলত ও বিভিন্ন দুরুদ।</div>
         </div>
       </div>
     </div>
@@ -804,8 +1742,8 @@ body{font-family:'Noto Sans Bengali',sans-serif;background:var(--cream);color:va
 
     <!-- Copyright -->
     <div style="text-align:center;padding:12px 0 8px;">
-      <div style="font-size:11px;color:var(--tx-lt);">© দৈনিক দোয়া ও তাসবিহ অ্যাপ</div>
-      <div style="font-size:10px;color:var(--tx-lt);margin-top:3px;">বিনামূল্যে ব্যবহারের জন্য · বিজ্ঞাপনমুক্ত</div>
+      <div style="font-size:13px;color:var(--tx-lt);">© দৈনিক দোয়া ও তাসবিহ অ্যাপ</div>
+      <div style="font-size:12px;color:var(--tx-lt);margin-top:3px;">বিনামূল্যে ব্যবহারের জন্য · বিজ্ঞাপনমুক্ত</div>
     </div>
 
   </div><!-- /about-body -->
@@ -823,15 +1761,28 @@ body{font-family:'Noto Sans Bengali',sans-serif;background:var(--cream);color:va
 const toBn = n => n.toString().replace(/\d/g,'0123456789'.split('').reduce((a,c,i)=>(a[c]='০১২৩৪৫৬৭৮৯'[i],a),{})[n]||n.toString());
 const toBnStr = n => n.toString().replace(/\d/g, d => '০১২৩৪৫৬৭৮৯'[d]);
 
-// ── Clock & Hijri ──
+// ── Clock & Dates ──
 function updateClock(){
-  const now = new Date();
-  const h = String(now.getHours()).padStart(2,'0');
-  const m = String(now.getMinutes()).padStart(2,'0');
+  // Bangladesh Time = UTC+6
+  const now = new Date(new Date().toLocaleString('en-US',{timeZone:'Asia/Dhaka'}));
+
+  // 12-hour format
+  let h = now.getHours(), m = now.getMinutes();
+  const ampm = h >= 12 ? 'PM' : 'AM';
+  h = h % 12 || 12;
+  const hStr = toBnStr(h);
+  const mStr = now.getMinutes() < 10 ? '০' + toBnStr(m) : toBnStr(m);
   const days = ['রবিবার','সোমবার','মঙ্গলবার','বুধবার','বৃহস্পতিবার','শুক্রবার','শনিবার'];
-  document.getElementById('clockTime').textContent = `${h}:${m} · ${days[now.getDay()]}`;
-  // Approximate Hijri
+  document.getElementById('clockTime').textContent = `${hStr}:${mStr} ${ampm} · ${days[now.getDay()]}`;
+
+  // Bangla Gregorian date
+  const bnMonths = ['জানুয়ারি','ফেব্রুয়ারি','মার্চ','এপ্রিল','মে','জুন','জুলাই','আগস্ট','সেপ্টেম্বর','অক্টোবর','নভেম্বর','ডিসেম্বর'];
+  document.getElementById('banglaDate').textContent =
+    `${toBnStr(now.getDate())} ${bnMonths[now.getMonth()]} ${toBnStr(now.getFullYear())}`;
+
+  // Hijri date
   const hijriMonths = ['মুহাররম','সফর','রবিউল আউয়াল','রবিউস সানি','জুমাদাল উলা','জুমাদাল আখিরা','রজব','শাবান','রমজান','শাওয়াল','যিলকদ','যিলহজ'];
+  const hijriMonthsAr = ['محرم','صفر','ربيع الأول','ربيع الآخر','جمادى الأولى','جمادى الآخرة','رجب','شعبان','رمضان','شوال','ذو القعدة','ذو الحجة'];
   const jd = Math.floor((now.getTime()/86400000)+2440587.5);
   const l=jd-1948440+10632,n=Math.floor((l-1)/10631),l2=l-10631*n+354;
   const j=Math.floor((10985-l2)/5965)||Math.floor((l2-51)/178);
@@ -840,9 +1791,12 @@ function updateClock(){
   const hYear = 30*n + j + 1;
   const hDay = l3 - Math.floor(29.5*(hMonth-1));
   const safeM = Math.min(hMonth,12)-1;
-  document.getElementById('hijriDate').textContent = `${toBnStr(hDay)} ${hijriMonths[safeM]} ${toBnStr(hYear)} হি.`;
+  // Arabic digits
+  const toAr = s => s.toString().replace(/\d/g,d=>'٠١٢٣٤٥٦٧٨٩'[d]);
+  document.getElementById('hijriDate').innerHTML =
+    `${toBnStr(hDay)} ${hijriMonths[safeM]} ${toBnStr(hYear)} হি.&nbsp;·&nbsp;<span style="font-family:'Noto Naskh Arabic',serif;font-size:10px;">${toAr(hDay)} ${hijriMonthsAr[safeM]} ${toAr(hYear)}</span>`;
 }
-updateClock(); setInterval(updateClock, 30000);
+updateClock(); setInterval(updateClock, 10000);
 
 // ── Page navigation ──
 function goTo(pgId){
@@ -872,8 +1826,8 @@ function switchPrayer(id, btn){
 }
 
 // ── Tasbih Counter ──
-const TARGETS=[33,33,34];
-const counts=[0,0,0];
+const TARGETS=[33,33,34,100];
+const counts=[0,0,0,0];
 function updateUI(i){
   const c=counts[i],T=TARGETS[i];
   document.getElementById('d'+i).textContent=toBnStr(c);
@@ -885,16 +1839,109 @@ function updateUI(i){
 function inc(i){counts[i]++;const el=document.getElementById('d'+i);el.style.transform='scale(1.2)';setTimeout(()=>el.style.transform='',100);updateUI(i);}
 function dec(i){if(counts[i]>0){counts[i]--;updateUI(i);}}
 function reset(i){counts[i]=0;updateUI(i);}
-function resetAll(){counts.fill(0);[0,1,2].forEach(i=>updateUI(i));document.getElementById('allDone').style.display='none';}
+function resetAll(){counts.fill(0);[0,1,2,3].forEach(i=>updateUI(i));document.getElementById('allDone').style.display='none';}
 
-// ── Names Counter ──
-const NT=[100,71,100,100,100,100,100,100,41,40];
-const nc=new Array(10).fill(0);
-function nUpdate(i){const c=nc[i],t=NT[i];document.getElementById('nc'+i).textContent=toBnStr(c);document.getElementById('np'+i).style.width=Math.min(c/t*100,100)+'%';document.getElementById('nd'+i).classList.toggle('show',c>=t);}
-function nInc(i){nc[i]++;const el=document.getElementById('nc'+i);el.style.transform='scale(1.3)';setTimeout(()=>el.style.transform='',120);nUpdate(i);}
-function nDec(i){if(nc[i]>0){nc[i]--;nUpdate(i);}}
-function nReset(i){nc[i]=0;nUpdate(i);}
-function resetNames(){nc.fill(0);for(let i=0;i<10;i++)nUpdate(i);}
+// ── Names Counter (names page - independent) ──
+const NNT=[100,71,100,100,100,100,100,100,41,40];
+const nn=new Array(10).fill(0);
+function nnUpdate(i){const c=nn[i],t=NNT[i];document.getElementById('nn'+i).textContent=toBnStr(c);document.getElementById('nq'+i).style.width=Math.min(c/t*100,100)+'%';document.getElementById('ne'+i).classList.toggle('show',c>=t);}
+function nnInc(i){nn[i]++;const el=document.getElementById('nn'+i);el.style.transform='scale(1.3)';setTimeout(()=>el.style.transform='',120);nnUpdate(i);}
+function nnDec(i){if(nn[i]>0){nn[i]--;nnUpdate(i);}}
+function nnReset(i){nn[i]=0;nnUpdate(i);}
+// ── Digital Tasbih ──
+const DT_PRESETS = [
+  {label:'সুবহানাল্লাহ', ar:'سُبْحَانَ اللَّهِ', target:33},
+  {label:'আলহামদুলিল্লাহ', ar:'اَلْحَمْدُ لِلَّهِ', target:33},
+  {label:'আল্লাহু আকবার', ar:'اَللَّهُ أَكْبَرُ', target:34},
+  {label:'লা ইলাহা ইল্লাল্লাহ', ar:'لَا إِلَٰهَ إِلَّا ٱللَّهُ', target:100},
+  {label:'আস্তাগফিরুল্লাহ', ar:'أَسْتَغْفِرُ اللَّهَ', target:100},
+  {label:'দুরুদ শরীফ', ar:'اللَّهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ', target:100},
+  {label:'কাস্টম', ar:'', target:33}
+];
+let dtIdx=0, dtCount=0, dtRounds=0, dtTotal=0, dtTarget=33, dtCustomMode=false;
+
+function dtBuildBeads(){
+  const wrap=document.getElementById('dtBeads'); wrap.innerHTML='';
+  const n=Math.min(dtTarget,33);
+  for(let i=0;i<n;i++){const b=document.createElement('div');b.className='dt-bead';b.id='dtb'+i;wrap.appendChild(b);}
+}
+function dtUpdateBeads(){
+  const n=Math.min(dtTarget,33);
+  const pct=dtCount/dtTarget;
+  const lit=Math.round(pct*n);
+  for(let i=0;i<n;i++){
+    const b=document.getElementById('dtb'+i);
+    if(b) b.classList.toggle('lit',i<lit);
+  }
+}
+function dtUpdateRing(){
+  const circ=653.45;
+  const pct=Math.min(dtCount/dtTarget,1);
+  const offset=circ*(1-pct);
+  document.getElementById('dtRingFg').style.strokeDashoffset=offset;
+}
+function dtUpdateUI(){
+  document.getElementById('dtCountNum').textContent=toBnStr(dtCount);
+  document.getElementById('dtCountLbl').textContent=DT_PRESETS[dtIdx].label;
+  document.getElementById('dtTargetLbl').textContent='লক্ষ্য: '+toBnStr(dtTarget);
+  document.getElementById('dtStatTotal').textContent=toBnStr(dtTotal);
+  document.getElementById('dtStatRounds').textContent=toBnStr(dtRounds);
+  document.getElementById('dtStatActive').textContent=toBnStr(dtCount);
+  dtUpdateRing();
+  dtUpdateBeads();
+  const done=dtCount>=dtTarget;
+  const doneEl=document.getElementById('dtDone');
+  doneEl.classList.toggle('show',done);
+  if(done){
+    document.getElementById('dtDoneTitle').textContent='মাশাআল্লাহ! '+toBnStr(dtTarget)+' বার পড়া হয়েছে!';
+  }
+}
+function dtTap(e){
+  dtCount++; dtTotal++;
+  const num=document.getElementById('dtCountNum');
+  num.classList.remove('pulse');
+  void num.offsetWidth;
+  num.classList.add('pulse');
+  // ripple
+  const btn=document.getElementById('dtTapBtn');
+  const r=document.createElement('span');
+  r.className='dt-ripple';
+  const rect=btn.getBoundingClientRect();
+  const x=e.clientX-rect.left-30, y=e.clientY-rect.top-30;
+  r.style.left=x+'px'; r.style.top=y+'px';
+  btn.appendChild(r);
+  setTimeout(()=>r.remove(),500);
+  if(dtCount>=dtTarget){ dtRounds++; }
+  dtUpdateUI();
+}
+function dtDec(){ if(dtCount>0){dtCount--;dtTotal=Math.max(dtTotal-1,0);dtUpdateUI();} }
+function dtResetCurrent(){ dtCount=0; document.getElementById('dtDone').classList.remove('show'); dtUpdateUI(); }
+function dtResetAll(){ dtCount=0;dtRounds=0;dtTotal=0; document.getElementById('dtDone').classList.remove('show'); dtUpdateUI(); }
+function dtSelect(i,btn){
+  dtIdx=i; dtCount=0;
+  document.querySelectorAll('.dt-sel-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  const customRow=document.getElementById('dtCustomRow');
+  if(i===6){
+    customRow.style.display='flex'; dtCustomMode=true;
+  } else {
+    customRow.style.display='none'; dtCustomMode=false;
+    dtTarget=DT_PRESETS[i].target;
+  }
+  document.getElementById('dtDone').classList.remove('show');
+  dtBuildBeads();
+  dtUpdateUI();
+}
+function dtSetCustom(){
+  const v=parseInt(document.getElementById('dtCustomTarget').value)||33;
+  dtTarget=Math.max(1,Math.min(v,9999));
+  dtCount=0;
+  document.getElementById('dtDone').classList.remove('show');
+  dtBuildBeads();
+  dtUpdateUI();
+}
+// init
+dtBuildBeads(); dtUpdateUI();
 </script>
 </body>
 </html>
